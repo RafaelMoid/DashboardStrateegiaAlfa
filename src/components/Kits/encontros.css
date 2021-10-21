@@ -1,0 +1,407 @@
+.wrapper {
+    background-color:white ;
+    height:100px;
+    width: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    margin-top: -10%;  
+    top: 65vh;
+
+    
+}
+
+.kitHexagon{
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+}
+
+.button-menu-bars {
+    margin-left: 8rem;
+    font-size: 2rem;
+    background: none;
+    color: green;
+    
+}
+
+.button-menu {
+    margin-left: 5%;
+    width: 100%;
+    height:99px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    
+    top: 42vh;
+    transition: 550ms;
+    z-index: -10;
+    
+}
+
+.button-menu.active {
+    top:60vh;
+    transition: 350ms;
+}
+
+.hexa{
+    
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    left:0px;
+    margin-left: 2.2%;
+    margin-right: -10%;
+    margin-bottom:-15%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 10px;
+    color:white;
+
+}
+
+.textStyle{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: -57.5%;
+    margin-top: 15%;
+}
+
+.hexa a {
+    text-decoration:none;
+    color: white;
+    font-size: 16px;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    padding: 0;
+    border-radius: 4px;
+    position:absolute
+
+}
+
+
+
+.hexaImg {
+    
+    max-height: 100px;
+    max-width: 100px;
+    top:50%;
+    left:50%;
+}
+
+.button-menu-items {
+    display: flex;
+    width:100%;
+    flex-direction: row;
+}
+
+
+
+span {
+    margin-left: 16px;
+}
+
+/* CONFIG DO BOTÃO DO MENU */
+.buttonTogle {
+    color:black;
+    border-radius:2em;
+    font-family:'Roboto',sans-serif;
+    box-sizing: border-box;
+    background-color:white;
+    border-color: #52B9A7;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: -40%;
+    
+}
+
+.buttonTogle.active{
+    color:white;
+    border-radius:2em;
+    font-family:'Roboto',sans-serif;
+    box-sizing: border-box;
+    background-color:#52B9A7;
+    border-color: #52B9A7;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: -40%;
+
+}
+/* Usar essa estrutura para o responsive layout
+@media screen and (max-width: 720px) {
+
+    .image1{
+      display: none;
+      max-height: 0px;
+      max-width: 0px;
+    }
+
+}  */
+
+
+
+@media screen and (min-width:601px) and (max-width:961px) {
+    .wrapper {
+        background-color:white ;
+        height:100px;
+        width: 100vh;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: fixed;
+        margin-top: -10%;  
+        top: 60vh;
+    
+        
+    }
+    
+    .kitHexagon{
+        z-index: 999;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .button-menu-bars {
+        margin-left: 8rem;
+        font-size: 2rem;
+        background: none;
+        color: green;
+        
+    }
+    
+    .button-menu {
+        margin-left: 5%;
+        width: 100%;
+        height:99px;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        
+        top: 39vh;
+        transition: 550ms;
+        z-index: -10;
+        
+    }
+    
+    .button-menu.active {
+        top:42vh;
+        transition: 350ms;
+    }
+    
+    .hexa{
+        
+        align-items: center;
+        padding: 8px 0px 8px 16px;
+        list-style: none;
+        left:0px;
+        margin-left: 2.2%;
+        margin-right: -10%;
+        margin-bottom:-15%;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 10px;
+        color:white;
+    
+    }
+    
+    .textStyle{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: -57.5%;
+        margin-top: 15%;
+    }
+    
+    .hexa a {
+        text-decoration:none;
+        color: white;
+        font-size: 16px;
+        height: 100%;
+        display:flex;
+        align-items: center;
+        padding: 0;
+        border-radius: 4px;
+        position:absolute
+    
+    }
+    
+    
+    
+    .hexaImg {
+        
+        max-height: 100px;
+        max-width: 100px;
+        top:50%;
+        left:50%;
+    }
+    
+    .button-menu-items {
+        display: flex;
+        width:100%;
+        flex-direction: row;
+    }
+    
+    
+    
+    span {
+        margin-left: 16px;
+    }
+    
+    /* CONFIG DO BOTÃO DO MENU */
+    .buttonTogle {
+        color:black;
+        border-radius:2em;
+        font-family:'Roboto',sans-serif;
+        box-sizing: border-box;
+        background-color:white;
+        border-color: #52B9A7;
+        padding: 5px 5px 5px 5px;
+        margin-bottom: -40%;
+        
+    }
+    
+    .buttonTogle.active{
+        color:white;
+        border-radius:2em;
+        font-family:'Roboto',sans-serif;
+        box-sizing: border-box;
+        background-color:#52B9A7;
+        border-color: #52B9A7;
+        padding: 5px 5px 5px 5px;
+        margin-bottom: -40%;
+    
+    }
+
+}
+
+/* MOBILE FIRST */
+
+@media screen and (max-width:600px) {
+    .wrapper {
+        background-color:white ;
+        height:100px;
+        width: 100vh;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: fixed;
+        left: 0vh;
+        top: 50vh;
+    
+        
+    }
+    
+    .kitHexagon{
+        z-index: 999;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .button-menu-bars {
+        margin-left: 2rem;
+        font-size: 2rem;
+        background: none;
+        color: green;
+        
+    }
+    
+    .button-menu {
+        margin-left: 5%;
+        width: 100%;
+        height:50vh;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 45vh;
+        transition: 550ms;
+        z-index: -10;
+        
+    }
+    
+    .button-menu.active {
+        top:55vh;
+        transition: 350ms;
+    }
+    
+    .hexa{
+        
+        align-items: center;
+        padding: 8px 8px 8px 16px;
+        list-style: none;
+        left:0px;
+        margin-left: 2.2%;
+        margin-right: -25%;
+        margin-bottom:-15%;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 9px;
+        color:white;
+    
+    }
+    
+    .textStyle{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: -57.5%;
+        margin-top: 15%;
+    }
+    
+    .hexa a {
+        text-decoration:none;
+        color: white;
+        font-size: 16px;
+        height: 100%;
+        display:flex;
+        align-items: center;
+        padding: 0;
+        border-radius: 4px;
+        position:absolute
+    
+    }
+    
+    
+    
+    .hexaImg {
+        
+        max-height: 100px;
+        max-width: 100px;
+        top:50%;
+        left:50%;
+    }
+    
+    .button-menu-items {
+        display: flex;
+        width:100%;
+        flex-direction: row;
+    }
+    
+    
+    
+    span {
+        margin-left: 16px;
+    }
+    
+    /* CONFIG DO BOTÃO DO MENU */
+    .buttonTogle {
+        color:black;
+        border-radius:2em;
+        font-family:'Roboto',sans-serif;
+        box-sizing: border-box;
+        background-color:white;
+        border-color: #52B9A7;
+        padding: 5px 5px 5px 5px;
+        margin-bottom: -40%;
+        
+    }
+    
+    .buttonTogle.active{
+        color:white;
+        border-radius:2em;
+        font-family:'Roboto',sans-serif;
+        box-sizing: border-box;
+        background-color:#52B9A7;
+        border-color: #52B9A7;
+        padding: 5px 5px 5px 5px;
+        margin-bottom: -40%;
+    
+    }
+}

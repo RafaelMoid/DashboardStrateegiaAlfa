@@ -1,0 +1,119 @@
+.desenvolvedores {
+    display: flex;
+    flex-direction: column;
+    align-items: row;
+    position: relative;
+    
+    
+}
+.title {
+    
+  padding-left: 25%;
+  margin-top: 4%;
+  margin-right: -50%;
+  display: row;
+  flex-direction: row;
+  align-items: row;
+  color: #52B9A7;
+}
+
+
+
+.devImg {
+    position:absolute;
+    max-height: 200px;
+    max-width: 200px;
+    top:21%;
+    right: 30%;
+}
+
+.devs {
+    display: flex;
+    margin-left: 13.5%;
+    margin-top: 5%;
+    margin-right: 20%;
+    flex-direction: row;
+    align-items: row;
+}
+
+.devs div{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    margin-top: 5%;
+    width: 250px;
+    flex-direction: row;
+    align-items: row;
+    
+
+}
+
+.devs h3{
+    font-size: 30px;
+    margin-left: 50px;
+    color: white;
+    margin-bottom: -14px;
+}
+
+.devs p{
+    margin-top: 10px;
+    margin-left: 50px;
+    color: white;
+}
+
+.links div{
+  display: row;
+  flex-direction: row;
+  align-items: row;
+  position: absolute;
+  margin-top: -10px;
+}
+
+.devs .linkWrapper1 {
+
+    margin-left: 130px;
+    margin-top: -10px; 
+    color: white;
+}
+
+.devs .linkWrapper2 {
+
+    margin-left: 100px;
+    margin-top: -25px;
+    color: white;
+}
+
+
+
+
+.objWrapper div{
+    font-family: Rubik;
+    display: flex;
+    flex-direction: column;
+    margin-left: -30%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10%;
+    width: 215px;
+    
+}
+.imgWrapper img{
+    
+    padding: 0px 0px 0px 0px;
+    background-color: transparent;
+    font-family: Rubik;
+    display: flex;
+    z-index: 10;
+    width: 140px;
+    position: relative;
+    
+}
+
+
+
+
+.obj {
+    background-color: #52B9A7;
+    font-family: Rubik;
+    display: flex;
+    
+}

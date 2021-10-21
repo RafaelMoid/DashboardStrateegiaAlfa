@@ -1,0 +1,27 @@
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../components/providers/auth";
+import Login from "../components/Login";
+import Strateegia from "../components/Strateegia";
+import Desenvolvedores from "../components/Desenvolvedores";
+
+const Routes = () => {
+  const auth = useContext(AuthContext);
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          {!auth.isAuthenticated ? <Redirect to="/login" /> : <Strateegia />}
+        </Route>
+        <Route path="/login" exact>
+          <Login />
+        </Route>
+        <Route path="/Desenvolvedores"  exact>
+          <Desenvolvedores />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
+};
+
+export default Routes;

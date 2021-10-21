@@ -1,0 +1,67 @@
+.wellcome {
+    position: relative;
+    font-weight: 400;
+    color:#52B9A7 ;
+    
+}
+
+.wellcome h3 {
+    font-size: 60px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.ola{
+   
+    color: black;
+}
+
+
+.linha {
+
+width: 62%;
+height: 0px;
+left: 32.1%;
+top: 20%;
+
+border: 0.1px solid #52B9A7;
+}
+
+@media screen and (max-width: 719px) {
+    .linha {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wellcome {
+        position: relative;
+        font-weight: 400;
+        color:#52B9A7 ;
+        
+    }
+    
+    .wellcome h3 {
+        font-size: 30px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+    
+    .ola{
+       
+        color: black;
+    }
+    
+    
+    .linha {
+    
+    width: 62%;
+    height: 0px;
+    left: 32.1%;
+    top: 20%;
+    
+    border: 0.1px solid #52B9A7;
+    }
+}

@@ -1,0 +1,71 @@
+.DEIXANDO_INVISIVEL {
+  display: none;
+}
+
+
+  .Wrapper {
+    font-family: Rubik;
+    display: flex;
+    flex-direction: column;
+    align-items: row;
+    position: relative;
+    
+  }
+//}
+
+.firstLine {
+  margin-top: 4%;
+  width:58.5%;
+  display: column;
+  flex-direction: column;
+  margin-left: 11.5%;
+}
+
+.WrapperNav {
+  z-index: 999;
+  height:10%;
+}
+
+.introTxt {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.image1{
+  max-height: 300px;
+  max-width: 300px;
+  margin-top: 5%;
+  z-index: 100;
+}
+
+.togle{
+  color: black;
+  background-color: #0067AC;
+  display: flex;
+  padding: 5px 10px 5px 10px;
+  outline: gray;
+  margin-left: 20%;
+
+}
+
+
+@media screen and (max-width: 720px) {
+
+  .image1{
+    display: none;
+    max-height: 0px;
+    max-width: 0px;
+  }
+
+
+  
+}
+
+@media screen and (max-width:600px) {
+
+.textoo h3 {
+  font-size:10px;
+}
+
+}
