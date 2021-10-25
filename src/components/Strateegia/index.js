@@ -11,6 +11,7 @@ import Wellcome from "../Wellcome";
 import Navbar2 from "../Navbarv2";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Encontros from "../Kits";
+import BarChart from '../Charts/Chart.js';
 
 
 import "./styles.scss";
@@ -100,18 +101,19 @@ const Strateegia = () => {
        <div className="comparacao">
          
          <div className="containerLeft">
-          <h3>Comparação rápida  de índices</h3>
+          <h1>Comparação rápida  de índices</h1>
           <p>Selecione duas jornadas para um compartivo rápido entre seus índices </p>
           <h3>ADICIONAR DOIS DROPDOWNS AQUI</h3>
           <h3>PARA SELECIONAR OS PROJETOS</h3>
          </div>
 
         <div className="containerRight">
-        <h1>Adicione aqui as comparações</h1>
+          \/ Será necessario fazer varios desses com dados diferentes \/
+          <BarChart />
         </div>
-          
        </div>
 
+       
       </div>
     
     
