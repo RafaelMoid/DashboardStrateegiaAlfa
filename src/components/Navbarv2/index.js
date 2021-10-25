@@ -24,6 +24,11 @@ const Navbar2 = ({ username }) => {
 
   return (
     <>
+
+    <div className="wellcomeNav">
+      
+    </div>
+
     <IconContext.Provider value={{color:'white'}}>
       <div className="navbar">
         <Link to="#" className='menu-bars'>

@@ -5,7 +5,7 @@
     justify-content: start;
     align-items: center;
     position: relative;
-    
+    z-index: 999;
 }
 
 
@@ -26,7 +26,8 @@
     position: fixed;
     top: 0;
     left: -100%;
-    transition: 850ms;
+    transition: 650ms;
+    z-index: 999;
 }
 
 .nav-menu.active {
@@ -57,7 +58,7 @@
 }
 
 .nav-text a:hover {
-    background-color: #0067AC;
+    background-color: #60a3cf;
 }
 
 .nav-menu-items {

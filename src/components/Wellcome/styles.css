@@ -1,7 +1,9 @@
 .wellcome {
     position: relative;
     font-weight: 400;
-    color:#52B9A7 ;
+    color:#0067AC ;
+    margin-left: 16vh;
+    margin-top: 5vh;
     
 }
 
@@ -12,21 +14,16 @@
     position: relative;
 }
 
+.wellcome p {
+    font-size: 24px;
+}
+
 .ola{
    
     color: black;
 }
 
 
-.linha {
-
-width: 62%;
-height: 0px;
-left: 32.1%;
-top: 20%;
-
-border: 0.1px solid #52B9A7;
-}
 
 @media screen and (max-width: 719px) {
     .linha {
@@ -38,7 +35,7 @@ border: 0.1px solid #52B9A7;
     .wellcome {
         position: relative;
         font-weight: 400;
-        color:#52B9A7 ;
+        color:#0067AC ;
         
     }
     

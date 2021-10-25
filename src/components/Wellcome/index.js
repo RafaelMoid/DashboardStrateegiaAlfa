@@ -18,7 +18,7 @@ const Wellcome = ({ username }) => {
     <>
       <div className="wellcome">
           <h3 className="ola">Olá,</h3><h3 className="nome">{username}</h3><h3 className="ola">!</h3>
-          <hr className="linha"/>
+          <p>Aqui você encontra os dados das suas jornadas em um só lugar</p>
         </div>
         
     </>

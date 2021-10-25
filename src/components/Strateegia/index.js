@@ -75,25 +75,45 @@ const Strateegia = () => {
       <div className="WrapperNav">
         
           <Navbar2 />
-          
+          <Wellcome username={user.name}/>
       </div>
-      
-      <div className="DEIXANDO_INVISIVEL">
-      <div className="introTxt">
-           <div className="firstLine">
-            <Wellcome username={user.name}/>
-             <h3 className="textoo">Aqui estão todos os seus projetos na plataforma Strateegia. Selecione o projeto para agendar seus 
-pontos de conversação em sua Google Agenda.</h3>
-           </div>
-           <img className="image1" src="datep.svg" />
-           
-              </div>
-              <Encontros />
+      <div nameClass="inicialBoxes">
+        <div className="box1">
+          <div className="title1"><h1>32</h1></div>
+          <div className="subtitle1"><p>projetos ativos</p></div>
+        </div>
+        <div className="box2">
+          <div className="title2"><h1>45</h1></div>
+          <div className="subtitle2"><p>projetos concluídos</p></div>
+        </div>
+        <div className="box3">
+          <div className="title3"><h1>432</h1></div>
+          <div className="subtitle3"><p>participantes</p></div>
+        </div>
+        <div className="box4">
+          <div className="title4"><h1>56</h1></div>
+          <div className="subtitle4"><p>relatórios gerados</p></div>
+        </div>
       </div>
-            
-      </div>
-        
 
+    
+       <div className="comparacao">
+         
+         <div className="containerLeft">
+          <h3>Comparação rápida  de índices</h3>
+          <p>Selecione duas jornadas para um compartivo rápido entre seus índices </p>
+          <h3>ADICIONAR DOIS DROPDOWNS AQUI</h3>
+          <h3>PARA SELECIONAR OS PROJETOS</h3>
+         </div>
+
+        <div className="containerRight">
+        <h1>Adicione aqui as comparações</h1>
+        </div>
+          
+       </div>
+
+      </div>
+    
     
   );
 };

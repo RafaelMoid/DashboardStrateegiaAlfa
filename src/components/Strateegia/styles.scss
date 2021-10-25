@@ -1,6 +1,148 @@
-.DEIXANDO_INVISIVEL {
-  display: none;
+//Sessão de dados iniciais e boxes display
+//DAQUI PARA BAIXO É NECESSARIO FAZER A RESPONSIVIDADE
+
+.inicialBoxes {
+  position: relative;
+width: 100%;
+
 }
+
+.box1 {
+  border-radius: 10px;
+  margin-left: 18vh;
+  background-color: #FE6E9F;
+  display: inline-block;
+  width: 30vh;
+  height: 20vh;
+  margin-top: 5vh;
+}
+
+.title1 {
+  padding-top:3vh;
+  font-size: 32px;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;  
+  color: #186FBB;
+}
+
+
+.subtitle1 {
+  font-size: 24px;
+  color: #186FBB;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.box2 {  
+  border-radius: 10px;
+  margin-left: 16vh;
+  background-color: #393EA0;
+  display: inline-block;
+  width: 30vh;
+  height: 20vh;
+}
+
+.title2 {
+  padding-top:3vh;
+  font-size: 32px;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;  
+  color: #52C7AA;
+}
+
+
+.subtitle2 {
+  font-size: 24px;
+  color: #52C7AA;
+  text-align: center;
+  font-weight: bold;
+}
+
+.box3 {
+  border-radius: 10px;
+  margin-left: 16vh;
+  background-color: #186FBB;
+  display: inline-block;
+  width: 30vh;
+  height: 20vh;
+}
+
+.title3 {
+  padding-top:3vh;
+  font-size: 32px;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;  
+  color: #6AC460;
+}
+
+
+.subtitle3 {
+  font-size: 24px;
+  color: #6AC460;
+  text-align: center;
+  font-weight: bold;
+}
+
+.box4 {
+  border-radius: 10px;
+  margin-left: 16vh;
+  background-color: #52C7AA;
+  display: inline-block;
+  width: 30vh;
+  height: 20vh;
+}
+
+.title4 {
+  padding-top:3vh;
+  font-size: 32px;
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: #393EA0;  
+}
+
+
+.subtitle4 {
+  font-size: 24px;
+  color: #393EA0;
+  text-align: center;
+  font-weight: bold;
+}
+
+//Sessão de comparações rapidas de indice
+
+.comparacao {
+  margin-top: 5vh;
+  margin-left: 15vh;
+  margin-right: 15vh;
+  border: 3px solid rgb(51, 49, 49);
+  border-radius:15px;
+  position: relative;
+}
+
+.containerLeft {
+  margin-top: 5vh;
+  margin-left: 5vh;
+  margin-bottom: 5vh;
+}
+
+.containerRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 8vh;
+  margin-right: 5vh;
+}
+
+//DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE
 
 
   .Wrapper {
