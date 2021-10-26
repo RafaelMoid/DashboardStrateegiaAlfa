@@ -101,10 +101,20 @@ const Strateegia = () => {
        <div className="comparacao">
          
          <div className="containerLeft">
-          <h1>Comparação rápida  de índices</h1>
-          <p>Selecione duas jornadas para um compartivo rápido entre seus índices </p>
-          <h3>ADICIONAR DOIS DROPDOWNS AQUI</h3>
-          <h3>PARA SELECIONAR OS PROJETOS</h3>
+          <h2>Comparação rápida  de índices</h2>
+          <p>Selecione duas jornadas para um compartivo <br/> rápido entre seus índices </p>
+          <p><br/> Jornada 1</p>
+          <select className="dropdown">
+            <option value="Project 1">Project 1</option>
+            <option value="Project 2">Project 2</option>
+            <option value="Project 3">Project 3</option>
+          </select>
+          <p>Jornada 2</p>
+          <select className="dropdown">
+            <option value="Project 1">Project 1</option>
+            <option value="Project 2">Project 2</option>
+            <option value="Project 3">Project 3</option>
+          </select>
          </div>
 
         <div className="containerRight">
