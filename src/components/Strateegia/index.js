@@ -27,6 +27,35 @@ const Strateegia = () => {
   // const [projects, setProjects] = useState([]);
   const auth = useContext(AuthContext);
 
+  //AQUI EMBAIXO TEMOS DADOS MOCADOS PARA PROJETOS E DADOS
+  //apos feito a lista, ela foi operada usando a função .map
+  //usando o indece posso chamar o array com todos os seus subarrays e dados inclusos
+  //é necessario criar state e atribuir logica de true e false para on click em botões da linha 155 do contentTitle
+  const projetos=[
+    {nome:"Nome do projeto", status:"Status", pessoas:"Pessoas ativas"},
+    {nome:"Projeto 1", status:"ativo", pessoas:"25"},
+    {nome:"Projeto 2", status:"concluido", pessoas:"125"},
+    {nome:"Projeto 3", status:"ativo", pessoas:"22"},
+    {nome:"Projeto 4", status:"ativo", pessoas:"48"},
+    {nome:"Projeto 5", status:"ativo", pessoas:"87"},
+    {nome:"Projeto 6", status:"concluido", pessoas:"35"},
+    {nome:"Projeto 7", status:"concluido", pessoas:"35"},];
+  const listaProjetosNome=projetos.map(
+    (c,i)=>
+      <li key={i}>{c.nome}</li>
+      )
+
+      const listaProjetosStatus=projetos.map(
+        (c,i)=>
+          <li key={i}>{c.status}</li>
+          )
+
+          const listaProjetosPessoas=projetos.map(
+            (c,i)=>
+              <li key={i}>{c.pessoas}</li>
+              )
+
+  const relatorios=[['Relatorio 1', 'conclusão','escola figital'],['Relatorio parcial', 'parcial','banco figital'],['MVS', 'parcial','habilitação figital'],['Relatorio final', 'conclusão','empresa figital']];
   
 
   useEffect(() => {
@@ -144,10 +173,18 @@ const Strateegia = () => {
       <div className="contentTitle"><button>Projetos</button><button>Relatórios</button></div>
       <div className="contentWrapper">
         <div className="exibitContent">
-          
-          
+        <ul className="listaProjetos">
+          {listaProjetosNome}
+        </ul>
+        <ul className="listaStatus">
+        {listaProjetosStatus}
+        </ul>
+        <ul className="listaPessoas">
+        {listaProjetosPessoas}
+        </ul> 
         </div>
         
+          
       </div>
       <button className="btnRelatorio">criar relatório</button>
       </div>

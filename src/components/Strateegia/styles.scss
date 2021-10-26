@@ -232,6 +232,48 @@ width: 100%;
 
   
 }
+
+.exibitContent {
+  align-items: center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: left;
+}
+
+.listaProjetos {
+  margin-top: 2vh;
+  margin-left: 7vh;
+  list-style: none;
+  font-weight: bold;
+  font-size:18px;
+  word-spacing: 10px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.listaStatus {
+  margin-top: 2vh;
+  margin-left: 7vh;
+  list-style: none;
+  font-weight: bold;
+  font-size:18px;
+  word-spacing: 10px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.listaPessoas {
+  margin-top: 2vh;
+  margin-left: 7vh;
+  list-style: none;
+  font-weight: bold;
+  font-size:18px;
+  word-spacing: 10px;
+  font-family: monospace;
+  text-align: center;
+}
+
 //DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE
 
 
