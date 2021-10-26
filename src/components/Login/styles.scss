@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     .informative-wrapper {
       display: flex;
       flex-direction: column;
@@ -95,7 +95,7 @@
         
         .informative-texts {
           text-align: unset;
-          margin: 10% 0 40% 25%;
+          margin: 10% 0 19.2% 25%;
           
           h2 {
             font-size: 52px;

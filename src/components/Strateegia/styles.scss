@@ -8,8 +8,11 @@ width: 100%;
 
 }
 
+
+
 .dropdown {
   width:200px;
+  font-size: 14px;
 }
 
 .box1 {
@@ -128,10 +131,11 @@ width: 100%;
   margin-top: 10vh;
   margin-left: 15vh;
   margin-right: 15vh;
-  height: 40vh;
-  border: 3px solid rgb(23, 113, 248);
+  height: 50vh;
+  border: 3px solid rgb(214, 214, 214);
   border-radius:15px;
   position: relative;
+  display: inline;
 }
 
 .containerLeft {
@@ -140,13 +144,94 @@ width: 100%;
   margin-bottom: 5vh;
 }
 
+
+
 .containerRight {
-  position: absolute;
+  position: absolute ;
   bottom: 0;
   right: 0;
-  margin-right: 8vh;
+  display: inline;
 }
 
+.chart1{
+  position: absolute ;
+  bottom: 0;
+  right: 25vh;
+  display: inline;
+  width:15vh;
+}
+
+.chart2{
+  position: absolute ;
+  bottom: 0;
+  right: 50vh;
+  display: inline;}
+
+.chart3{position: absolute ;
+  bottom: 0;
+  right: 75vh;
+  display: inline;}
+
+.chart4{
+  position: absolute ;
+  bottom: 0;
+  right: 100vh;
+  display: inline;}
+
+  .contentWrapper {
+  width:140vh;
+  margin-left: 15vh;
+  margin-right: 15vh;
+  margin-bottom: 5vh;
+  height: 50vh;
+  border: 3px rgb(217, 220, 223);
+  border-radius:15px;
+}
+  
+.contentTitle {
+  display: inline-block;
+  margin-top: 10vh;
+  margin-left: 15vh;
+}
+
+.contentTitle > button {
+  font-size:22px;
+  right:20vh;
+  bottom: 10vh;
+  width: 150px;
+  height: 35px;
+  color: black;
+  margin: auto;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.btnRelatorio {
+  font-size:18px;
+  position: absolute;
+  right:20vh;
+  bottom: 10vh;
+  width: 150px;
+  height: 35px;
+  background-color: #0067AC;
+  color: #fff;
+  margin: auto;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 3px #efefef;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background-color: #6badeb;
+  }
+
+  
+}
 //DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE
 
 

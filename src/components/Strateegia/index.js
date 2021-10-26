@@ -102,14 +102,14 @@ const Strateegia = () => {
          
          <div className="containerLeft">
           <h2>Comparação rápida  de índices</h2>
-          <p>Selecione duas jornadas para um compartivo <br/> rápido entre seus índices </p>
-          <p><br/> Jornada 1</p>
+          <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
+          <h3><br/> Jornada 1</h3>
           <select className="dropdown">
             <option value="Project 1">Project 1</option>
             <option value="Project 2">Project 2</option>
             <option value="Project 3">Project 3</option>
           </select>
-          <p>Jornada 2</p>
+          <h3>Jornada 2</h3>
           <select className="dropdown">
             <option value="Project 1">Project 1</option>
             <option value="Project 2">Project 2</option>
@@ -118,11 +118,39 @@ const Strateegia = () => {
          </div>
 
         <div className="containerRight">
-          \/ Será necessario fazer varios desses com dados diferentes \/
+          <div className="chart1">
           <BarChart />
+          <p>Pessoas ativas</p>
+          </div>
+          
+          <div className="chart2">
+          <BarChart />
+          <p>Engajamento nas questões</p>
+          </div>
+
+          <div className="chart3" >
+          <BarChart />
+          <p>Engajamento nos debates</p>
+          </div>
+
+          <div className="chart4">
+          <BarChart />
+          <p>Engajamento divergências</p>
+          </div>
+
         </div>
        </div>
-
+      <div className="contentSection">
+      <div className="contentTitle"><button>Projetos</button><button>Relatórios</button></div>
+      <div className="contentWrapper">
+        <div className="exibitContent">
+          
+          
+        </div>
+        
+      </div>
+      <button className="btnRelatorio">criar relatório</button>
+      </div>
        
       </div>
     
