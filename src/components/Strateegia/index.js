@@ -12,6 +12,7 @@ import Navbar2 from "../Navbarv2";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Encontros from "../Kits";
 import BarChart from '../Charts/Chart.js';
+import {BsThreeDots} from 'react-icons/bs';
 
 
 import "./styles.scss";
@@ -32,14 +33,21 @@ const Strateegia = () => {
   //usando o indece posso chamar o array com todos os seus subarrays e dados inclusos
   //é necessario criar state e atribuir logica de true e false para on click em botões da linha 155 do contentTitle
   const projetos=[
-    {nome:"Nome do projeto", status:"Status", pessoas:"Pessoas ativas"},
-    {nome:"Projeto 1", status:"ativo", pessoas:"25"},
-    {nome:"Projeto 2", status:"concluido", pessoas:"125"},
-    {nome:"Projeto 3", status:"ativo", pessoas:"22"},
-    {nome:"Projeto 4", status:"ativo", pessoas:"48"},
-    {nome:"Projeto 5", status:"ativo", pessoas:"87"},
-    {nome:"Projeto 6", status:"concluido", pessoas:"35"},
-    {nome:"Projeto 7", status:"concluido", pessoas:"35"},];
+    {nome:"Projeto 1", status:"ativo", pessoas:"25 participantes"},
+    {nome:"Projeto 2", status:"concluido", pessoas:"125 participantes"},
+    {nome:"Projeto 3", status:"ativo", pessoas:"22 participantes"},
+    {nome:"Projeto 4", status:"ativo", pessoas:"48 participantes"},
+    {nome:"Projeto 5", status:"ativo", pessoas:"87 participantes"},
+    {nome:"Projeto 6", status:"concluido", pessoas:"35 participantes"},
+    {nome:"Projeto 7", status:"concluido", pessoas:"39 participantes"},
+    {nome:"Projeto 8", status:"concluido", pessoas:"42 participantes"},
+    {nome:"Projeto 9", status:"concluido", pessoas:"12 participantes"},
+    {nome:"Projeto 10", status:"concluido", pessoas:"0 participantes"},
+    {nome:"Projeto 11", status:"concluido", pessoas:"135 participantes"},
+    {nome:"Projeto 12", status:"concluido", pessoas:"15 participantes"},
+    {nome:"Projeto 13", status:"concluido", pessoas:"78 participantes"},
+    {nome:"Projeto 14", status:"concluido", pessoas:"2 participantes"},
+  ];
   const listaProjetosNome=projetos.map(
     (c,i)=>
       <li key={i}>{c.nome}</li>
@@ -52,9 +60,13 @@ const Strateegia = () => {
 
           const listaProjetosPessoas=projetos.map(
             (c,i)=>
-              <li key={i}>{c.pessoas}</li>
+              <li key={i}>{c.pessoas} </li>
               )
 
+              const listaProjetosDots=projetos.map(
+                (c,i)=>
+                  <li key={i}><BsThreeDots /></li>
+                  )
   const relatorios=[['Relatorio 1', 'conclusão','escola figital'],['Relatorio parcial', 'parcial','banco figital'],['MVS', 'parcial','habilitação figital'],['Relatorio final', 'conclusão','empresa figital']];
   
 
@@ -182,6 +194,9 @@ const Strateegia = () => {
         <ul className="listaPessoas">
         {listaProjetosPessoas}
         </ul> 
+        <ul className="dots">
+        {listaProjetosDots}
+        </ul>
         </div>
         
           
