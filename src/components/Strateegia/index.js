@@ -119,88 +119,94 @@ const Strateegia = () => {
           <Navbar2 />
           <Wellcome username={user.name}/>
       </div>
-      <div nameClass="inicialBoxes">
-        <div className="box1">
-          <div className="textBox1">
-            <div className="title1"><h1>32</h1></div>
-            <div className="subtitle1"><p>projetos ativos</p></div>
-          </div>
-        </div>
-        <div className="box2">
-          <div className="textBox2">
-            <div className="title2"><h1>45</h1></div>
-            <div className="subtitle2"><p>projetos concluídos</p></div>
-          </div>
-        </div>
-        <div className="box3">
-          <div className="textBox3">
-            <div className="title3"><h1>432</h1></div>
-            <div className="subtitle3"><p>participantes</p></div>
-          </div>
-        </div>
-        <div className="box4">
-          <div className="textBox4">
-            <div className="title4"><h1>56</h1></div>
-            <div className="subtitle4"><p>relatórios gerados</p></div>
-          </div>
-        </div>
+      <div className="wrapperBoxes">
+          <article className="box1">
+            <div className="textBox1">
+              <div className="title1"><h1>32</h1></div>
+              <div className="subtitle1"><p>projetos ativos</p></div>
+            </div>
+          </article>
+          <article className="box2">
+            <div className="textBox2">
+              <div className="title2"><h1>45</h1></div>
+              <div className="subtitle2"><p>projetos concluídos</p></div>
+            </div>
+          </article>
+          <article className="box3">
+            <div className="textBox3">
+              <div className="title3"><h1>432</h1></div>
+              <div className="subtitle3"><p>participantes</p></div>
+            </div>
+          </article>
+          <article className="box4">
+            <div className="textBox4">
+              <div className="title4"><h1>56</h1></div>
+              <div className="subtitle4"><p>relatórios gerados</p></div>
+            </div>
+          </article>
       </div>
 
     
        
-         <div className="comparacao">
-         
-         
-           <div className="containerLeft">
-            <h3>Comparação rápida  de índices</h3>
-            <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
-            <h3><br/> Jornada 1</h3>
-            <select className="dropdown">
-              <option value="Project 1">Project 1</option>
-              <option value="Project 2">Project 2</option>
-              <option value="Project 3">Project 3</option>
-            </select>
-            <h3>Jornada 2</h3>
-            <select className="dropdown">
-              <option value="Project 1">Project 1</option>
-              <option value="Project 2">Project 2</option>
-              <option value="Project 3">Project 3</option>
-            </select>
+         <div className="container2">
+
+
+         <div className="contentSection">
+                 <div className="contentTitle"><h3>Projetos</h3></div>
+              <div className="contentWrapper">
+           
+                <ul className="listaProjetos">
+                 {listaProjetosNome}
+                </ul>
+           
+           
+           
+              </div>
+            </div>
+
+           <div className="comparacao">
+           
+           
+             <div className="containerLeft">
+              <h3>Comparação rápida  de índices</h3>
+              <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
+              <h3><br/> Jornada 1</h3>
+              <select className="dropdown">
+                <option value="Project 1">Project 1</option>
+                <option value="Project 2">Project 2</option>
+                <option value="Project 3">Project 3</option>
+              </select>
+              <h3>Jornada 2</h3>
+              <select className="dropdown">
+                <option value="Project 1">Project 1</option>
+                <option value="Project 2">Project 2</option>
+                <option value="Project 3">Project 3</option>
+              </select>
+             </div>
+            <div className="containerRight">
+              {/*<div className="chart1">
+              <BarChart />
+              <p>Pessoas ativas</p>
+              </div>
+           
+              <div className="chart2">
+              <BarChart />
+              <p>Engajamento nas questões</p>
+              </div>
+              <div className="chart3" >
+              <BarChart />
+              <p>Engajamento nos debates</p>
+              </div>
+           
+           
+              <div className="chart4">
+              <BarChart />
+              <p>Engajamento divergências</p>
+             </div> */}
+            </div>
            </div>
-          <div className="containerRight">
-            {/*<div className="chart1">
-            <BarChart />
-            <p>Pessoas ativas</p>
-            </div>
-         
-            <div className="chart2">
-            <BarChart />
-            <p>Engajamento nas questões</p>
-            </div>
-            <div className="chart3" >
-            <BarChart />
-            <p>Engajamento nos debates</p>
-            </div>
-         
-         
-            <div className="chart4">
-            <BarChart />
-            <p>Engajamento divergências</p>
-  </div> */}
-          </div>
-         </div>
-               <div className="contentSection">
-               <div className="contentTitle"><h3>Projetos</h3></div>
-               <div className="contentWrapper">
-          <div className="exibitContent">
-          <ul className="listaProjetos">
-            {listaProjetosNome}
-          </ul>
-          </div>
-         
             
-               </div>
-               </div>
+         </div>
       
        
       </div>

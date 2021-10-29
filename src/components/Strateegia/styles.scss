@@ -1,15 +1,21 @@
 //Sessão de dados iniciais e boxes display
 //DAQUI PARA BAIXO É NECESSARIO FAZER A RESPONSIVIDADE
-@media only screen and (min-width : 720px)
+@media only screen and (min-width : 720px) and (max-width :1366px)
 {
-.inicialBoxes {
-  display:flex;
-  position: relative;
-  width: 100%;
-  flex-direction: row; 
 
+  .Wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+.wrapperBoxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-
 
 
 .dropdown {
@@ -17,154 +23,165 @@
   font-size: 14px;
 }
 
+
+
 .box1 {
-  height: 20%;
-  width:10%;
+  height: 14vh;
   background-color:white;
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
+  margin: 2vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
 }
 
 .box2 {
-  height: 20%;
-  width:10%;
+  height: 14vh;
   background-color:white;
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
+  margin: 2vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 .box3 {
-  height: 20%;
-  width:10%;
+  height: 14vh;
   background-color:white;
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
+  margin: 2vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 .box4 {
-  height: 20%;
-  width:10%;
+  height: 14vh;
   background-color:white;
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
+  margin: 2vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
-/*
-.box1 {
-  border-radius: 10px;
-  margin-left: 16.5vh;
-  background-color: #FE6E9F;
-  display: inline-block;
-  width: 30vh;
-  height: 16vh;
-  margin-top: 2vh;
-}
+
 
 .title1 {
   padding-top:1vh;
-  font-size: 20px;
+  font-size: 1.3rem;
   width:100%;
   display:flex;
   align-items: center;
   justify-content: center;  
-  color: #186FBB;
+  color: black;
 }
 
 
 .subtitle1 {
-  font-size: 18px;
-  color: #186FBB;
+  font-size: 1rem;
+  color: black;
   text-align: center;
   font-weight: bold;
 }
 
 
-.box2 {  
-  border-radius: 10px;
-  margin-left: 5vh;
-  background-color: #393EA0;
-  display: inline-block;
-  width: 30vh;
-  height: 16vh;
-}
 
 .title2 {
   padding-top:1vh;
-  font-size: 20px;
+  font-size: 1.3rem;
   width:100%;
   display:flex;
   align-items: center;
   justify-content: center;  
-  color: #52C7AA;
+  color: black;
 }
 
 
 .subtitle2 {
-  font-size: 17px;
-  color: #52C7AA;
+  font-size: 1rem;
+  color: black;
   text-align: center;
   font-weight: bold;
 }
 
-.box3 {
-  border-radius: 10px;
-  margin-left: 5vh;
-  background-color: #186FBB;
-  display: inline-block;
-  width: 30vh;
-  height: 16vh;
-}
+
 
 .title3 {
   padding-top:1vh;
-  font-size: 20px;
+  font-size: 1.3rem;
   width:100%;
   display:flex;
   align-items: center;
   justify-content: center;  
-  color: #6AC460;
+  color: black;
 }
 
 
 .subtitle3 {
-  font-size: 18px;
-  color: #6AC460;
+  font-size: 1rem;
+  color: black;
   text-align: center;
   font-weight: bold;
 }
 
-.box4 {
-  border-radius: 10px;
-  margin-left: 5vh;
-  background-color: #52C7AA;
-  display: inline-block;
-  width: 30vh;
-  height: 16vh;
-}
 
 .title4 {
   padding-top:1vh;
-  font-size: 20px;
+  font-size: 1.3rem;
   width:100%;
   display:flex;
   align-items: center;
   justify-content: center;
-  color: #393EA0;  
+  color: black; 
 }
 
 
 .subtitle4 {
-  font-size: 17px;
-  color: #393EA0;
+  font-size: 1rem;
+  color: black;
   text-align: center;
   font-weight: bold;
 }
-*/
+
+.container2 {
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+.contentSection {
+background: #FFFFFF;
+box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+overflow:auto; 
+height: 40vh;
+margin-right: 5vh;
+}
+
+.containerLeft{
+  height: 40vh;
+  width: 150vh;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+
+}
+
 //Sessão de comparações rapidas de indice
 
 
-
+/*
 .comparacao {
   margin-top: 2vh;
   margin-left: 38%;
@@ -330,55 +347,18 @@ justify-content: left;
 .ulItem {
   margin-bottom: 1vh;
 }
-
+*/
 //DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE
 
 
-  .Wrapper {
-    font-family: Rubik;
-    display: flex;
-    flex-direction: column;
-    align-items: row;
-    position: relative;
-    
-  }
-//}
 
-.firstLine {
-  margin-top: 4%;
-  width:58.5%;
-  display: column;
-  flex-direction: column;
-  margin-left: 11.5%;
-}
 
 .WrapperNav {
   z-index: 999;
   height:10%;
 }
 
-.introTxt {
-  display: flex;
-  flex-direction: row;
-  
-}
 
-.image1{
-  max-height: 300px;
-  max-width: 300px;
-  margin-top: 5%;
-  z-index: 100;
-}
-
-.togle{
-  color: black;
-  background-color: #0067AC;
-  display: flex;
-  padding: 5px 10px 5px 10px;
-  outline: gray;
-  margin-left: 20%;
-
-}
 }
 
 @media screen and (max-width: 720px) {
