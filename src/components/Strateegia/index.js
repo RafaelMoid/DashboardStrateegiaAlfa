@@ -152,7 +152,7 @@ const Strateegia = () => {
 
 
          <div className="contentSection">
-                 <div className="contentTitle"><h3>Projetos</h3></div>
+                 <div className="contentTitle"><h3>Páginas das jornadas</h3></div>
               <div className="contentWrapper">
            
                 <ul className="listaProjetos">

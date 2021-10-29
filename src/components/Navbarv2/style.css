@@ -1,6 +1,5 @@
 .navbar {
-    background-color:#D70858 ;
-    height:50px;
+    width:5vh;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -10,12 +9,7 @@
 
 
 
-.menu-bars {
-    margin-left: 2rem;
-    font-size: 2rem;
-    background: none;
-    color: white;
-}
+
 
 .nav-menu {
     background-color:#D70858 ;
@@ -25,7 +19,7 @@
     justify-content: center;
     position: fixed;
     top: 0;
-    left: -30vh;
+    left: -31vh;
     transition: 650ms;
     z-index: 999;
 }
@@ -42,6 +36,7 @@
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+    width: 77%;
 }
 
 .nav-text a {
@@ -57,9 +52,6 @@
 
 }
 
-.nav-text a:hover {
-    background-color: #60a3cf;
-}
 
 .nav-menu-items {
     width:100%;

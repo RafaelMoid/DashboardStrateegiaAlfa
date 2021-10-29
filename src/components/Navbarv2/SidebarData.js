@@ -27,7 +27,7 @@ export const SidebarData = [
     }, */
 
     {
-        title: ' Ferramenta de comparação',
+        title: ' Comparações avançadas',
         path: '/Comparacao',
         icon: <AiOutlineBarChart />,
         cName: 'nav-text'
@@ -41,7 +41,7 @@ export const SidebarData = [
     },*/
 
     {
-        title: ' Sair',
+        title: ' Fazer logout',
         path: '/',
         icon: <FiIcons.FiLogOut />,
         cName: 'nav-text',
