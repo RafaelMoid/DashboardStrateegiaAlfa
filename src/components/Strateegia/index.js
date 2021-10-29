@@ -33,24 +33,24 @@ const Strateegia = () => {
   //usando o indece posso chamar o array com todos os seus subarrays e dados inclusos
   //é necessario criar state e atribuir logica de true e false para on click em botões da linha 155 do contentTitle
   const projetos=[
-    {nome:"Projeto 1", status:"ativo", pessoas:"25 participantes"},
-    {nome:"Projeto 2", status:"concluido", pessoas:"125 participantes"},
-    {nome:"Projeto 3", status:"ativo", pessoas:"22 participantes"},
-    {nome:"Projeto 4", status:"ativo", pessoas:"48 participantes"},
-    {nome:"Projeto 5", status:"ativo", pessoas:"87 participantes"},
-    {nome:"Projeto 6", status:"concluido", pessoas:"35 participantes"},
-    {nome:"Projeto 7", status:"concluido", pessoas:"39 participantes"},
-    {nome:"Projeto 8", status:"concluido", pessoas:"42 participantes"},
-    {nome:"Projeto 9", status:"concluido", pessoas:"12 participantes"},
-    {nome:"Projeto 10", status:"concluido", pessoas:"0 participantes"},
-    {nome:"Projeto 11", status:"concluido", pessoas:"135 participantes"},
-    {nome:"Projeto 12", status:"concluido", pessoas:"15 participantes"},
-    {nome:"Projeto 13", status:"concluido", pessoas:"78 participantes"},
-    {nome:"Projeto 14", status:"concluido", pessoas:"2 participantes"},
+    {nome:"Strateegia Studio", status:"ativo", pessoas:"25 participantes"},
+    {nome:"Projeto Moura fácil", status:"concluido", pessoas:"125 participantes"},
+    {nome:"TreeloStudio", status:"ativo", pessoas:"22 participantes"},
+    {nome:"Projeto Rafa é desenrolado", status:"ativo", pessoas:"48 participantes"},
+    {nome:"Projeto Nath é uma artista", status:"ativo", pessoas:"87 participantes"},
+    {nome:"Projeto Matheus é um mago", status:"concluido", pessoas:"35 participantes"},
+    {nome:"Projeto Akira", status:"concluido", pessoas:"39 participantes"},
+    {nome:"Godzilla", status:"concluido", pessoas:"42 participantes"},
+    {nome:"Sem criatividade 9", status:"concluido", pessoas:"12 participantes"},
+    {nome:"Sem criatividade 10", status:"concluido", pessoas:"0 participantes"},
+    {nome:"Sem criatividade 11", status:"concluido", pessoas:"135 participantes"},
+    {nome:"Sem criatividade 12", status:"concluido", pessoas:"15 participantes"},
+    {nome:"Sem criatividade 13", status:"concluido", pessoas:"78 participantes"},
+    {nome:"Sem criatividade 14", status:"concluido", pessoas:"2 participantes"},
   ];
   const listaProjetosNome=projetos.map(
     (c,i)=>
-      <li key={i}>{c.nome}</li>
+      <li key={i} className="ulItem">{c.nome}</li>
       )
 
       const listaProjetosStatus=projetos.map(
@@ -121,88 +121,87 @@ const Strateegia = () => {
       </div>
       <div nameClass="inicialBoxes">
         <div className="box1">
-          <div className="title1"><h1>32</h1></div>
-          <div className="subtitle1"><p>projetos ativos</p></div>
+          <div className="textBox1">
+            <div className="title1"><h1>32</h1></div>
+            <div className="subtitle1"><p>projetos ativos</p></div>
+          </div>
         </div>
         <div className="box2">
-          <div className="title2"><h1>45</h1></div>
-          <div className="subtitle2"><p>projetos concluídos</p></div>
+          <div className="textBox2">
+            <div className="title2"><h1>45</h1></div>
+            <div className="subtitle2"><p>projetos concluídos</p></div>
+          </div>
         </div>
         <div className="box3">
-          <div className="title3"><h1>432</h1></div>
-          <div className="subtitle3"><p>participantes</p></div>
+          <div className="textBox3">
+            <div className="title3"><h1>432</h1></div>
+            <div className="subtitle3"><p>participantes</p></div>
+          </div>
         </div>
         <div className="box4">
-          <div className="title4"><h1>56</h1></div>
-          <div className="subtitle4"><p>relatórios gerados</p></div>
+          <div className="textBox4">
+            <div className="title4"><h1>56</h1></div>
+            <div className="subtitle4"><p>relatórios gerados</p></div>
+          </div>
         </div>
       </div>
 
     
-       <div className="comparacao">
+       
+         <div className="comparacao">
          
-         <div className="containerLeft">
-          <h2>Comparação rápida  de índices</h2>
-          <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
-          <h3><br/> Jornada 1</h3>
-          <select className="dropdown">
-            <option value="Project 1">Project 1</option>
-            <option value="Project 2">Project 2</option>
-            <option value="Project 3">Project 3</option>
-          </select>
-          <h3>Jornada 2</h3>
-          <select className="dropdown">
-            <option value="Project 1">Project 1</option>
-            <option value="Project 2">Project 2</option>
-            <option value="Project 3">Project 3</option>
-          </select>
+         
+           <div className="containerLeft">
+            <h3>Comparação rápida  de índices</h3>
+            <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
+            <h3><br/> Jornada 1</h3>
+            <select className="dropdown">
+              <option value="Project 1">Project 1</option>
+              <option value="Project 2">Project 2</option>
+              <option value="Project 3">Project 3</option>
+            </select>
+            <h3>Jornada 2</h3>
+            <select className="dropdown">
+              <option value="Project 1">Project 1</option>
+              <option value="Project 2">Project 2</option>
+              <option value="Project 3">Project 3</option>
+            </select>
+           </div>
+          <div className="containerRight">
+            {/*<div className="chart1">
+            <BarChart />
+            <p>Pessoas ativas</p>
+            </div>
+         
+            <div className="chart2">
+            <BarChart />
+            <p>Engajamento nas questões</p>
+            </div>
+            <div className="chart3" >
+            <BarChart />
+            <p>Engajamento nos debates</p>
+            </div>
+         
+         
+            <div className="chart4">
+            <BarChart />
+            <p>Engajamento divergências</p>
+  </div> */}
+          </div>
          </div>
-
-        <div className="containerRight">
-          <div className="chart1">
-          <BarChart />
-          <p>Pessoas ativas</p>
+               <div className="contentSection">
+               <div className="contentTitle"><h3>Projetos</h3></div>
+               <div className="contentWrapper">
+          <div className="exibitContent">
+          <ul className="listaProjetos">
+            {listaProjetosNome}
+          </ul>
           </div>
-          
-          <div className="chart2">
-          <BarChart />
-          <p>Engajamento nas questões</p>
-          </div>
-
-          <div className="chart3" >
-          <BarChart />
-          <p>Engajamento nos debates</p>
-          </div>
-
-          <div className="chart4">
-          <BarChart />
-          <p>Engajamento divergências</p>
-          </div>
-
-        </div>
-       </div>
-      <div className="contentSection">
-      <div className="contentTitle"><button>Projetos</button><button>Relatórios</button></div>
-      <div className="contentWrapper">
-        <div className="exibitContent">
-        <ul className="listaProjetos">
-          {listaProjetosNome}
-        </ul>
-        <ul className="listaStatus">
-        {listaProjetosStatus}
-        </ul>
-        <ul className="listaPessoas">
-        {listaProjetosPessoas}
-        </ul> 
-        <ul className="dots">
-        {listaProjetosDots}
-        </ul>
-        </div>
-        
-          
-      </div>
-      <button className="btnRelatorio">criar relatório</button>
-      </div>
+         
+            
+               </div>
+               </div>
+      
        
       </div>
     

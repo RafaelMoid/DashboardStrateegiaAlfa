@@ -1,21 +1,30 @@
+.container {
+    display:flex;
+    margin-left:16vh;
+        margin-top: 8vh;
+}
+
+
+
 .wellcome {
+    justify-content: flex-start;
     position: relative;
     font-weight: 400;
-    color:#0067AC ;
-    margin-left: 16vh;
-    margin-top: 5vh;
+    color:#474143 ;
+    margin-top: 2vh;
+    margin-left: 5vh;
     
 }
 
 .wellcome h3 {
-    font-size: 40px;
+    font-size: 30px;
     display: inline-block;
     vertical-align: top;
     position: relative;
 }
 
 .wellcome p {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .ola{
@@ -35,7 +44,7 @@
     .wellcome {
         position: relative;
         font-weight: 400;
-        color:#0067AC ;
+        color:black ;
         
     }
     
@@ -52,13 +61,5 @@
     }
     
     
-    .linha {
-    
-    width: 62%;
-    height: 0px;
-    left: 32.1%;
-    top: 20%;
-    
-    border: 0.1px solid #52B9A7;
-    }
+  
 }

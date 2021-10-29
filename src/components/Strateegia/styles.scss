@@ -1,10 +1,12 @@
 //Sessão de dados iniciais e boxes display
 //DAQUI PARA BAIXO É NECESSARIO FAZER A RESPONSIVIDADE
-@media only screen and (min-width : 720px) and (max-width : 1366px)
+@media only screen and (min-width : 720px)
 {
 .inicialBoxes {
+  display:flex;
   position: relative;
-width: 100%;
+  width: 100%;
+  flex-direction: row; 
 
 }
 
@@ -16,18 +18,52 @@ width: 100%;
 }
 
 .box1 {
+  height: 20%;
+  width:10%;
+  background-color:white;
+  color:black;
+  box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
+  border-radius: 12px;
+}
+
+.box2 {
+  height: 20%;
+  width:10%;
+  background-color:white;
+  color:black;
+  box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
+  border-radius: 12px;
+}
+.box3 {
+  height: 20%;
+  width:10%;
+  background-color:white;
+  color:black;
+  box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
+  border-radius: 12px;
+}
+.box4 {
+  height: 20%;
+  width:10%;
+  background-color:white;
+  color:black;
+  box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
+  border-radius: 12px;
+}
+/*
+.box1 {
   border-radius: 10px;
-  margin-left: 18vh;
+  margin-left: 16.5vh;
   background-color: #FE6E9F;
   display: inline-block;
   width: 30vh;
-  height: 20vh;
-  margin-top: 5vh;
+  height: 16vh;
+  margin-top: 2vh;
 }
 
 .title1 {
   padding-top:1vh;
-  font-size: 24px;
+  font-size: 20px;
   width:100%;
   display:flex;
   align-items: center;
@@ -50,12 +86,12 @@ width: 100%;
   background-color: #393EA0;
   display: inline-block;
   width: 30vh;
-  height: 20vh;
+  height: 16vh;
 }
 
 .title2 {
   padding-top:1vh;
-  font-size: 24px;
+  font-size: 20px;
   width:100%;
   display:flex;
   align-items: center;
@@ -77,12 +113,12 @@ width: 100%;
   background-color: #186FBB;
   display: inline-block;
   width: 30vh;
-  height: 20vh;
+  height: 16vh;
 }
 
 .title3 {
   padding-top:1vh;
-  font-size: 24px;
+  font-size: 20px;
   width:100%;
   display:flex;
   align-items: center;
@@ -104,12 +140,12 @@ width: 100%;
   background-color: #52C7AA;
   display: inline-block;
   width: 30vh;
-  height: 20vh;
+  height: 16vh;
 }
 
 .title4 {
   padding-top:1vh;
-  font-size: 24px;
+  font-size: 20px;
   width:100%;
   display:flex;
   align-items: center;
@@ -124,14 +160,17 @@ width: 100%;
   text-align: center;
   font-weight: bold;
 }
-
+*/
 //Sessão de comparações rapidas de indice
 
+
+
 .comparacao {
-  margin-top: 10vh;
-  margin-left: 15vh;
-  margin-right: 15vh;
-  height: 50vh;
+  margin-top: 2vh;
+  margin-left: 38%;
+  margin-right: 5.7%;
+  height: 55vh;
+  width: 120vh;
   border: 3px solid rgb(214, 214, 214);
   border-radius:15px;
   position: relative;
@@ -139,12 +178,19 @@ width: 100%;
 }
 
 .containerLeft {
-  margin-top: 5vh;
-  margin-left: 5vh;
+  margin-top: 8vh;
+  margin-left:8vh;
   margin-bottom: 5vh;
 }
 
+.containerLeft > h3 {
+  top: 5px;
+  font-size:18px;
+}
 
+.containerLeft > p {
+  font-size:14px;
+}
 
 .containerRight {
   position: absolute ;
@@ -155,44 +201,73 @@ width: 100%;
 
 .chart1{
   position: absolute ;
-  bottom: 0;
-  right: 25vh;
-  display: inline;
-  width:15vh;
+  bottom: 2vh;
+  right: 8vh;
+}
+
+.chart1 > p {
+  font-size:14px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 .chart2{
   position: absolute ;
-  bottom: 0;
-  right: 50vh;
-  display: inline;}
+  bottom: 26vh;
+  right: 8vh;}
+
+  .chart2 > p {
+    font-size:14px;
+    font-weight: bolder;
+    text-align: center;
+  }
 
 .chart3{position: absolute ;
   bottom: 0;
-  right: 75vh;
+  right: 38vh;
   display: inline;}
+
+  .chart3 > p {
+    font-size:14px;
+    font-weight: bolder;
+    text-align: center;
+  }
 
 .chart4{
   position: absolute ;
-  bottom: 0;
-  right: 100vh;
+  bottom: 26vh;
+  right: 38vh;
   display: inline;}
 
+  .chart4 > p {
+    font-size:14px;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+.contentSection {
+  margin-top: -56vh;
+  height: 10vh;
+}
+
   .contentWrapper {
-  width:140vh;
-  margin-left: 15vh;
-  margin-right: 15vh;
-  margin-bottom: 5vh;
+  width:26.2%;
+  margin-left: 18vh;
+  margin-right: 60.8%;
   height: 50vh;
   border: 3px rgb(217, 220, 223);
   border-radius:15px;
   overflow:auto; 
+  top: 0 ;
+  padding: 5px 10px 10px 10px;
+  
+  border: 3px solid rgb(214, 214, 214);
 }
   
 .contentTitle {
   display: inline-block;
-  margin-top: 10vh;
-  margin-left: 15vh;
+  margin-left: 20vh;
+  text-decoration: underline;
 }
 
 .contentTitle > button {
@@ -212,7 +287,7 @@ width: 100%;
 }
 
 .btnRelatorio {
-  font-size:18px;
+  font-size:14px;
   position: absolute;
   right:20vh;
   bottom: 10vh;
@@ -235,59 +310,25 @@ width: 100%;
 }
 
 .exibitContent {
-  align-items: center;
+  align-items: left;
 display: flex;
 flex-direction: row;
-flex-wrap: wrap;
 justify-content: left;
 }
 
 .listaProjetos {
-  margin-top: 2vh;
-  margin-left: 7vh;
+  margin-top: 1vh;
+  margin-left:2vh;
   list-style: none;
   font-weight: bold;
-  font-size:18px;
+  font-size:14px;
   word-spacing: 10px;
   font-family: monospace;
-  text-align: center;
-  margin-right: 30vh;
+  text-align: left;
 }
 
-.listaStatus {
-  margin-top: 2vh;
-  margin-left: 7vh;
-  list-style: none;
-  font-weight: bold;
-  font-size:18px;
-  word-spacing: 10px;
-  font-family: monospace;
-  text-align: center;
-  margin-right: 10vh;
-}
-
-.listaPessoas {
-  margin-top: 2vh;
-  margin-left: 7vh;
-  list-style: none;
-  font-weight: bold;
-  font-size:18px;
-  word-spacing: 10px;
-  font-family: monospace;
-  text-align: center;
-  margin-right: 10vh;
-}
-
-.dots {
-  margin-top: 2vh;
-  margin-left: 7vh;
-  list-style: none;
-  font-weight: bold;
-  font-size:18px;
-  word-spacing: 10px;
-  font-family: monospace;
-  text-align: right;
-  margin-right: 5vh;
+.ulItem {
+  margin-bottom: 1vh;
 }
 
 //DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE

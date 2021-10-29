@@ -58,7 +58,7 @@
         }
       }
       button {
-        background-color: #0067AC;
+        background-color: #D70858;
         color: #fff;
         width: 50%;
         margin: auto;
@@ -69,7 +69,7 @@
         cursor: pointer;
         transition: 0.5s;
         &:hover {
-          background-color: #6badeb;
+          background-color: #D70858;
         }
       }
     }
@@ -85,17 +85,20 @@
     .informative-wrapper {
       display: flex;
       flex-direction: column;
-      background-color: #0067AC;
+      background-color: #D70858;
+            height: 100vh;
+            width:80vh;
       
       .informative {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         height: 100%;
+        align-items: center;
         
         .informative-texts {
-          text-align: unset;
-          margin: 10% 0 19.2% 25%;
+          text-align: center;
+          margin-bottom: 15vh;
           
           h2 {
             font-size: 52px;

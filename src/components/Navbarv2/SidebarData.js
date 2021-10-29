@@ -7,38 +7,38 @@ import { ImProfile } from "react-icons/im";
 export const SidebarData = [
     {
         title: ' Dashboard',
-        path: '//https://app.strateegia.digital/signin',
+        path: '',
         icon: <AiFillHome />,
         cName: 'nav-text'
     },
 
     {
         title: ' Projetos',
-        path: '//https://calendar.google.com/',
+        path: '/Projetos',
         icon: <AiOutlineProject />,
         cName: 'nav-text'
     },
 
-    {
+   /* {
         title: ' Relatórios',
         path: '/Desenvolvedores',
         icon: <HiDocumentReport />,
         cName: 'nav-text'
-    },
+    }, */
 
     {
         title: ' Ferramenta de comparação',
-        path: '/Desenvolvedores',
+        path: '/Comparacao',
         icon: <AiOutlineBarChart />,
         cName: 'nav-text'
     },
 
-    {
+   /* {
         title: ' Meu perfil',
         path: '/Desenvolvedores',
         icon: <ImProfile />,
         cName: 'nav-text'
-    },
+    },*/
 
     {
         title: ' Sair',
