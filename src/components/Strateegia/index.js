@@ -155,11 +155,20 @@ const Strateegia = () => {
                  <div className="contentTitle"><h3>Páginas das jornadas</h3></div>
               <div className="contentWrapper">
            
+
+                
+                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
+                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
+                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
+
                 <ul className="listaProjetos">
                  {listaProjetosNome}
                 </ul>
            
            
+                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
+                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
+                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
            
               </div>
             </div>

@@ -41,3 +41,15 @@
 
 }
 
+/*
+AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
+*/
+.listaProjetos {
+    list-style: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    font-family: monospace;
+    text-align: left;
+  }
+
+  
