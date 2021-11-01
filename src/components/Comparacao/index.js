@@ -43,16 +43,20 @@ function Comparacao() {
 
                 <div className="comp1">
                     <div className="jornadas">
-                    <select className="dropdown">
-                        <option value="Project 1">Project 1</option>
-                         <option value="Project 2">Project 2</option>
-                          <option value="Project 3">Project 3</option>
-                     </select>
-                     <h3>mediana</h3>
+                       <select className="dropdown">
+                            <option value="Project 1">Project 1</option>
+                            <option value="Project 2">Project 2</option>
+                            <option value="Project 3">Project 3</option>
+                        </select>
                      
-                     <ul className="listaProjetos">
-                        {listaProjetosNome}
-                     </ul>
+                        <div className="wrapperProj">
+                            <h3>mediana</h3>
+                             <div>
+                             <ul className="listaProjetos">
+                                {listaProjetosNome}
+                             </ul>
+                                                 </div>
+                        </div>
                     </div>
                     <div div className="compProj">
                      

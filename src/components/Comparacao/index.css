@@ -44,12 +44,42 @@
 /*
 AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 */
+
+.comp1 {
+    display:flex;
+    flex-direction:row;
+    
+}
+
+.wrapperProj{
+    margin-top: 2.5vh;
+}
+
+.dropdown {
+    width: 14.5vw;
+}
+
+.jornadas{
+    height:35vh;
+    width: 10vw;
+    /*Aqui está o conteudo do wrap*/
+
+}
+
 .listaProjetos {
-    list-style: none;
-    font-weight: bold;
-    font-size: 0.85rem;
-    font-family: monospace;
-    text-align: left;
+
+overflow:auto; 
+height:25vh;
+margin-right: 5vh;
+width: 50vh;
+    
+width: 9.6vw;
   }
 
+
+  .compProj {
+      background-color:red;
+      margin-left:4.75vw;
+      width: 70vw;
+  }
   
