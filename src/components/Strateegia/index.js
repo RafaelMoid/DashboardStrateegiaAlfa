@@ -168,42 +168,73 @@ const Strateegia = () => {
            
            
              <div className="containerLeft">
-              <h3>Comparação rápida  de índices</h3>
-              <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
-              <h3><br/> Jornada 1</h3>
-              <select className="dropdown">
-                <option value="Project 1">Project 1</option>
-                <option value="Project 2">Project 2</option>
-                <option value="Project 3">Project 3</option>
-              </select>
-              <h3>Jornada 2</h3>
-              <select className="dropdown">
-                <option value="Project 1">Project 1</option>
-                <option value="Project 2">Project 2</option>
-                <option value="Project 3">Project 3</option>
-              </select>
+              <div className="comp0">
+                <h3>Comparação rápida  de índices</h3>
+                <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
+                <h3><br/> Jornada 1</h3>
+                <select className="dropdown">
+                  <option value="Project 1">Project 1</option>
+                  <option value="Project 2">Project 2</option>
+                  <option value="Project 3">Project 3</option>
+                </select>
+                <h3>Jornada 2</h3>
+                <select className="dropdown">
+                  <option value="Project 1">Project 1</option>
+                  <option value="Project 2">Project 2</option>
+                  <option value="Project 3">Project 3</option>
+                </select>
+                <div><button className="btnComp">Comparar</button></div>
+                <div className="txtComp"><a >Comparações avançadas</a></div>
+              </div>
+
+              <div className="comp1">
+                <h2 className="compTitle">Titulo projeto 1</h2>
+                <div className="element">
+                <img src="group.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                
+                <div className="element">
+                <img src="circledQuestion.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+
+                <div className="element">
+                <img src="squareChat.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+
+                <div className="element">
+                <img src="chatBubbles.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+
+              </div>
+              <div className="comp2">
+              <h2 className="compTitle">Titulo projeto 1</h2>
+                <div className="element">
+                <img src="group.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                
+                <div className="element">
+                <img src="circledQuestion.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+
+                <div className="element">
+                <img src="squareChat.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+
+                <div className="element">
+                <img src="chatBubbles.svg" /><h3>35%</h3>
+                </div>
+                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+              </div>
+              
              </div>
-            <div className="containerRight">
-              {/*<div className="chart1">
-              <BarChart />
-              <p>Pessoas ativas</p>
-              </div>
-           
-              <div className="chart2">
-              <BarChart />
-              <p>Engajamento nas questões</p>
-              </div>
-              <div className="chart3" >
-              <BarChart />
-              <p>Engajamento nos debates</p>
-              </div>
-           
-           
-              <div className="chart4">
-              <BarChart />
-              <p>Engajamento divergências</p>
-             </div> */}
-            </div>
+            
            </div>
             
          </div>

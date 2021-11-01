@@ -32,7 +32,7 @@
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
-  margin: 2vh;
+  margin: 0.5vh;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
-  margin: 2vh;
+  margin: 0.5vh;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
-  margin: 2vh;
+  margin: 0.5vh;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
-  margin: 2vh;
+  margin: 0.5vh;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@
 
 
 .title1 {
-  padding-top:1vh;
+  padding-top:0.5vh;
   font-size: 1.3rem;
   width:100%;
   display:flex;
@@ -159,6 +159,7 @@
   display:flex;
   flex-direction: row;
   justify-content:center;
+  margin-top:2vh;
 }
 
 .contentSection {
@@ -171,19 +172,86 @@ margin-right: 5vh;
 width: 50vh;
 }
 
+
+.comparacao{
+  display:flex;
+  flex-direction:row;
+}
+
 .containerLeft{
   height: 55vh;
   width: 140vh;
   background: #FFFFFF;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+  justify-content:space-between;
+  
+  display:flex;
+  flex-direction:row;
+}
 
+
+.compTitle {
+  
+  justify-content:center;
+}
+
+.comp0{
+  margin:5%;
+}
+.comp1{
+  margin:5%;}
+.comp2{
+  margin:5%;}
+
+
+  
+.elementP > p {
+  font-size: 0.95rem;
+  justify-content:center;
+  margin-top:0.5vh;
+}
+
+.element{
+  display:flex;
+  flex-direction:row;
+    justify-content:center;
+    margin-top:1vh;
+}
+
+.element > img {
+  margin-right: 1vw;
+}
+
+.element > h3{
+  font-weight: bold;
+}
+
+button {
+  background-color: #D70858;
+  color: #fff;
+  width: 50%;
+  margin-top: 1vh;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 3px #efefef;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background-color: #D70858;
+  }
+}
+
+.txtComp {
+  margin-top:1vh;
 }
 
 .contentTitle {
   color:#D70858;
   font-size: 1rem;
   text-align: center;
+  
 }
 
 .exibitContent {
