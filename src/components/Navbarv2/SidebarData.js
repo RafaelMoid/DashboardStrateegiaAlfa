@@ -3,8 +3,18 @@ import {AiOutlineBarChart, AiOutlineProject, AiFillHome } from "react-icons/ai";
 import * as FiIcons from "react-icons/fi";
 import { HiDocumentReport } from "react-icons/hi";
 import { ImProfile } from "react-icons/im";
+import { FiHexagon } from "react-icons/fi";
+
 
 export const SidebarData = [
+    
+    {
+        title: '',
+        path: '',
+        icon: <FiHexagon size={45} />,
+        cName: 'icon'
+    },
+    
     {
         title: ' Dashboard',
         path: '',
@@ -33,6 +43,8 @@ export const SidebarData = [
         cName: 'nav-text'
     },
 
+
+
    /* {
         title: ' Meu perfil',
         path: '/Desenvolvedores',
@@ -47,4 +59,6 @@ export const SidebarData = [
         cName: 'nav-text',
         click: '"handleLogout"'
     }
+
+
 ]

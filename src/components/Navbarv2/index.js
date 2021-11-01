@@ -36,8 +36,8 @@ const Navbar2 = ({ username }) => {
         </Link>
         </div>
        
-      
       <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+          
           <ul className='nav-menu-items' onClick={showSidebar}>
               <li className="navbar-toogle">
                   <Link to="#" className='menu-bars'>
@@ -60,6 +60,7 @@ const Navbar2 = ({ username }) => {
           </ul>
       </nav>
       </IconContext.Provider>
+      
     </>
   );
 };
