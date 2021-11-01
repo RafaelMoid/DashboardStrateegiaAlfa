@@ -1,0 +1,43 @@
+.comparacao {
+        display:flex;
+    flex-direction:column;
+}
+
+.wrapper {
+    top:21vh;
+    display:flex;
+    flex-direction:column;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.containerTxt {
+    margin-top: 4vh;
+    justify-content:start;
+    top:0;
+    width: 100vw;
+ 
+}
+
+.containerTxt > p {
+    margin-left: 10vw;
+    color: #B4B4B4;
+    width: 100vw;
+
+}
+
+.containerTxt > h3 {
+    margin-left: 10vw;
+    color: #686868;
+    width: 100vw;
+
+}
+
+.containerTxt > h1 {
+    margin-left: 10vw;
+    color: #545151;
+    width: 100vw;
+
+}
+
