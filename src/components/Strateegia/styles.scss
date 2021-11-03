@@ -158,7 +158,7 @@
 .container2 {
   display:flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content:space-around;
   margin-top:2vh;
 }
 
@@ -166,11 +166,11 @@
 background: #FFFFFF;
 box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 12px;
-overflow:auto; 
 height: 55vh;
-margin-right: 5vh;
-width: 50vh;
+width: 18vw;
+margin-left: 8vw;
 }
+
 
 
 .comparacao{
@@ -180,7 +180,7 @@ width: 50vh;
 
 .containerLeft{
   height: 55vh;
-  width: 140vh;
+  width: 70vw;
   background: #FFFFFF;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
@@ -192,24 +192,24 @@ width: 50vh;
 
 
 .compTitle {
-  
   justify-content:center;
 }
 
 .comp0{
-  margin:5%;
+  margin:1vw;
 }
-.comp1{
-  margin:5%;}
-.comp2{
-  margin:5%;}
 
+.comp2{
+  margin:6vh 6vw;}
+
+.comp2 > h2 {
+  font-size:1rem;
+}
 
   
 .elementP > p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   justify-content:center;
-  margin-top:0.5vh;
 }
 
 .element{
@@ -248,30 +248,38 @@ button {
 }
 
 .contentTitle {
-  color:#D70858;
   font-size: 1rem;
   text-align: center;
-  
+  justify-content: center;
+  color: #D70858;
 }
 
 .exibitContent {
-  align-items: left;
+align-items: left;
 display: flex;
 flex-direction: row;
 justify-content: left;
 }
 
+
+
+
 .listaProjetos {
-  list-style: none;
-  font-weight: bold;
-  font-size: 0.85rem;
+  list-style: lower-roman;
+  font-size: 0.95rem;
   font-family: monospace;
-  text-align: left;
+}
+
+.listaProjetos > ul {
+
+  margin: 5rem;
+  height: 50vh;
+  width: 100%;
 }
 
 .ulItem {
-  margin: 1.5vh;
-  text-align: center;
+  margin-top: 1vh;
+  text-align: left;
 }
 
 //DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE

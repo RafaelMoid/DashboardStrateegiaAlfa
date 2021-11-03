@@ -53,20 +53,7 @@ const Strateegia = () => {
       <li key={i} className="ulItem">{c.nome}</li>
       )
 
-      const listaProjetosStatus=projetos.map(
-        (c,i)=>
-          <li key={i}>{c.status}</li>
-          )
-
-          const listaProjetosPessoas=projetos.map(
-            (c,i)=>
-              <li key={i}>{c.pessoas} </li>
-              )
-
-              const listaProjetosDots=projetos.map(
-                (c,i)=>
-                  <li key={i}><BsThreeDots /></li>
-                  )
+     
   const relatorios=[['Relatorio 1', 'conclusão','escola figital'],['Relatorio parcial', 'parcial','banco figital'],['MVS', 'parcial','habilitação figital'],['Relatorio final', 'conclusão','empresa figital']];
   
 
@@ -153,24 +140,11 @@ const Strateegia = () => {
 
          <div className="contentSection">
                  <div className="contentTitle"><h3>Páginas das jornadas</h3></div>
-              <div className="contentWrapper">
-           
-
-                
-                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
-                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
-                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
-
+              
                 <ul className="listaProjetos">
                  {listaProjetosNome}
                 </ul>
-           
-           
-                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
-                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
-                {/* AQUI ESTÁ A FORMA DE CHAMAR A LISTA MOCKADA LÁ ENCIMA */}
-           
-              </div>
+              
             </div>
 
            <div className="comparacao">
@@ -196,28 +170,27 @@ const Strateegia = () => {
                 <div className="txtComp"><a >Comparações avançadas</a></div>
               </div>
 
-              <div className="comp1">
-                <h2 className="compTitle">Titulo projeto 1</h2>
+              <div className="comp2">
+              <h2 className="compTitle">Titulo projeto 2</h2>
                 <div className="element">
                 <img src="group.svg" /><h3>35%</h3>
                 </div>
                 <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                 
                 <div className="element">
-                <img src="circledQuestion.svg" /><h3>35%</h3>
+                <img src="circledQuestion.svg" /><h3>15%</h3>
                 </div>
                 <div className="elementP"><p>Pessoas ativas na jornada</p></div>
 
                 <div className="element">
-                <img src="squareChat.svg" /><h3>35%</h3>
+                <img src="squareChat.svg" /><h3>85%</h3>
                 </div>
                 <div className="elementP"><p>Pessoas ativas na jornada</p></div>
 
                 <div className="element">
-                <img src="chatBubbles.svg" /><h3>35%</h3>
+                <img src="chatBubbles.svg" /><h3>147</h3>
                 </div>
                 <div className="elementP"><p>Pessoas ativas na jornada</p></div>
-
               </div>
               <div className="comp2">
               <h2 className="compTitle">Titulo projeto 1</h2>

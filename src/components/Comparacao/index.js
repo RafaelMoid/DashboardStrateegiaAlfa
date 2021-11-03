@@ -8,7 +8,7 @@ function Comparacao() {
     //Saca só, aqui vou inserir uma bibliotera mockada de dados que pode ser trocados por json para
     //de outra origem depois
 
-    const projetos=[
+    const projetos1=[
         {nome:"Strateegia Studio", status:"ativo", pessoas:"25 participantes"},
         {nome:"Projeto Moura fácil", status:"concluido", pessoas:"125 participantes"},
         {nome:"TreeloStudio", status:"ativo", pessoas:"22 participantes"},
@@ -24,7 +24,7 @@ function Comparacao() {
         {nome:"Sem criatividade 13", status:"concluido", pessoas:"78 participantes"},
         {nome:"Sem criatividade 14", status:"concluido", pessoas:"2 participantes"},
       ];
-      const listaProjetosNome=projetos.map(
+      const listaProjetosNome=projetos1.map(
         (c,i)=>
           <li key={i} className="ulItem">{c.nome}</li>
           )
