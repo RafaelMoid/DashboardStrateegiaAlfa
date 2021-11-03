@@ -59,7 +59,7 @@ function Comparacao() {
                         </div>
                     </div>
                     <div div className="compProj">
-                     
+                     <h3>Comparativo por índice dos projetos</h3>
                      
                      
                     

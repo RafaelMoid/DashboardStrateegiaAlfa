@@ -48,11 +48,12 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 .comp1 {
     display:flex;
     flex-direction:row;
+    margin-top: 2.5vh;
     
 }
 
 .wrapperProj{
-    margin-top: 2.5vh;
+    margin-top: 2vh;
 }
 
 .dropdown {
