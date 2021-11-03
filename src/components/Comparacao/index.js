@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar2 from "../Navbarv2";
+import ChartPAtivas from "../Charts/ChartPAtivas";
 import "./index.css";
 
 function Comparacao() {
@@ -59,8 +60,37 @@ function Comparacao() {
                         </div>
                     </div>
                     <div div className="compProj">
-                     <h3>Comparativo por índice dos projetos</h3>
-                     
+                     <h3 className="titleComp">Comparativo por índice dos projetos</h3>
+                     <div className="charts">
+                         <div className="chartsContent">
+                             <ChartPAtivas/>
+                             <div className="iconAndText">
+                                <img src="group.svg" className="iconComp"/>
+                                <p>Pessoas ativas<br/>na jornada</p>
+                             </div>
+                             </div>
+                         <div className="chartsContent">
+                             <ChartPAtivas/>
+                             <div className="iconAndText">
+                                <img src="squareChat.svg" className="iconComp"/>
+                                <p>Pessoas ativas<br/>na jornada</p>
+                             </div>
+                             </div>
+                         <div className="chartsContent">
+                             <ChartPAtivas/>
+                             <div className="iconAndText">
+                                <img src="circledQuestion.svg" className="iconComp"/>
+                                <p>Pessoas ativas<br/>na jornada</p>
+                             </div>
+                             </div>
+                         <div className="chartsContent">
+                             <ChartPAtivas/>
+                             <div className="iconAndText">
+                                <img src="chatBubbles.svg" className="iconComp"/>
+                                <p>Pessoas ativas<br/>na jornada</p>
+                             </div>
+                             </div>
+                         </div>
                      
                     
                     </div>

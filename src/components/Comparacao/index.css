@@ -48,7 +48,8 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 .comp1 {
     display:flex;
     flex-direction:row;
-    margin-top: 2.5vh;
+    margin-top: 3.5vh;
+    margin-left: 6vw;
     
 }
 
@@ -79,8 +80,40 @@ width: 9.6vw;
 
 
   .compProj {
-      background-color:red;
-      margin-left:4.75vw;
+      margin-left:7vw;
       width: 70vw;
+      height: 45vh;
+      display:flex;
+      flex-direction:column;
   }
   
+.titleComp {
+    margin-left: 2.5vw;
+    margin-bottom: 3vh;
+}
+
+  .charts {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+  }
+
+.chartsContent {
+    
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+
+.iconAndText{
+    display: flex;
+    align-items: space-around;
+    
+  }
+
+  .iconAndText > p {
+      margin-left:1vw;
+  }
+
+ 

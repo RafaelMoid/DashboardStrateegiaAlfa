@@ -6,10 +6,9 @@ const ChartPAtivas = () => {
         <div>
             <Bar 
             data={{
-                labels:['Opção 1', 'Opção 2', 'Opção 3', 'Opção 4','Opção 5'],
+                labels:['','','','',''],
                 datasets:[
                     {
-                        label: [],
                     data: [12,19,32,12,189],
                     barThickness: 18,
                     backgroundColor: [
@@ -22,11 +21,9 @@ const ChartPAtivas = () => {
                 },
             ],
             }}
-            height={120}
-            width={107}
-            options={{
-                maintainAspectRatio: false
-            }}
+            height={150}
+            width={170}
+            
             />
         </div>
     )
