@@ -266,17 +266,12 @@ justify-content: left;
 
 
 .listaProjetos {
-  list-style: lower-roman;
-  font-size: 0.95rem;
-  font-family: monospace;
-}
 
-.listaProjetos > ul {
-
-  margin: 5rem;
-  height: 50vh;
-  width: 100%;
-}
+  overflow:auto; 
+  height:49vh;   
+  width: 15vw;
+  margin-left: 2vw;
+    }
 
 .ulItem {
   margin-top: 1vh;

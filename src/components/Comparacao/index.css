@@ -68,14 +68,12 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 
 }
 
-.listaProjetos {
+.listaProjetos2 {
 
 overflow:auto; 
 height:25vh;
-margin-right: 5vh;
-width: 50vh;
-    
-width: 9.6vw;
+margin-right: 5vh;    
+width: 11vw;
   }
 
 
