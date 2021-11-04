@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar2 from "../Navbarv2";
 import ChartPAtivas from "../Charts/ChartPAtivas";
+import ChartEQuestoes from "../Charts/ChartEQuestoes";
 import "./index.css";
 
 function Comparacao() {
@@ -70,7 +71,7 @@ function Comparacao() {
                              </div>
                              </div>
                          <div className="chartsContent">
-                             <ChartPAtivas/>
+                             <ChartEQuestoes/>
                              <div className="iconAndText">
                                 <img src="squareChat.svg" className="iconComp"/>
                                 <p>Pessoas ativas<br/>na jornada</p>

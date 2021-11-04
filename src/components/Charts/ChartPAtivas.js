@@ -9,6 +9,7 @@ const ChartPAtivas = () => {
                 labels:['','','','',''],
                 datasets:[
                     {
+                        label:false,
                     data: [12,19,32,12,189],
                     barThickness: 18,
                     backgroundColor: [
@@ -21,6 +22,7 @@ const ChartPAtivas = () => {
                 },
             ],
             }}
+            
             height={150}
             width={170}
             
@@ -30,3 +32,15 @@ const ChartPAtivas = () => {
 };
 
 export default ChartPAtivas;
+
+
+
+
+/*options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Custom Chart Title'
+            }
+        }
+    }*/
