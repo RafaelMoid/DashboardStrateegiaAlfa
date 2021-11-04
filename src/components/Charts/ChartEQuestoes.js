@@ -10,7 +10,7 @@ const ChartEQuestoes = () => {
                 labels: ['', '', '', '', ''],
                 datasets: [{
                     label: '',
-                    data: [12, 19, 3, 5, 2],
+                    data: [8, 19, 21, 21, 2],
                     barThickness: 18,
                     backgroundColor: [
                         '#125AB8',

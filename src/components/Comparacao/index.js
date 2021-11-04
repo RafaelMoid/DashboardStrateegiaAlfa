@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar2 from "../Navbarv2";
 import ChartPAtivas from "../Charts/ChartPAtivas";
 import ChartEQuestoes from "../Charts/ChartEQuestoes";
+import ChartEDebates from "../Charts/ChartEDebates";
+import ChartEDiver from "../Charts/ChartEDiver";
 import "./index.css";
 
 function Comparacao() {
@@ -74,21 +76,21 @@ function Comparacao() {
                              <ChartEQuestoes/>
                              <div className="iconAndText">
                                 <img src="squareChat.svg" className="iconComp"/>
-                                <p>Pessoas ativas<br/>na jornada</p>
+                                <p>Engajamento<br/>nos debates</p>
                              </div>
                              </div>
                          <div className="chartsContent">
-                             <ChartPAtivas/>
+                             <ChartEDebates/>
                              <div className="iconAndText">
                                 <img src="circledQuestion.svg" className="iconComp"/>
-                                <p>Pessoas ativas<br/>na jornada</p>
+                                <p>Engajamento<br/>nas questões</p>
                              </div>
                              </div>
                          <div className="chartsContent">
-                             <ChartPAtivas/>
+                             <ChartEDiver/>
                              <div className="iconAndText">
                                 <img src="chatBubbles.svg" className="iconComp"/>
-                                <p>Pessoas ativas<br/>na jornada</p>
+                                <p>Engajamento<br/>nas divergências</p>
                              </div>
                              </div>
                          </div>

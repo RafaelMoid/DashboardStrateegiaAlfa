@@ -1,16 +1,16 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
+import "./chart.css";
 
-const ChartPAtivas = () => {
+const ChartPativas = () => {
     return (
-        <div>
+        <div className="chartWrapper">
             <Bar 
             data={{
-                labels:['','','','',''],
-                datasets:[
-                    {
-                        label:false,
-                    data: [12,19,32,12,189],
+                labels: ['', '', '', '', ''],
+                datasets: [{
+                    label: '',
+                    data: [12, 19, 3, 5, 2],
                     barThickness: 18,
                     backgroundColor: [
                         '#125AB8',
@@ -18,29 +18,45 @@ const ChartPAtivas = () => {
                         '#A6CDE7',
                         '#DBEBF5',
                         '#DBEBF5'
-                    ]
-                },
-            ],
+                    ],
+                    
+                    borderWidth: 1
+                }]
             }}
-            
+            options={{
+                plugins:{
+                    legend:{
+                        display:false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            display: false
+                        },
+                        grid: {
+                            display: false,
+                            drawTicks:false,
+                            drawOnChartArea: false
+                            
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                            
+                        }
+                    }
+                }
+            }}
+
             height={150}
-            width={170}
-            
+            width={100}
+
             />
-        </div>
+            </div>
     )
 };
 
-export default ChartPAtivas;
-
-
-
-
-/*options: {
-        plugins: {
-            title: {
-                display: true,
-                text: 'Custom Chart Title'
-            }
-        }
-    }*/
+export default ChartPativas;
