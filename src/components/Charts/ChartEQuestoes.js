@@ -24,20 +24,36 @@ const ChartEQuestoes = () => {
                 }]
             }}
             options={{
+                plugins:{
+                    legend:{
+                        display:false
+                    }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        grid: {
+                        ticks: {
                             display: false
+                        },
+                        grid: {
+                            display: false,
+                            drawTicks:false,
+                            drawOnChartArea: false
+                            
                         }
                     },
                     x: {
                         grid: {
                             display: false
+                            
                         }
                     }
                 }
             }}
+
+            height={150}
+            width={100}
+
             />
             </div>
     )
