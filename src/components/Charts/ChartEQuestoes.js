@@ -32,7 +32,6 @@ const ChartEQuestoes = () => {
                         }
                     },
                     x: {
-                        beginAtZero: true,
                         grid: {
                             display: false
                         }
