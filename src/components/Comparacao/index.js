@@ -4,6 +4,7 @@ import ChartPAtivas from "../Charts/ChartPAtivas";
 import ChartEQuestoes from "../Charts/ChartEQuestoes";
 import ChartEDebates from "../Charts/ChartEDebates";
 import ChartEDiver from "../Charts/ChartEDiver";
+import Chart1 from "../HorizontalCharts/Chart1";
 import "./index.css";
 
 function Comparacao() {
@@ -111,7 +112,7 @@ function Comparacao() {
                         </button>
                     </div>
                     <div className="balanceProj">
-
+                        <Chart1/>
                     </div>
                     <div>
                         <button className="btnPng">
