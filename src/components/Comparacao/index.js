@@ -69,28 +69,28 @@ function Comparacao() {
                              <ChartPAtivas/>
                              <div className="iconAndText">
                                 <img src="group.svg" className="iconComp"/>
-                                <p>Pessoas ativas<br/>na jornada</p>
+                                <p>Pessoas ativas na jornada</p>
                              </div>
                              </div>
                          <div className="chartsContent">
                              <ChartEQuestoes/>
                              <div className="iconAndText">
                                 <img src="squareChat.svg" className="iconComp"/>
-                                <p>Engajamento<br/>nos debates</p>
+                                <p>Engajamento nos debates</p>
                              </div>
                              </div>
                          <div className="chartsContent">
                              <ChartEDebates/>
                              <div className="iconAndText">
                                 <img src="circledQuestion.svg" className="iconComp"/>
-                                <p>Engajamento<br/>nas questões</p>
+                                <p>Engajamento nas questões</p>
                              </div>
                              </div>
                          <div className="chartsContent">
                              <ChartEDiver/>
                              <div className="iconAndText">
                                 <img src="chatBubbles.svg" className="iconComp"/>
-                                <p>Engajamento<br/>nas divergências</p>
+                                <p>Engajamento nas divergências</p>
                              </div>
                              </div>
                          </div>
@@ -101,11 +101,22 @@ function Comparacao() {
                
                
                 <div className="comp2">
-                    <div className="notes">
-
+                    <div className="notesWrapper">
+                        <h2>Notas</h2>
+                        <div className="notes">
+                          <input type="text" className="notesInput"></input>
+                        </div>
+                        <button>
+                        Salvar nota
+                        </button>
                     </div>
                     <div className="balanceProj">
 
+                    </div>
+                    <div>
+                        <button className="btnPng">
+                            Download PNG
+                        </button>
                     </div>
                 </div>
             </div>
