@@ -24,13 +24,17 @@ const Chart1 = () => {
 
 
                     
-                    borderWidth: 1
+                    borderWidth: 1,
+                    datalabels: {
+                        
+                    }
                 }]
             }}
             options={{
                 
                 indexAxis: 'y',
                 plugins:{
+                     
                     legend:{
                         display:false
                     }
@@ -62,7 +66,7 @@ const Chart1 = () => {
             }}
 
             height={60}
-            width={180}
+            width={220}
 
             />
             </div>

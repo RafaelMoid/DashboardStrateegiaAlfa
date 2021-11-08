@@ -5,6 +5,11 @@ import ChartEQuestoes from "../Charts/ChartEQuestoes";
 import ChartEDebates from "../Charts/ChartEDebates";
 import ChartEDiver from "../Charts/ChartEDiver";
 import Chart1 from "../HorizontalCharts/Chart1";
+import Chart2 from '../HorizontalCharts/Chart2';
+import Chart3 from '../HorizontalCharts/Chart3';
+import Chart4 from '../HorizontalCharts/Chart4';
+import Chart5 from '../HorizontalCharts/Chart5';
+import Legend from '../HorizontalCharts/legend';
 import "./index.css";
 
 function Comparacao() {
@@ -113,6 +118,11 @@ function Comparacao() {
                     </div>
                     <div className="balanceProj">
                         <Chart1/>
+                        <Chart2/>
+                        <Chart3/>
+                        <Chart4/>
+                        <Chart5/>
+                        <Legend/>
                     </div>
                     <div>
                         <button className="btnPng">

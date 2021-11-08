@@ -163,6 +163,7 @@ width: 17vw;
     justify-content: space-between;
     width:55vw;
     margin-left: 5vw;
+    flex-wrap: wrap;
 }
 
 .btnPng {

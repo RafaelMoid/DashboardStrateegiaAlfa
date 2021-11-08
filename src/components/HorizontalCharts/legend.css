@@ -1,0 +1,47 @@
+.ball1 {
+    margin-right: 0.5vw;
+    background-color:#51C0A5;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.ball2 {
+    margin-right: 0.5vw;
+    background-color:#51C0A58F;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.ball3 {
+    margin-right: 0.5vw;
+    background-color:#51C0A54A;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.ball4 {
+    margin-right: 0.5vw;
+    background-color:#51C0A51F;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.legendWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.elementWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    margin-top:-0.6vh;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
