@@ -193,14 +193,34 @@ margin-left: 8vw;
 
 .compTitle {
   justify-content:center;
-  align-items: center;
 }
 
 .comp0{
   margin:1vw;
+  margin-left: 4vw;
+}
+
+.comp1{
+  justify-content:center;
+  margin-top:6vh;
+  margin-left:4vw;
+}
+
+.comp1 > h2 {
+  font-size:1.5rem;
+}
+
+.horizontalDisplay{
+  width: 20vw;
+}
+
+.iconComp {
+  margin-left:-8vw;
+  width: 1.5vw;
 }
 
 .comp2{
+  justify-content:center;
   margin:6vh 6vw;}
 
 .comp2 > h2 {
@@ -211,13 +231,15 @@ margin-left: 8vw;
 .elementP > p {
   font-size: 0.85rem;
   justify-content:center;
+  flex-direction:column;
 }
 
 .element{
   display:flex;
   flex-direction:row;
-    justify-content:center;
-    margin-top:1vh;
+  justify-content:center;
+  align-items:center;
+  margin-top:1vh;
 }
 
 .element > img {

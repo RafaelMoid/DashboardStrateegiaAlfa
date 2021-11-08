@@ -161,12 +161,13 @@ width: 17vw;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-    width:55vw;
+    width:50vw;
     margin-left: 5vw;
     flex-wrap: wrap;
 }
 
 .btnPng {
+    margin-left: 2.5vw;
     margin-top: 29vh;
     width: 10vw;
 }

@@ -7,24 +7,24 @@ const Legend = () => {
     return (
         
         <div className="legendWrapper">
-           <div className="elementWrapper">
+           <div className="elementWrapper5">
                 <div className="ball1"></div>
-                <p className="text">Pessoa ativas na jornada</p>
+                <p className="text5">Pessoa ativas na jornada</p>
            </div>
 
-           <div className="elementWrapper">
+           <div className="elementWrapper5">
                 <div className="ball2"></div>
-                <p className="text">Engajamento nos debates</p>
+                <p className="text5">Engajamento nos debates</p>
            </div>
 
-           <div className="elementWrapper">
+           <div className="elementWrapper5">
                 <div className="ball3"></div>
-                <p className="text">Engajamento nas questões</p>
+                <p className="text5">Engajamento nas questões</p>
            </div>
 
-           <div className="elementWrapper">
+           <div className="elementWrapper5">
                 <div className="ball4"></div>
-                <p className="text">Engajamento nas divergencias</p>
+                <p className="text5">Engajamento nas divergencias</p>
            </div>
         </div>
     )

@@ -35,12 +35,12 @@
     flex-direction: column;
 }
 
-.elementWrapper {
+.elementWrapper5 {
     display: flex;
     flex-direction: row;
 }
 
-.text {
+.text5 {
     margin-top:-0.6vh;
     font-weight: bold;
     font-size: 0.9rem;

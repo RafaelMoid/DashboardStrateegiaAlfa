@@ -153,8 +153,8 @@ const Strateegia = () => {
              <div className="containerLeft">
               <div className="comp0">
                 <h3>Comparação rápida  de índices</h3>
-                <p>Selecione duas jornadas para um  <br/>compartivo rápido entre seus índices  </p>
-                <h3><br/> Jornada 1</h3>
+                <p>Selecione duas jornadas para um compartivo rápido entre seus índices  </p>
+                <h3>Jornada 1</h3>
                 <select className="dropdown">
                   <option value="Project 1">Project 1</option>
                   <option value="Project 2">Project 2</option>
@@ -170,49 +170,50 @@ const Strateegia = () => {
                 <div className="txtComp"><a >Comparações avançadas</a></div>
               </div>
 
-              <div className="comp2">
-              <h2 className="compTitle">Titulo projeto 2</h2>
-                <div className="element">
-                <img src="group.svg" /><h3>35%</h3>
+              <div className="comp1">
+                <div className="horizontalDisplay">
+                <h2 className="compTitle">Titulo projeto 1</h2>
+                  <div className="element">
+                  <img src="group.svg" className="iconComp"/><h3>35%</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  
+                  <div className="element">
+                  <img src="circledQuestion.svg" className="iconComp"/><h3>15%</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="element">
+                  <img src="squareChat.svg" className="iconComp"/><h3>85%</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="element">
+                  <img src="chatBubbles.svg" className="iconComp"/><h3>147</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                 </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
-                
-                <div className="element">
-                <img src="circledQuestion.svg" /><h3>15%</h3>
-                </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
-
-                <div className="element">
-                <img src="squareChat.svg" /><h3>85%</h3>
-                </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
-
-                <div className="element">
-                <img src="chatBubbles.svg" /><h3>147</h3>
-                </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
               </div>
-              <div className="comp2">
-              <h2 className="compTitle">Titulo projeto 1</h2>
-                <div className="element">
-                <img src="group.svg" /><h3>35%</h3>
+              
+              <div className="comp1">
+                <div className="horizontalDisplay">
+                <h2 className="compTitle">Titulo projeto 2</h2>
+                  <div className="element">
+                  <img src="group.svg" className="iconComp"/><h3>35%</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  
+                  <div className="element">
+                  <img src="circledQuestion.svg" className="iconComp"/><h3>15%</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="element">
+                  <img src="squareChat.svg" className="iconComp"/><h3>85%</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="element">
+                  <img src="chatBubbles.svg" className="iconComp"/><h3>147</h3>
+                  </div>
+                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                 </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
-                
-                <div className="element">
-                <img src="circledQuestion.svg" /><h3>35%</h3>
-                </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
-
-                <div className="element">
-                <img src="squareChat.svg" /><h3>35%</h3>
-                </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
-
-                <div className="element">
-                <img src="chatBubbles.svg" /><h3>35%</h3>
-                </div>
-                <div className="elementP"><p>Pessoas ativas na jornada</p></div>
               </div>
               
              </div>
