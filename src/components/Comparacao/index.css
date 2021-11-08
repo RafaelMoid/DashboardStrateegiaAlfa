@@ -110,17 +110,21 @@ width: 17vw;
     
 }
 
+.iconComp {
+    margin-left:0.1vw;
+}
 
 .iconAndText{
+    margin-top:-4vh;
     display: flex;
-    align-items: space-between;
+    align-items: space-around;
     margin-left: 1vw;
     
   }
 
   .iconAndText > p {
-      margin-left:0.5vw;
-      font-size:0.8rem;
+      margin-left:0.8vw;
+      font-size:0.75rem;
       font-weight: bold;
   }
 

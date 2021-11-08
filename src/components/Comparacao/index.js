@@ -75,28 +75,28 @@ function Comparacao() {
                              <ChartPAtivas/>
                              <div className="iconAndText">
                                 <img src="group.svg" className="iconComp"/>
-                                <p>Pessoas ativas na jornada</p>
+                                <p>Pessoas ativas <br/> na jornada</p>
                              </div>
                              </div>
                          <div className="chartsContent">
                              <ChartEQuestoes/>
                              <div className="iconAndText">
                                 <img src="squareChat.svg" className="iconComp"/>
-                                <p>Engajamento nos debates</p>
+                                <p>Engajamento<br/>nos debates</p>
                              </div>
                              </div>
                          <div className="chartsContent">
                              <ChartEDebates/>
                              <div className="iconAndText">
                                 <img src="circledQuestion.svg" className="iconComp"/>
-                                <p>Engajamento nas questões</p>
+                                <p>Engajamento<br/>nas questões</p>
                              </div>
                              </div>
                          <div className="chartsContent">
                              <ChartEDiver/>
                              <div className="iconAndText">
                                 <img src="chatBubbles.svg" className="iconComp"/>
-                                <p>Engajamento nas divergências</p>
+                                <p>Engajamento<br/>nas divergências</p>
                              </div>
                              </div>
                          </div>
