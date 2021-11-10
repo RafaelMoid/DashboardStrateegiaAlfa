@@ -3,11 +3,11 @@ import {Bar} from 'react-chartjs-2';
 
 import "./hChart.css";
 
-const ChartJourney1 = () => {
+const ChartJourney2 = () => {
     return (
         
         <div className="chartJourneyWrapper">
-            <p className="charJourneytTitle">Pessoas ativas na jornada</p>
+            <p className="charJourneytTitle">Pessoas</p>
             <Bar 
             data={{
                 labels: ['', '', '', ''],
@@ -73,4 +73,4 @@ const ChartJourney1 = () => {
     )
 };
 
-export default ChartJourney1;
+export default ChartJourney2;

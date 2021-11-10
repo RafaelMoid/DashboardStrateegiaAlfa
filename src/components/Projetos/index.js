@@ -2,10 +2,16 @@ import React, {useState} from 'react';
 import Navbar2 from "../Navbarv2";
 import "./index.css";
 import ChartJourney1 from '../ChartsJourney/ChartJourney1.js';
+import ChartJourney2 from '../ChartsJourney/ChartJourney2.js';
 
 function Projetos() {
 
     const [viewMode, setViewMode] = useState("indices");
+    console.log(viewMode);
+
+    function handleSelection(e){
+        setViewMode(e.target.value)
+    }; 
 
     return (
         
@@ -39,18 +45,18 @@ function Projetos() {
                     <h3>Modo de visualização</h3>
                     <div className="inferior">
                         <p>Selecione um tipo de visualização das informações da jornada</p>
-                        <select className="dropdownData">
-                                <option value="Project 1" onClick={()=>setViewMode("indices")}>Índices</option>
-                                <option value="Project 2" onClick={()=>setViewMode("jornadas")}>Jornadas</option>
-                                <option value="Project 3" onClick={()=>setViewMode("participantes")}>Participantes</option>
-                                <option value="Project 4" onClick={()=>setViewMode("ferramentas")}>Ferramentas</option>
+                        <select className="dropdownData" onChange={handleSelection} defaultValue={viewMode}>
+                                <option value="indices" >Índices</option>
+                                <option value="jornadas" >Jornadas</option>
+                                <option value="participantes" >Participantes</option>
+                                <option value="ferramentas" >Ferramentas</option>
                         </select>
                     </div>
                 </div>
                 <div className="dataWrapper">
                     <div className="leftData">
                         {viewMode === "indices" && <ChartJourney1/>}
-                        {viewMode === "jornadas" && <ChartJourney1/>}
+                        {viewMode === "jornadas" && <ChartJourney2/>}
                         {viewMode === "participantes" && <ChartJourney1/>}
                         {viewMode === "ferramentas" && <ChartJourney1/>}
                         
