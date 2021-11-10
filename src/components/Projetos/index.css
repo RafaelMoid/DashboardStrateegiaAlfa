@@ -1,0 +1,105 @@
+.mainWrapper {
+    display:flex;
+    flex-direction:column;
+}
+
+.textTitle {
+    width: 60vw;
+    margin-top: -6vh;
+    margin-left:5.5vw;
+}
+.textTitle > p{
+    color: rgba(0, 0, 0, 0.36);    
+}
+.rightBar {
+    margin-left:70vw;
+    background: blue;
+    margin-top:-80vh;
+    width: 30vw;
+    height: 80vh;
+}
+.resumoJornada {
+    display:flex;
+    flex-direction:row;
+    margin-left:4.5vw;
+    width: 60vw;
+    height: 15vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img{    
+    margin-right:-6vw;
+    height:10vh;
+    width: 10vw;
+}
+
+.infoP {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleP {
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.36);
+}
+
+.value { 
+    font-size: 1rem;
+    color: black;
+}
+
+
+.introData {
+    width: 70vw;
+    height: 15vh;
+    
+}
+
+.introData > h3 { 
+    margin-top: 2vh;
+    margin-left:8vw;
+}
+
+.inferior {    
+    display:flex;
+    flex-direction:row;    
+    justify-content: space-between;
+}
+
+.inferior > select {
+    width: 13vw;
+    margin-right: 4vw;
+}
+
+.inferior > p { 
+    font-weight:400;
+    margin-left:8vw;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.36);
+}
+
+
+
+.dataWrapper {    
+    display:flex;
+    flex-direction:row;
+    background: purple;
+    width: 70vw;
+}
+.leftData {
+    margin-left:4.5vw;
+    background: grey;
+    width: 35vw;
+    height: 55vh;
+}
+.rightData {
+    background: yellow;
+    width: 35vw;
+    height: 55vh;
+}
+
+
