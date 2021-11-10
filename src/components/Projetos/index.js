@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar2 from "../Navbarv2";
 import "./index.css";
+import ChartJourney1 from '../ChartsJourney/ChartJourney1.js';
 
 function Projetos() {
+
+    const [viewMode, setViewMode] = useState("indices");
+
     return (
         
         <div className="desenvolvedores">
@@ -36,15 +40,20 @@ function Projetos() {
                     <div className="inferior">
                         <p>Selecione um tipo de visualização das informações da jornada</p>
                         <select className="dropdownData">
-                                <option value="Project 1">Project 1</option>
-                                <option value="Project 2">Project 2</option>
-                                <option value="Project 3">Project 3</option>
+                                <option value="Project 1" onClick={()=>setViewMode("indices")}>Índices</option>
+                                <option value="Project 2" onClick={()=>setViewMode("jornadas")}>Jornadas</option>
+                                <option value="Project 3" onClick={()=>setViewMode("participantes")}>Participantes</option>
+                                <option value="Project 4" onClick={()=>setViewMode("ferramentas")}>Ferramentas</option>
                         </select>
                     </div>
                 </div>
                 <div className="dataWrapper">
                     <div className="leftData">
-                        <p>Barra e os caraio</p>
+                        {viewMode === "indices" && <ChartJourney1/>}
+                        {viewMode === "jornadas" && <ChartJourney1/>}
+                        {viewMode === "participantes" && <ChartJourney1/>}
+                        {viewMode === "ferramentas" && <ChartJourney1/>}
+                        
                     </div>
                     <div className="rightData">
                         <p>Barra e os caraio</p>

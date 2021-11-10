@@ -1,0 +1,47 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.progress {
+    margin-left:3.5vw;
+    background-color:#E5E5E5;;
+    border-radius: 28px;
+    height: 2vh;
+    width: 18vw;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.progressTxt {
+    margin-left: 28vw;
+    font-weight: 600;
+}
+
+.progress-done{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    background-color: #125AB8;
+    height: 2vh;
+    width:100px;
+}
+
+.chartJourneyTitle1 {
+    margin-left:3.5vw;
+    margin-bottom: 1.5vh;
+}
+
+.chartJourneyP1 {
+    font-weight: 600;
+    margin-top: 2vh;
+    margin-left:3.5vw;
+}
+
+.chartJourneyP2 {
+    font-weight: 600;
+    margin-left:3.5vw;
+}

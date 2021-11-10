@@ -87,12 +87,10 @@
 .dataWrapper {    
     display:flex;
     flex-direction:row;
-    background: purple;
     width: 70vw;
 }
 .leftData {
     margin-left:4.5vw;
-    background: grey;
     width: 35vw;
     height: 55vh;
 }
