@@ -2,6 +2,7 @@ import React from 'react';
 import {Bar} from 'react-chartjs-2';
 import ChartJourHori from './chartJourneyHorizontal';
 import Legend from './legendJourney.js';
+import ChartLineIndice from './chartLineIndice.js';
 
 import "./ChartJourney1.css";
 
@@ -83,6 +84,7 @@ const ChartJourney1 = () => {
                 <h3>Balanço índices</h3>
                 <ChartJourHori/>
                 <Legend/>
+                <ChartLineIndice/>
             </div>
         </div>  
            
