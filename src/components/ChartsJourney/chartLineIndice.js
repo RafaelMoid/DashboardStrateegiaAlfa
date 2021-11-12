@@ -21,7 +21,7 @@ const ChartLineIndice = () => {
             ],
             }}
             height={40}
-            width={40}
+            width={20}
             options={{
                 maintainAspectRatio: false
             }}
