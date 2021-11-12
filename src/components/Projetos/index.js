@@ -54,16 +54,14 @@ function Projetos() {
                     </div>
                 </div>
                 <div className="dataWrapper">
-                    <div className="leftData">
+                    <div className="data">
                         {viewMode === "indices" && <ChartJourney1/>}
                         {viewMode === "jornadas" && <ChartJourney2/>}
                         {viewMode === "participantes" && <ChartJourney1/>}
                         {viewMode === "ferramentas" && <ChartJourney1/>}
                         
                     </div>
-                    <div className="rightData">
-                        <p>Barra e os caraio</p>
-                    </div>
+                    
                 </div>
             </div>
             <div className="rightBar">

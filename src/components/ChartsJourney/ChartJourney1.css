@@ -1,3 +1,8 @@
+.chartJWrapper {
+    display:flex;
+    flex-direction: row;
+}
+
 .body {
     display: flex;
     align-items: center;
@@ -7,7 +12,6 @@
 }
 
 .progress {
-    margin-left:3.5vw;
     background-color:#E5E5E5;;
     border-radius: 28px;
     height: 2vh;
@@ -16,8 +20,8 @@
 }
 
 .progressTxt {
-    margin-left: 28vw;
     font-weight: 600;
+    font-size:0.8rem;
 }
 
 .progress-done{
@@ -25,23 +29,63 @@
     align-items: center;
     justify-content: center;
     border-radius: 28px;
-    background-color: #125AB8;
+    background-color: #125ab8a1;
+    height: 2vh;
+    width:100px;
+}
+
+.progress-done2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    background-color: #A6CDE7;
+    height: 2vh;
+    width:100px;
+}
+
+.progress-done3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    background-color: #7AB4DB;
+    height: 2vh;
+    width:100px;
+}
+
+.progress-done4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    background-color: #DBEBF5;
     height: 2vh;
     width:100px;
 }
 
 .chartJourneyTitle1 {
-    margin-left:3.5vw;
-    margin-bottom: 1.5vh;
+    margin-bottom: 0.5vh;
 }
 
 .chartJourneyP1 {
     font-weight: 600;
-    margin-top: 2vh;
-    margin-left:3.5vw;
+    margin-top: 0.7vh;
+    font-size: 0.7rem;
 }
 
 .chartJourneyP2 {
     font-weight: 600;
+    font-size: 0.7rem;
+    margin-bottom: 1.5vh;
+}
+
+.leftData {
     margin-left:3.5vw;
+    width: 35vw;
+    height: 55vh;
+}
+.rightData {
+    width: 35vw;
+    height: 55vh;
 }

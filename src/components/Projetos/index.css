@@ -55,7 +55,7 @@
 
 .introData {
     width: 70vw;
-    height: 15vh;
+    height: 11vh;
     
 }
 
@@ -89,15 +89,11 @@
     flex-direction:row;
     width: 70vw;
 }
-.leftData {
+.data {
     margin-left:4.5vw;
-    width: 35vw;
+    width: 70vw;
     height: 55vh;
 }
-.rightData {
-    background: yellow;
-    width: 35vw;
-    height: 55vh;
-}
+
 
 

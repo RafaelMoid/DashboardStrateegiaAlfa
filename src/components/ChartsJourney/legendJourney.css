@@ -1,0 +1,56 @@
+.ball11 {
+    margin-right: 0.5vw;
+    background-color:#125ab8a1;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.ball22 {
+    margin-right: 0.5vw;
+    background-color:#A6CDE7;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.ball33 {
+    margin-right: 0.5vw;
+    background-color:#7AB4DB;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.ball44 {
+    margin-right: 0.5vw;
+    background-color:#DBEBF5;
+    width: 12.24px;
+    height: 12.24px;
+    border-radius: 12px;
+}
+
+.legendWrapper2 {
+    display: flex;
+    flex-direction: row;
+    margin-top:2vh;
+    margin-left: -1vw;
+}
+
+.legendWrapper3 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+}
+
+
+.elementWrapper5 {
+    display: flex;
+    flex-direction: row;
+}
+
+.text6 {
+    margin-top:-0.5vh;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
