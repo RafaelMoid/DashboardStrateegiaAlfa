@@ -13,10 +13,17 @@
 }
 .rightBar {
     margin-left:70vw;
-    margin-top:-80vh;
+    margin-top:-85vh;
     width: 30vw;
     height: 80vh;
 }
+
+.partTitle {
+    margin-top: 0.5vh;
+    font-size:1rem;
+    font-weight:bold;
+}
+
 .resumoJornada {
     display:flex;
     flex-direction:row;

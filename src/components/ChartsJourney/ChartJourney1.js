@@ -80,7 +80,7 @@ const ChartJourney1 = () => {
                </div>
             </div>
             <div className="rightData">
-                <h3>Balanço índices</h3>
+                <h3 className="chartJourneyTitle1">Balanço índices</h3>
                 <ChartJourHori/>
             </div>
         </div>  

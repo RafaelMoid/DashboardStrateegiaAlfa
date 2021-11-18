@@ -69,8 +69,10 @@ function Projetos() {
             </div>
             <div className="rightBar">
                     <PeopleContainer />
-                    <h3>Participantes mais influentes</h3>
-                    
+                    <h3 className="partTitle">Participantes mais influentes</h3>
+                    {/* Criar aqui um component para exibir o top 3 de pessoas
+                    com mais comentarios na plataformar que não tenham o status de admin
+                    ou habilitador */}
                 </div>
         </div>
             
