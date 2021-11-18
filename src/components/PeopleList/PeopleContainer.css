@@ -1,0 +1,40 @@
+
+/* Responsavel pelo container PAI*/
+.people-container {
+    display: flex;
+    flex-direction: column;  
+}
+
+/* Responsavel pela barra de pesquisa */
+.search-person {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-person-input {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.add-task-container{
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+}
+
+.add-task-button-container {
+    margin-left:10px;
+    flex: 1;
+}
+
+/* Aqui está o .map de pessoas */
+
+.PeopleListBox{
+    width: 22vw;
+    height: 40vh;      
+    overflow: auto;
+}

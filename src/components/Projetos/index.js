@@ -3,9 +3,12 @@ import Navbar2 from "../Navbarv2";
 import "./index.css";
 import ChartJourney1 from '../ChartsJourney/ChartJourney1.js';
 import ChartJourney2 from '../ChartsJourney/ChartJourney2.js';
+import PeopleContainer from '../PeopleList/PeopleContainer.jsx';
 
 function Projetos() {
 
+    
+    //State responsavel por mostrar as visualizações do dropdown
     const [viewMode, setViewMode] = useState("indices");
     console.log(viewMode);
 
@@ -65,7 +68,7 @@ function Projetos() {
                 </div>
             </div>
             <div className="rightBar">
-                    <p>Pessoas</p>
+                    <PeopleContainer />
                 </div>
         </div>
             

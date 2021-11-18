@@ -7,21 +7,20 @@ const ChartLineIndice = () => {
             <h3>Balanço índices no tempo</h3>
             <Line 
             data={{
-                labels:['Opção 1', 'Opção 2'],
+                labels:['Opção 1'],
                 datasets:[
                     {
                         label: [],
-                    data: [12,19],
+                    data: [12],
                     barThickness: 18,
                     backgroundColor: [
-                        '#FE6E9F',
-                        '#393EA0'
+                        '#FE6E9F'
                     ]
                 },
             ],
             }}
-            height={40}
-            width={20}
+            height={5}
+            width={5}
             options={{
                 maintainAspectRatio: false
             }}

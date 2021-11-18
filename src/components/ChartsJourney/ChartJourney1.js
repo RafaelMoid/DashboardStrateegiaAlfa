@@ -83,8 +83,6 @@ const ChartJourney1 = () => {
             <div className="rightData">
                 <h3>Balanço índices</h3>
                 <ChartJourHori/>
-                <Legend/>
-                <ChartLineIndice/>
             </div>
         </div>  
            
