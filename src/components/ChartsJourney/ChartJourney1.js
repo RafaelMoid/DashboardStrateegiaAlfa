@@ -64,20 +64,19 @@ const ChartJourney1 = () => {
                <div>
                    <h3 className="chartJourneyTitle1">Pessoas ativas na jornada</h3>
                    <Progress2 done="40"/>
-                   <p className="chartJourneyP1">Total de participantes: 5</p>
-                   <p className="chartJourneyP2">Pessoas inativas: 2</p>
+                   <p className="chartJourneyP1">N° de questões: 12</p>
+                   <p className="chartJourneyP2">N° de respostas: 27 de 36 esperadas</p>
                </div>
                <div>
                    <h3 className="chartJourneyTitle1">Pessoas ativas na jornada</h3>
                    <Progress3 done="65"/>
-                   <p className="chartJourneyP1">Total de participantes: 5</p>
-                   <p className="chartJourneyP2">Pessoas inativas: 2</p>
+                   <p className="chartJourneyP1">N° de comentários: 5</p>
+                   <p className="chartJourneyP2">N° de concordos: 22</p>
+                   <p className="chartJourneyP2">N° de interações: 27 de 40.5 esperadas</p>
                </div>
                <div>
                    <h3 className="chartJourneyTitle1">Pessoas ativas na jornada</h3>
                    <Progress4 done="23"/>
-                   <p className="chartJourneyP1">Total de participantes: 5</p>
-                   <p className="chartJourneyP2">Pessoas inativas: 2</p>
                </div>
             </div>
             <div className="rightData">
