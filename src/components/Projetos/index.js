@@ -69,6 +69,8 @@ function Projetos() {
             </div>
             <div className="rightBar">
                     <PeopleContainer />
+                    <h3>Participantes mais influentes</h3>
+                    
                 </div>
         </div>
             
