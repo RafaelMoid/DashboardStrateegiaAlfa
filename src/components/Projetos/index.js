@@ -8,6 +8,7 @@ import PeopleContainer from '../PeopleList/PeopleContainer.jsx';
 function Projetos() {
 
     
+    
     //State responsavel por mostrar as visualizações do dropdown
     const [viewMode, setViewMode] = useState("indices");
     console.log(viewMode);

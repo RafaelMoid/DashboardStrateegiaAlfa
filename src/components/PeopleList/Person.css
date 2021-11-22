@@ -16,9 +16,9 @@
 .person-icon {
     color: white;
     background-color: pink;
-    width:3vw;
+    width:2.8vw;
     height: 6vh;
-    border-radius:25px;
+    border-radius:35px;
     display: flex; 
     justify-content:center;
     align-items: center;
