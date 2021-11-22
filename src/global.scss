@@ -8,3 +8,29 @@
   font-family: Urbanist;
 }
 
+* > h1 {
+  font-family: inter;
+  font-weight: bold;
+  letter-spacing: -2%;
+}
+
+* > h2 {
+  font-family: inter;
+  font-weight: bold;
+  letter-spacing: -2%;
+}
+
+* > h3 {
+  font-family: inter;
+  font-weight: bold;
+  letter-spacing: -2%;
+}
+
+* > p, ul, ol, input, button, link, option, select, li {
+  font-family: inter;
+  font-weight: normal;
+  letter-spacing: -2%;
+}
+
+
+
