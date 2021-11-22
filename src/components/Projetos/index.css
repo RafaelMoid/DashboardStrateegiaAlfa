@@ -12,14 +12,14 @@
     color: rgba(0, 0, 0, 0.36);    
 }
 .rightBar {
-    margin-left:70vw;
-    margin-top:-75vh;
+    margin-left:72vw;
+    margin-top:-85vh;
     width: 30vw;
     height: 80vh;
 }
 
 .partTitle {
-    margin-top: 0.5vh;
+    margin-top: 3vh;
     font-size:1rem;
     font-weight:bold;
 }
@@ -60,9 +60,10 @@
 
 
 .introData {
-    width: 70vw;
-    height: 11vh;
-    
+    margin-top: 4vh;
+    width: 65vw;
+    height: 11vh;    
+    margin-left: 2vw;
 }
 
 .introData > h3 { 
@@ -93,7 +94,10 @@
 .dataWrapper {    
     display:flex;
     flex-direction:row;
-    width: 70vw;
+    width: 65vw;
+    
+    margin-top: 4vh;   
+    margin-left: 2vw;
 }
 .data {
     margin-left:4.5vw;
@@ -102,4 +106,8 @@
 }
 
 
-
+.btnProj {
+    display: flex;
+    align-items: right;
+    width: 9vw;
+}

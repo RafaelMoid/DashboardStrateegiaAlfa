@@ -62,6 +62,9 @@ function Projetos() {
                     {/* Criar aqui um component para exibir o top 3 de pessoas
                     com mais comentarios na plataformar que não tenham o status de admin
                     ou habilitador */}
+                    <button className="btnProj">
+                            Download PNG
+                    </button>
                 </div>
         </div>
             

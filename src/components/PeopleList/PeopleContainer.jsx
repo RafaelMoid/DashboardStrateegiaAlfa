@@ -91,7 +91,6 @@ const PeopleContainer = () => {
             />
                     <ButtonPeople className="people-button"><BiSearch/></ButtonPeople>
             </div>
-            <p> Aqui chamaremos a quantidade de itens mapeados </p>
             <div className="PeopleListBox">
                 <People people={people}/>
             </div>
