@@ -24,25 +24,13 @@ function Projetos() {
             <div className="mainWrapper">
                 <div className="textTitle">
                     <p>dashboard {'>'} página de projeto</p>
-                    <h1>Nome da Jornada/Projeto </h1>
                 </div>
                 <div className="resumoJornada">
                     <img src="group96.svg" className="img"/>
                     <div className="infoP">
-                        <p className="titleP">etapa</p>
-                        <p className="value">MVS</p>
-                    </div>
-                    <div className="infoP">
-                        <p className="titleP">semanas</p>
-                        <p className="value">6 semanas</p>
-                    </div>
-                    <div className="infoP">
-                        <p className="titleP">última atividade</p>
-                        <p className="value">2 dias atrás</p>
-                    </div>
-                    <div className="infoP">
-                        <p className="titleP">data de criação</p>
-                        <p className="value">04/02/21</p>
+                        <h1>Nome da Jornada/Projeto </h1>
+                        <p className="titleP">criada em 04/02/21</p>
+                        <p className="titleP">última atividade 2 dias atrás</p>
                     </div>
                 </div>
                 <div className="introData">

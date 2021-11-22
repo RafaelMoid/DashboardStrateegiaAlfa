@@ -85,7 +85,7 @@
     .informative-wrapper {
       display: flex;
       flex-direction: column;
-      background-color: #D70858;
+      background-color: white;
             height: 100vh;
             width:80vh;
       
@@ -130,7 +130,43 @@
         
 
       }
+
+      .imgLogo {
+        margin-top: 8vh;
+        margin-left: 6vw;  
+        margin-bottom: 8vh;
+        height: 50%;
+        width: 50%;
+      }
+      
+      .imgIcons {
+        height: 70%;
+        width: 70%;
+      }
+
     }
    
   }
+}
+
+@media screen and (max-width: 639px) {
+
+  .imgLogo {
+    margin-top: 4vh;
+    margin-left: 25vw;
+    justify-content:center;
+    align-items:center;
+    height: 50%;
+    width: 50%;
+  }
+
+  .imgIcons {
+    visibility: hidden;
+    height: 0%;
+    width: 0%;
+  }
+  .login-wrapper > h1 {
+    justify-content:center;
+    align-items:center;
+ }
 }

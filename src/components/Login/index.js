@@ -60,19 +60,8 @@ const Login = () => {
       {!auth.isAuthenticated && (
         <div className="login-container">
           <div className="informative-wrapper">
-            
-            <div className="informative">
-              <div className="informative-texts">
-              <div>
-                <img src="chart.png" className="chartImg"/>
-              </div>
-                <h2>Dashboard .Strateegia</h2>
-                <p>
-                   Dados e analises em um lugar! 
-                </p>
-              </div>
-              
-            </div>
+            <img src="logo.png" className="imgLogo"/>
+            <img src="iconesBG.png" className="imgIcons"/>
           </div>
           <div className="login-wrapper">
             <h1>login</h1>
