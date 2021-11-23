@@ -23,16 +23,7 @@ function Comparacao() {
         {nome:"Projeto Moura fácil", status:"concluido", pessoas:"125 participantes"},
         {nome:"TreeloStudio", status:"ativo", pessoas:"22 participantes"},
         {nome:"Projeto Rafa é desenrolado", status:"ativo", pessoas:"48 participantes"},
-        {nome:"Projeto Nath é uma artista", status:"ativo", pessoas:"87 participantes"},
-        {nome:"Projeto Matheus é um mago", status:"concluido", pessoas:"35 participantes"},
-        {nome:"Projeto Akira", status:"concluido", pessoas:"39 participantes"},
-        {nome:"Godzilla", status:"concluido", pessoas:"42 participantes"},
-        {nome:"Sem criatividade 9", status:"concluido", pessoas:"12 participantes"},
-        {nome:"Sem criatividade 10", status:"concluido", pessoas:"0 participantes"},
-        {nome:"Sem criatividade 11", status:"concluido", pessoas:"135 participantes"},
-        {nome:"Sem criatividade 12", status:"concluido", pessoas:"15 participantes"},
-        {nome:"Sem criatividade 13", status:"concluido", pessoas:"78 participantes"},
-        {nome:"Sem criatividade 14", status:"concluido", pessoas:"2 participantes"},
+        {nome:"Projeto Nath é uma artista", status:"ativo", pessoas:"87 participantes"}
       ];
       const listaProjetosNome=projetos1.map(
         (c,i)=>

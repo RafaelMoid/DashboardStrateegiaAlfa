@@ -70,7 +70,7 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 
 .listaProjetos2 {
 
-overflow:auto; 
+overflow:hidden; 
 height:20vh;
 margin-right: 5vh;    
 width: 17vw;
