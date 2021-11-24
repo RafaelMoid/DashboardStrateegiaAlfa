@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/auth";
 import {
-  fetchUserData,fetchUserEncouters,fetchMapById, fetchEncounterByMaps, fetchUserGetProjectById
-  // fetchUserProjects,
+  fetchUserData,fetchUserEncouters,fetchMapById, fetchEncounterByMaps, fetchUserGetProjectById,
+  fetchUserProjects, fetchProjectsMembers
 } from "../../services/requestFunctions";
 import Navbar from "../Navbar";
 import Kits from "../Kits";
@@ -25,6 +25,10 @@ const Strateegia = () => {
   const [kitData, setKitData] = useState("");
   //Retorno da linha 62 (aqui estão os pontos de encontro) \/
   const [MapsData, setMapsData] = useState("");
+  // const [projects, setProjects] = useState([]);
+  const [projectsData, setProjectsData] = useState("");
+  // Dados de usuarios em projetos \/\/\/\/
+  const [membersData, setMembersData] = useState("");
   // const [projects, setProjects] = useState([]);
   const auth = useContext(AuthContext);
 
@@ -53,6 +57,7 @@ const Strateegia = () => {
       <li key={i} className="ulItem">{c.nome}</li>
       )
 
+
      
   const relatorios=[['Relatorio 1', 'conclusão','escola figital'],['Relatorio parcial', 'parcial','banco figital'],['MVS', 'parcial','habilitação figital'],['Relatorio final', 'conclusão','empresa figital']];
   
@@ -71,20 +76,28 @@ const Strateegia = () => {
   
   //Aqui estão os dados do mapa em si, é daqui que se resgata os kits (linha 51)
   useEffect(() => {
-    fetchMapById(auth.apiToken ).then((data) => {
+    fetchUserProjects(auth.apiToken ).then((data) => {
       console.log(data);
-      setKitData(data);
+      setProjectsData(data);
     });
     // fetchUserProjects(auth.apiToken).then((data) => {
     //   setProjects(data);
     // });
   }, [auth.apiToken]);
 
+  //Aqui estão os dados dos membros dos projetos
+  useEffect(() => {
+    fetchProjectsMembers(auth.apiToken ).then((data) => {
+      console.log(data);
+      setMembersData(data);
+    });
+  }, [auth.apiToken]);
+
 
   //Retorno da linha 62 (aqui estão os pontos de encontro)
   useEffect(() => {
     fetchEncounterByMaps(auth.apiToken).then((data) => {
-      console.log(data);
+      //console.log(data);
       setMapsData(data);
     });
     // fetchUserProjects(auth.apiToken).then((data) => {
@@ -96,6 +109,8 @@ const Strateegia = () => {
   
 
   /*<img className="bgImage" src="Calendar_SVG 1.svg"/>  Imagem para adicionar na tela de logado*/
+
+/* <component projetos={projectsData.} */
 
   return (
     

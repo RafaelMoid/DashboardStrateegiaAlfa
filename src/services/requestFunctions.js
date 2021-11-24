@@ -41,6 +41,17 @@ export const fetchUserProjects = async (token) => {
   return data;
 };
 
+//Detalhamento de cada projeto (obtem todos os membros)
+export const fetchProjectsMembers = async (token) => {
+  const { data } = await api("/v1/project/60e481ee9692e14e21c51261", {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+  return data;
+};
+
 export const fetchMapById = async (token) => {
   const {data} = await api("/projects/v1/project/60e481ee9692e14e21c51261",
   {
