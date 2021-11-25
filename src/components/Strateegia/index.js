@@ -25,8 +25,10 @@ const Strateegia = () => {
   const [kitData, setKitData] = useState("");
   //Retorno da linha 62 (aqui estão os pontos de encontro) \/
   const [MapsData, setMapsData] = useState("");
-  // const [projects, setProjects] = useState([]);
+  // Todos os projetos estão sendo chamados como array complexo de 3 niveis
   const [projectsData, setProjectsData] = useState("");
+  //Vai ser necessario quebrar em aprtes menores
+  const [projectsProjectsData, setProjectsProjectsData] = useState("");
   // Dados de usuarios em projetos \/\/\/\/
   const [membersData, setMembersData] = useState("");
   // const [projects, setProjects] = useState([]);
@@ -54,9 +56,10 @@ const Strateegia = () => {
   ];
   const listaProjetosNome=projetos.map(
     (c,i)=>
-      <li key={i} className="ulItem">{c.nome}</li>
+      <li key={i} className="ulItem">{c.title}</li>
       )
 
+  
 
      
   const relatorios=[['Relatorio 1', 'conclusão','escola figital'],['Relatorio parcial', 'parcial','banco figital'],['MVS', 'parcial','habilitação figital'],['Relatorio final', 'conclusão','empresa figital']];
@@ -74,6 +77,27 @@ const Strateegia = () => {
 
 
   
+  //Aqui estão os dados dos projetos em si, de forma bruta como um Array complexo de 3 niveis
+  useEffect(() => {
+    fetchUserProjects(auth.apiToken ).then((data) => {
+      console.log(data);
+      //Aqui embaixo consigo chamar apenas o titulo do objeto no array de terceiro nivel
+      console.log(data[1].projects[0].title)
+      setProjectsData(data);
+
+      //iterando todos os titulos de todos os projetos
+      projectsData.forEach((data) => {
+        console.log(data.projects.title);
+        setProjectsProjectsData(data)
+    });
+    });
+  }, [auth.apiToken]);
+  
+  //Mostra isso a Gab
+  /*useEffect(() => {
+    setProjectsProjectsData = projectsData.projects
+  })*/
+
   //Aqui estão os dados do mapa em si, é daqui que se resgata os kits (linha 51)
   useEffect(() => {
     fetchUserProjects(auth.apiToken ).then((data) => {
