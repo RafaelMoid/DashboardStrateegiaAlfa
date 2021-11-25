@@ -6,6 +6,7 @@ import Strateegia from "../components/Strateegia";
 import Desenvolvedores from "../components/Desenvolvedores";
 import Projetos from "../components/Projetos";
 import Comparacao from "../components/Comparacao";
+import TesteComp from "../components/TesteComp/TesteComp.jsx";
 
 
 
@@ -26,6 +27,9 @@ const Routes = () => {
         </Route>
         <Route path="/Projetos"  exact>
           <Projetos />
+        </Route>
+        <Route path="/TesteComp"  exact>
+          <TesteComp />
         </Route>
       </Switch>
     </BrowserRouter>

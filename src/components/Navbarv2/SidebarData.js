@@ -29,12 +29,12 @@ export const SidebarData = [
         cName: 'nav-text'
     },
 
-   /* {
-        title: ' Relatórios',
-        path: '/Desenvolvedores',
+    {
+        title: ' Testes',
+        path: '/TesteComp',
         icon: <HiDocumentReport />,
         cName: 'nav-text'
-    }, */
+    }, 
 
     {
         title: ' Comparações avançadas',
