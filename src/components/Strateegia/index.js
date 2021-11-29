@@ -34,27 +34,8 @@ const Strateegia = () => {
   // const [projects, setProjects] = useState([]);
   const auth = useContext(AuthContext);
 
-  //AQUI EMBAIXO TEMOS DADOS MOCADOS PARA PROJETOS E DADOS
-  //apos feito a lista, ela foi operada usando a função .map
-  //usando o indece posso chamar o array com todos os seus subarrays e dados inclusos
-  //é necessario criar state e atribuir logica de true e false para on click em botões da linha 155 do contentTitle
-  const projetos=[
-    {nome:"Strateegia Studio", status:"ativo", pessoas:"25 participantes"},
-    {nome:"Projeto Moura fácil", status:"concluido", pessoas:"125 participantes"},
-    {nome:"TreeloStudio", status:"ativo", pessoas:"22 participantes"},
-    {nome:"Projeto Rafa é desenrolado", status:"ativo", pessoas:"48 participantes"},
-    {nome:"Projeto Nath é uma artista", status:"ativo", pessoas:"87 participantes"},
-    {nome:"Projeto Matheus é um mago", status:"concluido", pessoas:"35 participantes"},
-    {nome:"Projeto Akira", status:"concluido", pessoas:"39 participantes"},
-    {nome:"Godzilla", status:"concluido", pessoas:"42 participantes"},
-    {nome:"Sem criatividade 9", status:"concluido", pessoas:"12 participantes"},
-    {nome:"Sem criatividade 10", status:"concluido", pessoas:"0 participantes"},
-    {nome:"Sem criatividade 11", status:"concluido", pessoas:"135 participantes"},
-    {nome:"Sem criatividade 12", status:"concluido", pessoas:"15 participantes"},
-    {nome:"Sem criatividade 13", status:"concluido", pessoas:"78 participantes"},
-    {nome:"Sem criatividade 14", status:"concluido", pessoas:"2 participantes"},
-  ];
-  const listaProjetosNome=projetos.map(
+  
+  const listaProjetosNome=projectsData.map(
     (c,i)=>
       <li key={i} className="ulItem">{c.title}</li>
       )
@@ -66,42 +47,27 @@ const Strateegia = () => {
   
 
   useEffect(() => {
-    fetchUserData(auth.apiToken).then((data) => {
-      console.log(data);
-      setUser(data);
-    });
-    // fetchUserProjects(auth.apiToken).then((data) => {
-    //   setProjects(data);
-    // });
-  }, [auth.apiToken]);
+    fetchUserData(auth.apiToken).then((response) => {
+      // console.log(response);
+      setUser(response);
 
+      fetchUserProjects(auth.apiToken ).then((data) => {
+      
+        if (data && response) {
+          const [myJourneys] = data.filter((journey) => {
+            return journey.lab.owner_name === response.name
 
-  
-  //Aqui estão os dados dos projetos em si, de forma bruta como um Array complexo de 3 niveis
-  useEffect(() => {
-    fetchUserProjects(auth.apiToken ).then((data) => {
-      console.log(data);
-      //Aqui embaixo consigo chamar apenas o titulo do objeto no array de terceiro nivel
-      console.log(data[1].projects[0].title)
-      setProjectsData(data);
-
-      //iterando todos os titulos de todos os projetos
-      projectsData.forEach((data) => {
-        console.log(data.projects.title);
-        setProjectsProjectsData(data)
-    });
+            }
+          )
+          setProjectsData(...[myJourneys.projects])
+        }}) 
     });
   }, [auth.apiToken]);
-  
-  //Mostra isso a Gab
-  /*useEffect(() => {
-    setProjectsProjectsData = projectsData.projects
-  })*/
+
 
   //Aqui estão os dados do mapa em si, é daqui que se resgata os kits (linha 51)
   useEffect(() => {
     fetchUserProjects(auth.apiToken ).then((data) => {
-      console.log(data);
       setProjectsData(data);
     });
     // fetchUserProjects(auth.apiToken).then((data) => {
@@ -112,7 +78,6 @@ const Strateegia = () => {
   //Aqui estão os dados dos membros dos projetos
   useEffect(() => {
     fetchProjectsMembers(auth.apiToken ).then((data) => {
-      console.log(data);
       setMembersData(data);
     });
   }, [auth.apiToken]);
@@ -124,17 +89,9 @@ const Strateegia = () => {
       //console.log(data);
       setMapsData(data);
     });
-    // fetchUserProjects(auth.apiToken).then((data) => {
-    //   setProjects(data);
-    // });
   }, [auth.apiToken]);
 
 
-  
-
-  /*<img className="bgImage" src="Calendar_SVG 1.svg"/>  Imagem para adicionar na tela de logado*/
-
-/* <component projetos={projectsData.} */
 
   return (
     
