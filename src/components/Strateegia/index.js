@@ -26,7 +26,7 @@ const Strateegia = () => {
   //Retorno da linha 62 (aqui estão os pontos de encontro) \/
   const [MapsData, setMapsData] = useState("");
   // Todos os projetos estão sendo chamados como array complexo de 3 niveis
-  const [projectsData, setProjectsData] = useState("");
+  const [projectsData, setProjectsData] = useState([]);
   //Vai ser necessario quebrar em aprtes menores
   const [projectsProjectsData, setProjectsProjectsData] = useState("");
   // Dados de usuarios em projetos \/\/\/\/
