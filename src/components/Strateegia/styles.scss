@@ -301,8 +301,10 @@ justify-content: left;
     }
 
 .ulItem {
-  margin-top: 1vh;
-  text-align: left;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 //DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE

@@ -9,6 +9,7 @@ import Kits from "../Kits";
 import Button from "../pontosDeEncontro";
 import Wellcome from "../Wellcome";
 import Navbar2 from "../Navbarv2";
+import {Link} from "react-router-dom";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Encontros from "../Kits";
 import BarChart from '../Charts/Chart.js';
@@ -37,7 +38,7 @@ const Strateegia = () => {
   
   const listaProjetosNome=projectsData.map(
     (c,i)=>
-      <li key={i} className="ulItem">{c.title}</li>
+      <Link key={i} className="ulItem" to={"/Projetos"} >{c.title}</Link>
       )
 
   
@@ -48,15 +49,15 @@ const Strateegia = () => {
 
   useEffect(() => {
     fetchUserData(auth.apiToken).then((response) => {
-      // console.log(response);
+      //console.log(response);
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-      
+        //console.log(data)
         if (data && response) {
           const [myJourneys] = data.filter((journey) => {
             return journey.lab.owner_name === response.name
-
+            
             }
           )
           setProjectsData(...[myJourneys.projects])
