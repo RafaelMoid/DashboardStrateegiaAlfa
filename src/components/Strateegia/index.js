@@ -38,11 +38,11 @@ const Strateegia = () => {
   
   const listaProjetosNome=projectsData.map(
     (c,i)=>
-      <Link key={i} className="ulItem" to={"/Projetos"} >{c.title}</Link>
+      <Link key={i} className="ulItem" to={"/Projetos"} projectId={projectsData.id} projectTitle={projectsData.title}>{c.title}</Link>
       )
 
   
-
+//
      
   const relatorios=[['Relatorio 1', 'conclusão','escola figital'],['Relatorio parcial', 'parcial','banco figital'],['MVS', 'parcial','habilitação figital'],['Relatorio final', 'conclusão','empresa figital']];
   
