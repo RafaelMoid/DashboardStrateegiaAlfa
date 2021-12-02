@@ -5,7 +5,8 @@ import ChartJourney1 from '../ChartsJourney/ChartJourney1.js';
 import ChartJourney2 from '../ChartsJourney/ChartJourney2.js';
 import PeopleContainer from '../PeopleList/PeopleContainer.jsx';
 
-function Projetos() {
+
+function Projetos({projectsData}) {
 
     
     
@@ -28,7 +29,7 @@ function Projetos() {
                 <div className="resumoJornada">
                     <img src="group96.svg" className="img"/>
                     <div className="infoP">
-                        <h1>Nome da Jornada/Projeto </h1>
+                        <h1>{"Matheus"}</h1>
                         <p className="titleP">criada em 04/02/21</p>
                         <p className="titleP">última atividade 2 dias atrás</p>
                     </div>

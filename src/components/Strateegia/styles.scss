@@ -301,12 +301,20 @@ justify-content: left;
     }
 
 .ulItem {
+  margin-top: 1.5vh;  
   text-align: center;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
+
+.ulItem:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 //DAQUI PARA CIMA É NECESSARIO FAZER A RESPONSIVIDADE
 
 

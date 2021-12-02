@@ -9,7 +9,7 @@ import Kits from "../Kits";
 import Button from "../pontosDeEncontro";
 import Wellcome from "../Wellcome";
 import Navbar2 from "../Navbarv2";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Encontros from "../Kits";
 import BarChart from '../Charts/Chart.js';
@@ -19,44 +19,29 @@ import {BsThreeDots} from 'react-icons/bs';
 import "./styles.scss";
 
 const Strateegia = () => {
+
+  const history = useHistory();
+  
+  const handleRoute = () =>{ 
+    history.push("/Projetos");
+  }
+
   const [user, setUser] = useState({});
   //Aqui está a chamada do valor de id para a função seguinte
-  const [idKitData, setIdKitData] = useState("");
-  //Aqui estão os dados do mapa em si, é daqui que se resgata os kits (linha 51) \/
-  const [kitData, setKitData] = useState("");
-  //Retorno da linha 62 (aqui estão os pontos de encontro) \/
-  const [MapsData, setMapsData] = useState("");
-  // Todos os projetos estão sendo chamados como array complexo de 3 niveis
   const [projectsData, setProjectsData] = useState([]);
-  //Vai ser necessario quebrar em aprtes menores
-  const [projectsProjectsData, setProjectsProjectsData] = useState("");
-  // Dados de usuarios em projetos \/\/\/\/
-  const [membersData, setMembersData] = useState("");
-  // const [projects, setProjects] = useState([]);
   const auth = useContext(AuthContext);
-
-  
-  const listaProjetosNome=projectsData.map(
-    (c,i)=>
-      <Link key={i} className="ulItem" to={"/Projetos"} projectId={projectsData.id} projectTitle={projectsData.title}>{c.title}</Link>
-      )
-
-  
-//
-     
-  const relatorios=[['Relatorio 1', 'conclusão','escola figital'],['Relatorio parcial', 'parcial','banco figital'],['MVS', 'parcial','habilitação figital'],['Relatorio final', 'conclusão','empresa figital']];
-  
 
   useEffect(() => {
     fetchUserData(auth.apiToken).then((response) => {
-      //console.log(response);
+      console.log(user)
+      console.log(response);
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-        //console.log(data)
+        console.log(data)
         if (data && response) {
           const [myJourneys] = data.filter((journey) => {
-            return journey.lab.owner_name === response.name
+            return journey.lab.id === response.id
             
             }
           )
@@ -65,6 +50,16 @@ const Strateegia = () => {
     });
   }, [auth.apiToken]);
 
+
+  const listaProjetosNome=projectsData.map(
+    (c,i)=>
+      <li className="ulItem">
+        <p key={i} className="ulItem" onClick={handleRoute} projectsData={projectsData}>{c.title}</p>
+      </li>
+      )
+
+
+      
 
   //Aqui estão os dados do mapa em si, é daqui que se resgata os kits (linha 51)
   useEffect(() => {
@@ -75,31 +70,14 @@ const Strateegia = () => {
     //   setProjects(data);
     // });
   }, [auth.apiToken]);
-
-  //Aqui estão os dados dos membros dos projetos
-  useEffect(() => {
-    fetchProjectsMembers(auth.apiToken ).then((data) => {
-      setMembersData(data);
-    });
-  }, [auth.apiToken]);
-
-
-  //Retorno da linha 62 (aqui estão os pontos de encontro)
-  useEffect(() => {
-    fetchEncounterByMaps(auth.apiToken).then((data) => {
-      //console.log(data);
-      setMapsData(data);
-    });
-  }, [auth.apiToken]);
-
-
+  
 
   return (
     
     <div className="Wrapper">
       
       <div className="WrapperNav">
-        
+
           <Navbar2 />
           <Wellcome username={user.name}/>
       </div>
@@ -219,7 +197,6 @@ const Strateegia = () => {
             
          </div>
       
-       
       </div>
     
     
