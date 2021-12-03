@@ -26,10 +26,16 @@ const Strateegia = () => {
     history.push("/Projetos");
   }
 
+  const handleSelection = (e) =>{
+    setProjectId(e)
+  }
+
   const [user, setUser] = useState({});
   //Aqui está a chamada do valor de id para a função seguinte
   const [projectsData, setProjectsData] = useState([]);
+  const [projectId, setProjectId] = useState("");
   const auth = useContext(AuthContext);
+
 
   useEffect(() => {
     fetchUserData(auth.apiToken).then((response) => {
@@ -53,13 +59,37 @@ const Strateegia = () => {
 
   const listaProjetosNome=projectsData.map(
     (c,i)=>
+      <>
+      <>
+      {localStorage.setItem('itemId', c.id)}
+      {localStorage.setItem('itemTitle', c.title)}
+      </>
       <li className="ulItem">
-        <p key={i} className="ulItem" onClick={handleRoute} projectsData={projectsData}>{c.title}</p>
+        <p key={i} className="ulItem" onClick={handleRoute} >{c.title}</p>
       </li>
+      </>
       )
 
-
-      
+  const listaProjetosDropdown=projectsData.map(
+    (c,i)=>
+      <>
+        <>
+          {localStorage.setItem('selection1', c.id)}
+          {localStorage.setItem('selection1Title', c.title)}
+        </>
+        <option key={i} value="Project 1" >{c.title}</option>
+      </>
+      )
+  const listaProjetosDropdown2=projectsData.map(
+    (c,i)=>
+    <>
+      <>
+       {localStorage.setItem('selection2', c.id)}
+       {localStorage.setItem('selection2Title', c.title)}
+      </>
+      <option key={i} value="Project 1" >{c.title}</option>
+    </>
+      )    
 
   //Aqui estão os dados do mapa em si, é daqui que se resgata os kits (linha 51)
   useEffect(() => {
@@ -131,15 +161,11 @@ const Strateegia = () => {
                 <p>Selecione duas jornadas para um compartivo rápido entre seus índices  </p>
                 <h3>Jornada 1</h3>
                 <select className="dropdown">
-                  <option value="Project 1">Project 1</option>
-                  <option value="Project 2">Project 2</option>
-                  <option value="Project 3">Project 3</option>
+                  {listaProjetosDropdown}
                 </select>
                 <h3>Jornada 2</h3>
                 <select className="dropdown">
-                  <option value="Project 1">Project 1</option>
-                  <option value="Project 2">Project 2</option>
-                  <option value="Project 3">Project 3</option>
+                  {listaProjetosDropdown2}
                 </select>
                 <div><button className="btnComp">Comparar</button></div>
                 <div className="txtComp"><a >Comparações avançadas</a></div>
