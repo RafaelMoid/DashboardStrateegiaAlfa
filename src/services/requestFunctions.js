@@ -43,7 +43,7 @@ export const fetchUserProjects = async (token) => {
 
 //Detalhamento de cada projeto (obtem todos os membros)
 export const fetchProjectsMembers = async (token) => {
-  const { data } = await api("/v1/project/60e481ee9692e14e21c51261", {
+  const { data } = await api("/v1/project/", {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ export const fetchProjectsMembers = async (token) => {
 };
 
 export const fetchMapById = async (token) => {
-  const {data} = await api("/projects/v1/project/60e481ee9692e14e21c51261",
+  const {data} = await api("/projects/v1/project/"+localStorage.getItem('id'),
   {
     method: "GET", 
     headers: {
@@ -62,6 +62,20 @@ export const fetchMapById = async (token) => {
 })
  return data;
 };
+
+//Detalhamento das statisticas do projeto /v1/project/{id}/statistics
+export const fetchMapStatistics = async (token) => {
+  const {data} = await api("v1/project/"+localStorage.getItem('id')+"statistics",
+  {
+    method: "GET", 
+    headers: {
+      Authorization: `Bearer ${token}`,
+  },
+})
+ return data;
+};
+
+
 
 export const fetchEncounterByMaps = async (token) => {
   const {data} = await api("/projects/v1/map/60e481ef9692e14e21c51262",

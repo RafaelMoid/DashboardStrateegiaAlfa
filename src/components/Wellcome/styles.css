@@ -4,15 +4,18 @@
         margin-top: 8vh;
 }
 
-
+.imgWellcome {
+    margin-left: 7vw;
+    height:15vh;
+}
 
 .wellcome {
     justify-content: flex-start;
     position: relative;
     font-weight: 400;
     color:#474143 ;
-    margin-top: -0.6vh;
-    margin-left: 5vw;
+    margin-top: 1vh;
+    margin-left: 1vw;
     
 }
 

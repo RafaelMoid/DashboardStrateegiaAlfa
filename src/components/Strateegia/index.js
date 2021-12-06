@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/auth";
 import {
   fetchUserData,fetchUserEncouters,fetchMapById, fetchEncounterByMaps, fetchUserGetProjectById,
-  fetchUserProjects, fetchProjectsMembers
+  fetchUserProjects, fetchMapStatistics
 } from "../../services/requestFunctions";
 import Navbar from "../Navbar";
 import Kits from "../Kits";
@@ -24,27 +24,27 @@ const Strateegia = () => {
   
   const handleRoute = () =>{ 
     history.push("/Projetos");
+
   }
 
-  const handleSelection = (e) =>{
-    setProjectId(e)
-  }
+  
 
   const [user, setUser] = useState({});
   //Aqui está a chamada do valor de id para a função seguinte
   const [projectsData, setProjectsData] = useState([]);
   const [projectId, setProjectId] = useState("");
+  const [projectStatistics, setProjectStatistics] = useState([]);
   const auth = useContext(AuthContext);
 
 
   useEffect(() => {
     fetchUserData(auth.apiToken).then((response) => {
-      console.log(user)
-      console.log(response);
+      //console.log(user)
+      //console.log(response);
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-        console.log(data)
+        //console.log(data)
         if (data && response) {
           const [myJourneys] = data.filter((journey) => {
             return journey.lab.id === response.id
@@ -56,18 +56,19 @@ const Strateegia = () => {
     });
   }, [auth.apiToken]);
 
+  
+  useEffect(() => {
+    fetchMapStatistics(auth.apiToken).then((response) => {
+      
+    })
+  }, [auth.apiToken]);
+
 
   const listaProjetosNome=projectsData.map(
     (c,i)=>
-      <>
-      <>
-      {localStorage.setItem('itemId', c.id)}
-      {localStorage.setItem('itemTitle', c.title)}
-      </>
       <li className="ulItem">
-        <p key={i} className="ulItem" onClick={handleRoute} >{c.title}</p>
-      </li>
-      </>
+        <p key={i} className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
+      </li>    
       )
 
   const listaProjetosDropdown=projectsData.map(
@@ -91,15 +92,7 @@ const Strateegia = () => {
     </>
       )    
 
-  //Aqui estão os dados do mapa em si, é daqui que se resgata os kits (linha 51)
-  useEffect(() => {
-    fetchUserProjects(auth.apiToken ).then((data) => {
-      setProjectsData(data);
-    });
-    // fetchUserProjects(auth.apiToken).then((data) => {
-    //   setProjects(data);
-    // });
-  }, [auth.apiToken]);
+  
   
 
   return (
@@ -128,12 +121,6 @@ const Strateegia = () => {
             <div className="textBox3">
               <div className="title3"><h1>432</h1></div>
               <div className="subtitle3"><p>participantes</p></div>
-            </div>
-          </article>
-          <article className="box4">
-            <div className="textBox4">
-              <div className="title4"><h1>56</h1></div>
-              <div className="subtitle4"><p>relatórios gerados</p></div>
             </div>
           </article>
       </div>

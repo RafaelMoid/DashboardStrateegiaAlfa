@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, { useContext, useEffect, useState } from "react";
 import Navbar2 from "../Navbarv2";
 import "./index.css";
 import ChartJourney1 from '../ChartsJourney/ChartJourney1.js';
 import ChartJourney2 from '../ChartsJourney/ChartJourney2.js';
 import PeopleContainer from '../PeopleList/PeopleContainer.jsx';
-
+import {fetchMapById, fetchMapStatistics} from "../../services/requestFunctions";
+import { AuthContext } from "../providers/auth";
 
 function Projetos() {
 
@@ -13,6 +14,25 @@ function Projetos() {
     //State responsavel por mostrar as visualizações do dropdown
     const [viewMode, setViewMode] = useState("indices");
     console.log(viewMode);
+    const auth = useContext(AuthContext);
+    const [project, setProject] = useState([]);
+    const [projectStatistics, setProjectStatistics] = useState([]);
+
+    useEffect(() => {
+        fetchMapById(auth.apiToken).then((response) => {
+          //console.log(user)
+          console.log(response);
+          setProject(response);
+        }
+    )});
+
+    useEffect(() => {
+        fetchMapStatistics(auth.apiToken).then((response) => {
+          //console.log(user)
+          //console.log(response);
+          setProjectStatistics(response);
+        }
+    )});
 
     function handleSelection(e){
         setViewMode(e.target.value)
@@ -27,10 +47,10 @@ function Projetos() {
                     <p>dashboard {'>'} página de projeto</p>
                 </div>
                 <div className="resumoJornada">
-                    <img src="group96.svg" className="img"/>
+                    <img src="group96.svg" className="imgProjetcs"/>
                     <div className="infoP">
-                        <h1>{localStorage.getItem('itemTitle')}</h1>
-                        <p className="titleP">criada em 04/02/21</p>
+                        <h1>{project.title}</h1>
+                        <p className="titleP">criada em {project.created_at}</p>
                         <p className="titleP">última atividade 2 dias atrás</p>
                     </div>
                 </div>

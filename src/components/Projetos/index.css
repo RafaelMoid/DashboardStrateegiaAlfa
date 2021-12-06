@@ -27,16 +27,16 @@
 .resumoJornada {
     display:flex;
     flex-direction:row;
-    width: 60vw;
+    width: 80vw;
     height: 15vh;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    margin-left: -10vw;
 }
 
-.img{
+.imgProjetcs{
     height:10vh;
     width: 10vw;
+    margin-left: 6vw;
 }
 
 .infoP {
@@ -44,7 +44,6 @@
     flex-direction:column;
     justify-content: left;
     align-items: left;
-    margin-left: -31vw;
 }
 
 .infoP > h1{

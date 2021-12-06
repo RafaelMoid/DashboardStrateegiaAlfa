@@ -18,67 +18,7 @@ const PeopleContainer = () => {
             id: "2",
             name: "Mara sobrenome",
             position: "Mentor",
-        },
-        {
-            id: "3",
-            name: "Tara sobrenome",
-            position: "Mentor",
-        },
-        {
-            id: "4",
-            name: "Cara sobrenome",
-            position: "Mentor",
-        },
-        {
-            id: "5",
-            name: "Para sobrenome",
-            position: "Admin",
-        },
-        {
-            id: "6",
-            name: "Iara sobrenome",
-            position: "Participante",
-        },
-        {
-            id: "7",
-            name: "Bara sobrenome",
-            position: "Admin",
-        },
-        {
-            id: "1",
-            name: "Sara sobrenome",
-            position: "Participante",
-        },
-        {
-            id: "2",
-            name: "Mara sobrenome",
-            position: "Participante",
-        },
-        {
-            id: "3",
-            name: "Tara sobrenome",
-            position: "Participante",
-        },
-        {
-            id: "4",
-            name: "Cara sobrenome",
-            position: "Participante",
-        },
-        {
-            id: "5",
-            name: "Para sobrenome",
-            position: "Participante",
-        },
-        {
-            id: "6",
-            name: "Iara sobrenome",
-            position: "Participante",
-        },
-        {
-            id: "7",
-            name: "Bara sobrenome",
-            position: "Participante",
-        },
+        }
     ]);
 
     return ( 
