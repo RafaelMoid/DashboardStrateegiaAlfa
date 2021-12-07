@@ -33,6 +33,7 @@ const Strateegia = () => {
   //Aqui está a chamada do valor de id para a função seguinte
   const [projectsData, setProjectsData] = useState([]);
   const [projectId, setProjectId] = useState("");
+  const [project, setProject] = useState([]);
   const [projectStatistics, setProjectStatistics] = useState([]);
   const auth = useContext(AuthContext);
 
@@ -56,12 +57,21 @@ const Strateegia = () => {
     });
   }, [auth.apiToken]);
 
-  
-  useEffect(() => {
-    fetchMapStatistics(auth.apiToken).then((response) => {
-      
-    })
-  }, [auth.apiToken]);
+  // useEffect(() => {
+  //       fetchMapById(auth.apiToken).then((response) => {
+  //         //console.log(user)
+  //         console.log(response);
+  //         setProject(response);
+  //       }
+  //   )});
+
+  //   useEffect(() => {
+  //       fetchMapStatistics(auth.apiToken).then((response) => {
+  //         //console.log(user)
+  //         console.log(response);
+  //         setProjectStatistics(response);
+  //       }
+  //   )});
 
 
   const listaProjetosNome=projectsData.map(

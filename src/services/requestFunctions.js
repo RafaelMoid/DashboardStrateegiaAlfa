@@ -11,6 +11,7 @@ export const authenticate = async (values) => {
   })
     .then((response) => {
       functionReturn = response;
+      console.log(response);
     })
     .catch((err) => {
       throw Error(err.message);
@@ -65,11 +66,11 @@ export const fetchMapById = async (token) => {
 
 //Detalhamento das statisticas do projeto /v1/project/{id}/statistics
 export const fetchMapStatistics = async (token) => {
-  const {data} = await api("v1/project/"+localStorage.getItem('id')+"statistics",
+  const {data} = await api("/projects/v1/project/"+localStorage.getItem('id')+"/statistics",
   {
     method: "GET", 
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem('tokenGlobal')}`,
   },
 })
  return data;

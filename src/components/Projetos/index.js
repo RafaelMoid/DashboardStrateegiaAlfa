@@ -29,7 +29,7 @@ function Projetos() {
     useEffect(() => {
         fetchMapStatistics(auth.apiToken).then((response) => {
           //console.log(user)
-          //console.log(response);
+          console.log(response);
           setProjectStatistics(response);
         }
     )});
