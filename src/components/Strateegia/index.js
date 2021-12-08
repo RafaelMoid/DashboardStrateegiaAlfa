@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/auth";
 import {
   fetchUserData,fetchUserEncouters,fetchMapById, fetchEncounterByMaps, fetchUserGetProjectById,
-  fetchUserProjects, fetchMapStatistics
+  fetchUserProjects, fetchMapStatistics, fetchMapStatisticsHome, fetchMapStatisticsHome2
 } from "../../services/requestFunctions";
 import Navbar from "../Navbar";
 import Kits from "../Kits";
@@ -26,7 +26,6 @@ const Strateegia = () => {
     history.push("/Projetos");
 
   }
-
   
 
   const [user, setUser] = useState({});
@@ -34,7 +33,8 @@ const Strateegia = () => {
   const [projectsData, setProjectsData] = useState([]);
   const [projectId, setProjectId] = useState("");
   const [project, setProject] = useState([]);
-  const [projectStatistics, setProjectStatistics] = useState([]);
+  const [projectStatistics1, setProjectStatistics1] = useState("");
+  const [projectStatistics2, setProjectStatistics2] = useState("");
   const auth = useContext(AuthContext);
 
 
@@ -57,21 +57,22 @@ const Strateegia = () => {
     });
   }, [auth.apiToken]);
 
-  // useEffect(() => {
-  //       fetchMapById(auth.apiToken).then((response) => {
-  //         //console.log(user)
-  //         console.log(response);
-  //         setProject(response);
-  //       }
-  //   )});
 
-  //   useEffect(() => {
-  //       fetchMapStatistics(auth.apiToken).then((response) => {
-  //         //console.log(user)
-  //         console.log(response);
-  //         setProjectStatistics(response);
-  //       }
-  //   )});
+    useEffect(() => {
+      fetchMapStatisticsHome(auth.apiToken).then((response) => {
+          //console.log(user)
+          console.log(response);
+          setProjectStatistics1(response);
+        }
+    )});
+
+    useEffect(() => {
+      fetchMapStatisticsHome2(auth.apiToken).then((response) => {
+          //console.log(user)
+          console.log(response);
+          setProjectStatistics2(response);
+        }
+    )});
 
 
   const listaProjetosNome=projectsData.map(
@@ -81,24 +82,19 @@ const Strateegia = () => {
       </li>    
       )
 
+    //ESTAMOS SEMPRE PASSANDO O ULTIMO VALOR DO OBJETO DE LISTA PARA A REQUISÇÃO DE aAPI
+
   const listaProjetosDropdown=projectsData.map(
     (c,i)=>
       <>
-        <>
-          {localStorage.setItem('selection1', c.id)}
-          {localStorage.setItem('selection1Title', c.title)}
-        </>
-        <option key={i} value="Project 1" >{c.title}</option>
+        <option key={i} onClick={localStorage.setItem( `idStat1` ,c.id)}>{c.title}</option>
       </>
       )
+      //
   const listaProjetosDropdown2=projectsData.map(
     (c,i)=>
     <>
-      <>
-       {localStorage.setItem('selection2', c.id)}
-       {localStorage.setItem('selection2Title', c.title)}
-      </>
-      <option key={i} value="Project 1" >{c.title}</option>
+      <option key={i} onClick={localStorage.setItem( `idStat2` ,c.id)}>{c.title}</option>
     </>
       )    
 

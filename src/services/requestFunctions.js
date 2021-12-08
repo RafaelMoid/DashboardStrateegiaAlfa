@@ -76,7 +76,27 @@ export const fetchMapStatistics = async (token) => {
  return data;
 };
 
+export const fetchMapStatisticsHome = async (token) => {
+  const {data} = await api("/projects/v1/project/"+localStorage.getItem('idStat1')+"/statistics",
+  {
+    method: "GET", 
+    headers: {
+      Authorization: `Bearer ${token}`,
+  },
+})
+ return data;
+};
 
+export const fetchMapStatisticsHome2 = async (token) => {
+  const {data} = await api("/projects/v1/project/"+localStorage.getItem('idStat2')+"/statistics",
+  {
+    method: "GET", 
+    headers: {
+      Authorization: `Bearer ${token}`,
+  },
+})
+ return data;
+};
 
 export const fetchEncounterByMaps = async (token) => {
   const {data} = await api("/projects/v1/map/60e481ef9692e14e21c51262",
