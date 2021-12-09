@@ -24,9 +24,33 @@ const Strateegia = () => {
   
   const handleRoute = () =>{ 
     history.push("/Projetos");
+  }
 
+  const handleSelect = () => {
+    fetchMapStatisticsHome(auth.apiToken).then((response) => {
+      //console.log(user)
+      console.log(response);
+      setProjectStatistics1(response);
+    }
+)
+
+
+fetchMapStatisticsHome2(auth.apiToken).then((response) => {
+  //console.log(user)
+  console.log(response);
+  setProjectStatistics2(response);
+}
+)
   }
   
+  
+  
+  // function generateOptions(dados, select){
+  //   const dadosOptions = projectsData.map( dado => `
+  //       <option value="${dado}">${dado}</option>
+  //   `).join("")
+  //   console.log(dadosOptions)
+  // }
 
   const [user, setUser] = useState({});
   //Aqui está a chamada do valor de id para a função seguinte
@@ -58,21 +82,21 @@ const Strateegia = () => {
   }, [auth.apiToken]);
 
 
-    useEffect(() => {
-      fetchMapStatisticsHome(auth.apiToken).then((response) => {
-          //console.log(user)
-          console.log(response);
-          setProjectStatistics1(response);
-        }
-    )});
+    // useEffect(() => {
+    //   fetchMapStatisticsHome(auth.apiToken).then((response) => {
+    //       //console.log(user)
+    //       console.log(response);
+    //       setProjectStatistics1(response);
+    //     }
+    // )});
 
-    useEffect(() => {
-      fetchMapStatisticsHome2(auth.apiToken).then((response) => {
-          //console.log(user)
-          console.log(response);
-          setProjectStatistics2(response);
-        }
-    )});
+    // useEffect(() => {
+    //   fetchMapStatisticsHome2(auth.apiToken).then((response) => {
+    //       //console.log(user)
+    //       console.log(response);
+    //       setProjectStatistics2(response);
+    //     }
+    // )});
 
 
   const listaProjetosNome=projectsData.map(
@@ -87,14 +111,16 @@ const Strateegia = () => {
   const listaProjetosDropdown=projectsData.map(
     (c,i)=>
       <>
-        <option key={i} onClick={localStorage.setItem( `idStat1` ,c.id)}>{c.title}</option>
+        <option key={i} onClick={localStorage.setItem( `idStat1` ,c.id)} onMouseEnter={() => localStorage.setItem('idStat1', c.id)}>{c.title}</option>
+        <>{console.log(localStorage.getItem( `idStat1`))}</>
       </>
       )
       //
   const listaProjetosDropdown2=projectsData.map(
     (c,i)=>
     <>
-      <option key={i} onClick={localStorage.setItem( `idStat2` ,c.id)}>{c.title}</option>
+      <option key={i} onClick={localStorage.setItem( `idStat2` ,c.id)} onMouseEnter={() => localStorage.setItem('idStat2', c.id)}>{c.title}</option>
+      <>{console.log(localStorage.getItem( `idStat2`))}</>
     </>
       )    
 
@@ -153,14 +179,16 @@ const Strateegia = () => {
                 <h3>Comparação rápida  de índices</h3>
                 <p>Selecione duas jornadas para um compartivo rápido entre seus índices  </p>
                 <h3>Jornada 1</h3>
-                <select className="dropdown">
+                <select className="dropdown">                  
+                  <option value=''>Selecione</option>
                   {listaProjetosDropdown}
                 </select>
                 <h3>Jornada 2</h3>
                 <select className="dropdown">
+                  <option value=''>Selecione</option>
                   {listaProjetosDropdown2}
                 </select>
-                <div><button className="btnComp">Comparar</button></div>
+                <div><button className="btnComp" onClick={handleSelect}>Comparar</button></div>
                 <div className="txtComp"><a >Comparações avançadas</a></div>
               </div>
 
