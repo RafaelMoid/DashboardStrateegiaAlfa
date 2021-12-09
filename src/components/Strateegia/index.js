@@ -35,10 +35,10 @@ const Strateegia = () => {
 )
 
 
-fetchMapStatisticsHome2(auth.apiToken).then((response) => {
+fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
   //console.log(user)
-  console.log(response);
-  setProjectStatistics2(response);
+  console.log(response2);
+  setProjectStatistics2(response2);
 }
 )
   }
@@ -196,22 +196,22 @@ fetchMapStatisticsHome2(auth.apiToken).then((response) => {
                 <div className="horizontalDisplay">
                 <h2 className="compTitle">Titulo projeto 1</h2>
                   <div className="element">
-                  <img src="group.svg" className="iconComp"/><h3>35%</h3>
+                  <img src="group.svg" className="iconComp"/><h3>{projectStatistics1.people_active_count}</h3>
                   </div>
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
                   <img src="circledQuestion.svg" className="iconComp"/><h3>15%</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
                   <img src="squareChat.svg" className="iconComp"/><h3>85%</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
                   <img src="chatBubbles.svg" className="iconComp"/><h3>147</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementP"><p>Engajamento nos debates</p></div>
                 </div>
               </div>
               
@@ -226,15 +226,15 @@ fetchMapStatisticsHome2(auth.apiToken).then((response) => {
                   <div className="element">
                   <img src="circledQuestion.svg" className="iconComp"/><h3>15%</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
                   <img src="squareChat.svg" className="iconComp"/><h3>85%</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
                   <img src="chatBubbles.svg" className="iconComp"/><h3>147</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementP"><p>Engajamento nos debates</p></div>
                 </div>
               </div>
               
