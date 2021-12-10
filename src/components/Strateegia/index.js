@@ -20,6 +20,8 @@ import "./styles.scss";
 
 const Strateegia = () => {
 
+  //Variaveis para dropdown
+
   const history = useHistory();
   
   const handleRoute = () =>{ 
@@ -111,20 +113,34 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
   const listaProjetosDropdown=projectsData.map(
     (c,i)=>
       <>
-        <option key={i} onClick={localStorage.setItem( `idStat1` ,c.id)} onMouseEnter={() => localStorage.setItem('idStat1', c.id)}>{c.title}</option>
-        <>{console.log(localStorage.getItem( `idStat1`))}</>
+        <option key={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
+        <>{console.log(localStorage.getItem(i))}</>
       </>
       )
       //
   const listaProjetosDropdown2=projectsData.map(
     (c,i)=>
     <>
-      <option key={i} onClick={localStorage.setItem( `idStat2` ,c.id)} onMouseEnter={() => localStorage.setItem('idStat2', c.id)}>{c.title}</option>
-      <>{console.log(localStorage.getItem( `idStat2`))}</>
+      <option key={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
+      <>{console.log(localStorage.getItem(i))}</>
     </>
       )    
 
-  
+    //   // O MAIS PERTO QUE CHEGUEI DE RESOLVER PORÉM AINDA COM O ERRO DE ESCOPO
+    //    var teste1=<>
+    //     <select id="select_id" className="dropdown" >                  
+    //                  <option >Selecione</option>
+    //                  {var listaProjetosDropdown2=projectsData.map(
+    // (c,i)=>
+    // <>
+    //   <option key={i} value={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
+    //   <>{console.log(localStorage.getItem(i))}</>
+    // </>
+    //   )}
+    //    </select>
+    //    {document.getElementById('select_id').addEventListener('change', function() {
+    //       localStorage.setItem( `idStat1` ,localStorage.getItem(this.key));})}
+    //  </>
   
 
   return (
@@ -179,7 +195,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                 <h3>Comparação rápida  de índices</h3>
                 <p>Selecione duas jornadas para um compartivo rápido entre seus índices  </p>
                 <h3>Jornada 1</h3>
-                <select className="dropdown">                  
+                <select className="dropdown">
                   <option value=''>Selecione</option>
                   {listaProjetosDropdown}
                 </select>
@@ -194,7 +210,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
 
               <div className="comp1">
                 <div className="horizontalDisplay">
-                <h2 className="compTitle">Titulo projeto 1</h2>
+                <h2 className="compTitle">{projectStatistics1.title}</h2>
                   <div className="element">
                   <img src="group.svg" className="iconComp"/><h3>{projectStatistics1.people_active_count}</h3>
                   </div>
@@ -217,9 +233,9 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
               
               <div className="comp1">
                 <div className="horizontalDisplay">
-                <h2 className="compTitle">Titulo projeto 2</h2>
+                <h2 className="compTitle">{projectStatistics2.title}</h2>
                   <div className="element">
-                  <img src="group.svg" className="iconComp"/><h3>35%</h3>
+                  <img src="group.svg" className="iconComp"/><h3>{projectStatistics2.people_active_count}</h3>
                   </div>
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
