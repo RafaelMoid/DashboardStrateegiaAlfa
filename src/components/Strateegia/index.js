@@ -196,16 +196,16 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                 <p>Selecione duas jornadas para um compartivo rápido entre seus índices  </p>
                 <h3>Jornada 1</h3>
                 <select className="dropdown">
-                  <option value=''>Selecione</option>
+                  <option value='' onChange={e => localStorage.setItem(('idStat1' , e.value))} >Selecione</option>
                   {listaProjetosDropdown}
                 </select>
                 <h3>Jornada 2</h3>
                 <select className="dropdown">
-                  <option value=''>Selecione</option>
+                  <option value='' onChange={e => localStorage.setItem(('idStat1' , e.value))}>Selecione</option>
                   {listaProjetosDropdown2}
                 </select>
                 <div><button className="btnComp" onClick={handleSelect}>Comparar</button></div>
-                <div className="txtComp"><a >Comparações avançadas</a></div>
+                <div className="txtComp"><a>Comparações avançadas</a></div>
               </div>
 
               <div className="comp1">
@@ -217,7 +217,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
-                  <img src="circledQuestion.svg" className="iconComp"/><h3>15%</h3>
+                  <img src="circledQuestion.svg" className="iconComp"/><h3>{projectStatistics1.iep}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
@@ -240,7 +240,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
-                  <img src="circledQuestion.svg" className="iconComp"/><h3>15%</h3>
+                  <img src="circledQuestion.svg" className="iconComp"/><h3>{projectStatistics2.iep}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">

@@ -34,9 +34,9 @@ function Projetos() {
         }
     )});
 
-    function handleSelection(e){
-        setViewMode(e.target.value)
-    }; 
+    // function handleSelection(e){
+    //     setViewMode(e.target.value)
+    // }; 
 
     return (
         
@@ -55,25 +55,29 @@ function Projetos() {
                     </div>
                 </div>
                 <div className="introData">
-                    <h3>Modo de visualização</h3>
+                    {/* <h3>Modo de visualização</h3>
                     <div className="inferior">
                         <p>Selecione um tipo de visualização das informações da jornada</p>
-                        <select className="dropdownData" onChange={handleSelection} defaultValue={viewMode}>
+                        
+                         <select className="dropdownData" onChange={handleSelection} defaultValue={viewMode}>
                                 <option value="indices" >Índices</option>
                                 <option value="jornadas" >Jornadas</option>
                                 <option value="participantes" >Participantes</option>
                                 <option value="ferramentas" >Ferramentas</option>
-                        </select>
-                    </div>
+                        </select> 
+                    </div> */}
                 </div>
                 <div className="dataWrapper">
                     <div className="data">
+                        <ChartJourney1/>                        
+                    </div>
+                    {/* <div className="data">
                         {viewMode === "indices" && <ChartJourney1/>}
                         {viewMode === "jornadas" && <ChartJourney2/>}
                         {viewMode === "participantes" && <ChartJourney1/>}
                         {viewMode === "ferramentas" && <ChartJourney1/>}
                         
-                    </div>
+                    </div> */}
                     
                 </div>
             </div>
