@@ -155,19 +155,19 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
       <div className="wrapperBoxes">
           <article className="box1">
             <div className="textBox1">
-              <div className="title1"><h1>32</h1></div>
+              <div className="title1"><h1>Imp</h1></div>
               <div className="subtitle1"><p>projetos ativos</p></div>
             </div>
           </article>
           <article className="box2">
             <div className="textBox2">
-              <div className="title2"><h1>45</h1></div>
+              <div className="title2"><h1>Imp</h1></div>
               <div className="subtitle2"><p>projetos concluídos</p></div>
             </div>
           </article>
           <article className="box3">
             <div className="textBox3">
-              <div className="title3"><h1>432</h1></div>
+              <div className="title3"><h1>Imp</h1></div>
               <div className="subtitle3"><p>participantes</p></div>
             </div>
           </article>
@@ -201,7 +201,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                 </select>
                 <h3>Jornada 2</h3>
                 <select className="dropdown">
-                  <option value='' onChange={e => localStorage.setItem(('idStat1' , e.value))}>Selecione</option>
+                  <option value='' onChange={e => localStorage.setItem(('idStat2' , e.value))}>Selecione</option>
                   {listaProjetosDropdown2}
                 </select>
                 <div><button className="btnComp" onClick={handleSelect}>Comparar</button></div>
@@ -217,7 +217,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
-                  <img src="circledQuestion.svg" className="iconComp"/><h3>{projectStatistics1.iep}%</h3>
+                  <img src="circledQuestion.svg" className="iconComp"/><h3>{projectStatistics1.total_comments_count / projectStatistics1.potencial}</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
