@@ -31,7 +31,7 @@ const Strateegia = () => {
   const handleSelect = () => {
     fetchMapStatisticsHome(auth.apiToken).then((response) => {
       //console.log(user)
-      console.log(response);
+      // console.log(response);
       setProjectStatistics1(response);
     }
 )
@@ -39,7 +39,7 @@ const Strateegia = () => {
 
 fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
   //console.log(user)
-  console.log(response2);
+  // console.log(response2);
   setProjectStatistics2(response2);
 }
 )
@@ -74,8 +74,6 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
   const [projectStatistics2, setProjectStatistics2] = useState("");
   // const [result, setResult] = useState();
   const auth = useContext(AuthContext);
-
- 
 
   useEffect(() => {
     fetchUserData(auth.apiToken).then((response) => {
@@ -127,7 +125,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
     (c,i)=>
       <>
         <option key={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
-        <>{console.log(localStorage.getItem(i))}</>
+        {/* <>{console.log(localStorage.getItem(i))}</> */}
       </>
       )
       //
@@ -135,7 +133,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
     (c,i)=>
     <>
       <option key={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
-      <>{console.log(localStorage.getItem(i))}</>
+      {/* <>{console.log(localStorage.getItem(i))}</> */}
     </>
       )    
 
@@ -231,15 +229,33 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   
                   <div className="element">
                     
-                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3>{parseFloat(projectStatistics1.total_comments_count/projectStatistics1.potential).toFixed(2)}</h3>
+                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3>{
+                  parseFloat(
+                    projectStatistics1.parent_comments_count
+                    /
+                    (projectStatistics1.question_count*projectStatistics1.people_active_count)*100)
+                    .toFixed(2)}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
-                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3>85%</h3>
+                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3>{
+                  parseFloat(
+                      (projectStatistics1.parent_comments_count
+                      /
+                      (projectStatistics1.question_count*projectStatistics1.people_active_count))
+                    +
+                    (((projectStatistics1.agreements_comments_count+projectStatistics1.reply_comments_count)
+                    /
+                    ((projectStatistics1.parent_comments_count*projectStatistics1.people_active_count)/2))/2)*100).toFixed(2)}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
-                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3>147</h3>
+                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3>{
+                  parseFloat(
+                    (projectStatistics1.agreements_comments_count+projectStatistics1.reply_comments_count)
+                    /
+                    ((projectStatistics1.parent_comments_count*projectStatistics1.people_active_count)/2)*100).toFixed(2)
+                  }%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nos debates</p></div>
                 </div>
@@ -254,15 +270,32 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
-                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3>{projectStatistics2.iep}%</h3>
+                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3>{parseFloat(
+                    projectStatistics2.parent_comments_count
+                    /
+                    (projectStatistics2.question_count*projectStatistics2.people_active_count)*100)
+                    .toFixed(2)}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
-                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3>85%</h3>
+                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3>{
+                  parseFloat(
+                      (projectStatistics2.parent_comments_count
+                      /
+                      (projectStatistics2.question_count*projectStatistics2.people_active_count))
+                    +
+                    (((projectStatistics2.agreements_comments_count+projectStatistics2.reply_comments_count)
+                    /
+                    ((projectStatistics2.parent_comments_count*projectStatistics2.people_active_count)/2))/2)*100).toFixed(2)}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
-                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3>147</h3>
+                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3>{
+                  parseFloat(
+                    (projectStatistics2.agreements_comments_count+projectStatistics2.reply_comments_count)
+                    /
+                    ((projectStatistics2.parent_comments_count*projectStatistics2.people_active_count)/2)*100).toFixed(2)
+                  }%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nos debates</p></div>
                 </div>
