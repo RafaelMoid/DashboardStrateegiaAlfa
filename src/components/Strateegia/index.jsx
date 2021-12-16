@@ -82,10 +82,10 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-        //console.log(data)
+        console.log(data)
         if (data && response) {
           const [myJourneys] = data.filter((journey) => {
-            return journey.lab.id === response.id
+            return journey.lab.id === response.id 
             
             }
           )
