@@ -10,7 +10,7 @@ import Button from "../pontosDeEncontro";
 import Wellcome from "../Wellcome";
 import Navbar2 from "../Navbarv2";
 import {Link, useHistory} from "react-router-dom";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Encontros from "../Kits";
 import BarChart from '../Charts/Chart.js';
 import {BsThreeDots} from 'react-icons/bs';
