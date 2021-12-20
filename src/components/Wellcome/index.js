@@ -25,14 +25,14 @@ const Wellcome = ({
   return ( <
     div className = "container" >
     <
-    img src = "group96.svg"
+    img src = "group96.png"
     className = "imgWellcome" / >
     <
     div className = "wellcome" >
     <
     h3 className = "ola" > Olá, < /h3><h3 className="nome">{username}</h3 > < h3 className = "ola" > ! < /h3> <
-    p > Aqui você encontra os dados das suas jornadas em um só lugar < /p> <
-    /div>
+    p > Aqui você encontra os dados das suas jornadas em um só lugar < /p> < /
+    div >
 
     <
     /div>
