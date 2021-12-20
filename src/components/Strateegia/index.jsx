@@ -166,19 +166,19 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
       <div className="wrapperBoxes">
           <article className="box1">
             <div className="textBox1">
-              <div className="title1"><h1>Imp</h1></div>
+              <div className="title1"><h1>32</h1></div>
               <div className="subtitle1"><p>projetos ativos</p></div>
             </div>
           </article>
           <article className="box2">
             <div className="textBox2">
-              <div className="title2"><h1>Imp</h1></div>
+              <div className="title2"><h1>45</h1></div>
               <div className="subtitle2"><p>projetos concluídos</p></div>
             </div>
           </article>
           <article className="box3">
             <div className="textBox3">
-              <div className="title3"><h1>Imp</h1></div>
+              <div className="title3"><h1>144</h1></div>
               <div className="subtitle3"><p>participantes</p></div>
             </div>
           </article>
@@ -223,13 +223,13 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                 <div className="horizontalDisplay">
                 <h2 className="compTitle">{projectStatistics1.title}</h2>
                   <div className="element">
-                  <img src="group.svg" className="iconComp" alt="icon"/><h3>{projectStatistics1.people_active_count}</h3>
+                  <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics1.people_active_count}</h3>
                   </div>
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
                     
-                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3>{
+                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
                   parseFloat(
                     projectStatistics1.parent_comments_count
                     /
@@ -238,7 +238,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
-                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3>{
+                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
                   parseFloat(
                       (projectStatistics1.parent_comments_count
                       /
@@ -250,7 +250,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   </div>
                   <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
-                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3>{
+                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
                   parseFloat(
                     (projectStatistics1.agreements_comments_count+projectStatistics1.reply_comments_count)
                     /
@@ -265,12 +265,12 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                 <div className="horizontalDisplay">
                 <h2 className="compTitle">{projectStatistics2.title}</h2>
                   <div className="element">
-                  <img src="group.svg" className="iconComp" alt="icon"/><h3>{projectStatistics2.people_active_count}</h3>
+                  <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.people_active_count}</h3>
                   </div>
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
-                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3>{parseFloat(
+                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{parseFloat(
                     projectStatistics2.parent_comments_count
                     /
                     (projectStatistics2.question_count*projectStatistics2.people_active_count)*100)
@@ -278,7 +278,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
-                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3>{
+                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
                   parseFloat(
                       (projectStatistics2.parent_comments_count
                       /
@@ -290,7 +290,7 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                   </div>
                   <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
-                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3>{
+                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
                   parseFloat(
                     (projectStatistics2.agreements_comments_count+projectStatistics2.reply_comments_count)
                     /

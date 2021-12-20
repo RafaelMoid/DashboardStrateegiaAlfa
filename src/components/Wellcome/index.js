@@ -25,7 +25,7 @@ const Wellcome = ({
   return ( <
     div className = "container" >
     <
-    img src = "group96.png"
+    img src = "group96.svg"
     className = "imgWellcome" / >
     <
     div className = "wellcome" >
