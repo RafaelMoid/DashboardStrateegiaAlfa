@@ -54,10 +54,11 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   const [project, setProject] = useState([]);
   const [projectStatistics1, setProjectStatistics1] = useState("");
   const [projectStatistics2, setProjectStatistics2] = useState("");
+  const [id0, setId0] = useState("");
   const [id1, setId1] = useState("");
   const [id2, setId2] = useState("");
 
-  console.log( id1 , id2);
+  //console.log( id1 , id2);
   // const [result, setResult] = useState();
   const auth = useContext(AuthContext);
 
@@ -162,7 +163,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
          <div className="contentSection">
                  <div className="contentTitle"><h3>Páginas das jornadas</h3></div>
               
-                <ul className="listaProjetos">
+                <ul className="listaProjetos"  onClick={e => setId0(e.target.value)}> 
                  {listaProjetosNome}
                 </ul>
               

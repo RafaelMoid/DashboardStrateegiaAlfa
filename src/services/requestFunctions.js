@@ -70,7 +70,7 @@ export const fetchMapStatistics = async (token) => {
   {
     method: "GET", 
     headers: {
-      Authorization: `Bearer ${localStorage.getItem('tokenGlobal')}`,
+      Authorization: `Bearer ${token}`,
   },
 })
  return data;

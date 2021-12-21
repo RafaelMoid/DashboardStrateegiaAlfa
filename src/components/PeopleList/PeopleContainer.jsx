@@ -8,9 +8,18 @@ import "./PeopleContainer.css";
 const PeopleContainer = () => {
 
     //State responsavel por popular a lista de usuarios no projeto
-    const [people, setPeople] = useState([]);
-
-    
+    const [people, setPeople] = useState([
+        {
+            id: "1",
+            name: "Sara sobrenome",
+            position: "Mentor",
+        },
+        {
+            id: "2",
+            name: "Mara sobrenome",
+            position: "Mentor",
+        }
+    ]);
 
     return ( 
         <div className="people-container">
