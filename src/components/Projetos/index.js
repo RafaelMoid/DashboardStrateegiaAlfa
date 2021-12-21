@@ -23,16 +23,18 @@ function Projetos() {
           //console.log(user)
           console.log(response);
           setProject(response);
-        }
-    )});
+        });
 
-    useEffect(() => {
+        
         fetchMapStatistics(auth.apiToken).then((response) => {
-          //console.log(user)
-          console.log(response);
-          setProjectStatistics(response);
+            //console.log(user)
+            console.log(response);
+            setProjectStatistics(response);
         }
-    )});
+
+    )}, [auth.apiToken] );
+
+  
 
     // function handleSelection(e){
     //     setViewMode(e.target.value)
