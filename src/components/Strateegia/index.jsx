@@ -29,7 +29,7 @@ const Strateegia = () => {
   }
 
   const handleSelect = () => {
-    fetchMapStatisticsHome(auth.apiToken).then((response) => {
+    fetchMapStatisticsHome(auth.apiToken , id1).then((response) => {
       //console.log(user)
       // console.log(response);
       setProjectStatistics1(response);
@@ -37,7 +37,7 @@ const Strateegia = () => {
 )
 
 
-fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
+fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   //console.log(user)
   // console.log(response2);
   setProjectStatistics2(response2);
@@ -47,24 +47,6 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
   }
   
 
-  //FORMA MAIS PROXIMA QUE CHEGUEI DE CALCULAR O VALOR
-  // function calculate1 () {
-  //   var ctt1 = projectStatistics1.total_comments_count;
-  //   var pot1 = projectStatistics1.potencial;
-
-  //   ctt1 = parseFloat(ctt1);
-  //   pot1 = parseFloat(pot1);
-
-  //   setResult(ctt1/pot1);
-  // }
-  
-  // function generateOptions(dados, select){
-  //   const dadosOptions = projectsData.map( dado => `
-  //       <option value="${dado}">${dado}</option>
-  //   `).join("")
-  //   console.log(dadosOptions)
-  // }
-
   const [user, setUser] = useState({});
   //Aqui está a chamada do valor de id para a função seguinte
   const [projectsData, setProjectsData] = useState([]);
@@ -72,6 +54,10 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
   const [project, setProject] = useState([]);
   const [projectStatistics1, setProjectStatistics1] = useState("");
   const [projectStatistics2, setProjectStatistics2] = useState("");
+  const [id1, setId1] = useState("");
+  const [id2, setId2] = useState("");
+
+  console.log( id1 , id2);
   // const [result, setResult] = useState();
   const auth = useContext(AuthContext);
 
@@ -124,34 +110,18 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
   const listaProjetosDropdown=projectsData.map(
     (c,i)=>
       <>
-        <option key={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
-        {/* <>{console.log(localStorage.getItem(i))}</> */}
+        <option key={i} value={c.id} >{c.title}</option>
+        {/* Fazendo dessa forma é possivel passar o valor no onChange do Select */}
       </>
       )
       //
   const listaProjetosDropdown2=projectsData.map(
     (c,i)=>
     <>
-      <option key={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
-      {/* <>{console.log(localStorage.getItem(i))}</> */}
+      <option key={i} value={c.id} >{c.title}</option>
     </>
       )    
 
-    //   // O MAIS PERTO QUE CHEGUEI DE RESOLVER PORÉM AINDA COM O ERRO DE ESCOPO
-    //    var teste1=<>
-    //     <select id="select_id" className="dropdown" >                  
-    //                  <option >Selecione</option>
-    //                  {var listaProjetosDropdown2=projectsData.map(
-    // (c,i)=>
-    // <>
-    //   <option key={i} value={i} onClick={localStorage.setItem( i ,c.id)}>{c.title}</option>
-    //   <>{console.log(localStorage.getItem(i))}</>
-    // </>
-    //   )}
-    //    </select>
-    //    {document.getElementById('select_id').addEventListener('change', function() {
-    //       localStorage.setItem( `idStat1` ,localStorage.getItem(this.key));})}
-    //  </>
   
 
   return (
@@ -206,13 +176,13 @@ fetchMapStatisticsHome2(auth.apiToken).then((response2) => {
                 <h3>Comparação rápida  de índices</h3>
                 <p>Selecione duas jornadas para um compartivo rápido entre seus índices  </p>
                 <h3>Jornada 1</h3>
-                <select className="dropdown">
-                  <option value='' onChange={e => localStorage.setItem(('idStat1' , e.value))} >Selecione</option>
+                <select className="dropdown" onChange={e => setId1(e.target.value)}>
+                  <option>Selecione</option>
                   {listaProjetosDropdown}
                 </select>
                 <h3>Jornada 2</h3>
-                <select className="dropdown">
-                  <option value='' onChange={e => localStorage.setItem(('idStat2' , e.value))}>Selecione</option>
+                <select className="dropdown" onChange={e => setId2(e.target.value)}>
+                  <option>Selecione</option>
                   {listaProjetosDropdown2}
                 </select>
                 <div><button className="btnComp" onClick={handleSelect}>Comparar</button></div>
