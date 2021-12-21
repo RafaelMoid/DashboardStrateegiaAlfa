@@ -186,7 +186,6 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
                   {listaProjetosDropdown2}
                 </select>
                 <div><button className="btnComp" onClick={handleSelect}>Comparar</button></div>
-                <div className="txtComp"><a>Comparações avançadas</a></div>
               </div>
 
               <div className="comp1">
