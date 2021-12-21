@@ -65,19 +65,25 @@
 }
 
 .chartJourneyTitle1 {
-    margin-bottom: 0.5vh;
-    font-size:1rem;
+    margin-bottom: 1vh;
+    font-size:1rem;    
+    margin-top: 2vh;
 }
 
 .chartJourneyP1 {
     font-weight: 600;
-    margin-top: 0.7vh;
-    font-size: 0.7rem;
+    margin-top: 1.2vh;
+    font-size: 0.6rem;
 }
 
 .chartJourneyP2 {
     font-weight: 600;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+}
+.chartJourneyP3 {
+    font-weight: 600;
+    font-size: 0.6rem;
+    margin-bottom: 3vh;
 }
 
 .leftData {
@@ -86,6 +92,7 @@
     height: 55vh;
 }
 .rightData {
-    width: 35vw;
+    margin-top:4.8vh;
+    width: 45vw;
     height: 55vh;
 }

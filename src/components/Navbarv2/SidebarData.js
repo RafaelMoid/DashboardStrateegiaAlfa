@@ -22,7 +22,7 @@ export const SidebarData = [
         title: '',
         path: '',
         icon: < FiHexagon size = {
-            45
+            35
         }
         />,
         cName: 'icon'

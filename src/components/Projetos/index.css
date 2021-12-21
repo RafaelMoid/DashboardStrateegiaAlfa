@@ -6,14 +6,14 @@
 .textTitle {
     width: 60vw;
     margin-top: -6vh;
-    margin-left:5.5vw;
+    margin-left:10vw;
 }
 .textTitle > p{
     color: rgba(0, 0, 0, 0.36);    
 }
 .rightBar {
     margin-left:72vw;
-    margin-top:-85vh;
+    margin-top:-75vh;
     width: 30vw;
     height: 80vh;
 }
@@ -27,16 +27,21 @@
 .resumoJornada {
     display:flex;
     flex-direction:row;
-    width: 80vw;
-    height: 15vh;
-    justify-content: flex-start;
-    align-items: center;
+    width: 55vw;
+    height: 18vh;
+    justify-content: left;
+    align-items: center; 
+    margin-top: 2vh;   
+    margin-left:10vw;
+    background-color: #006FB90F;
+    border-radius: 20px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .imgProjetcs{
     height:10vh;
     width: 10vw;
-    margin-left: 6vw;
 }
 
 .infoP {
@@ -47,7 +52,7 @@
 }
 
 .infoP > h1{
-    margin-bottom:-1vh;
+    font-size: 1.5rem;
 }
 
 .titleP {
@@ -95,7 +100,7 @@
     flex-direction:row;
     width: 65vw;
     
-    margin-top: 4vh;   
+    margin-top: -12vh;   
     margin-left: 2vw;
 }
 .data {
