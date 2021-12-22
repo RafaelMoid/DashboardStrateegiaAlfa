@@ -52,6 +52,7 @@
     background-color: #7AB4DB;
     height: 2vh;
     width:100px;
+    max-width: 18vw;
 }
 
 .progress-done4{
@@ -95,4 +96,10 @@
     margin-top:4.8vh;
     width: 45vw;
     height: 55vh;
+}
+
+.chartHLegend {
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }

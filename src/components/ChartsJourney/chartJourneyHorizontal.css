@@ -46,7 +46,8 @@
     border-radius: 0 4px 4px 0;
     background-color: #7AB4DB;
     height: 3.5vh;
-    width:150px;
+    width:150px;    
+    max-width: 25vw;
 }
 
 .progress-doneH4{

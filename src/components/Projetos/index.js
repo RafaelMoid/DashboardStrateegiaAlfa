@@ -18,6 +18,7 @@ function Projetos() {
     const [project, setProject] = useState([]);
     const [projectStatistics, setProjectStatistics] = useState([]);
 
+
     useEffect(() => {
         fetchMapById(auth.apiToken).then((response) => {
           //console.log(user)
@@ -71,7 +72,7 @@ function Projetos() {
                 </div>
                 <div className="dataWrapper">
                     <div className="data">
-                        <ChartJourney1/>                        
+                        <ChartJourney1 props={projectStatistics} props2={project}/>                        
                     </div>
                     {/* <div className="data">
                         {viewMode === "indices" && <ChartJourney1/>}
