@@ -36,7 +36,8 @@
     border-radius: 0 4px 4px 0;
     background-color: #A6CDE7;
     height: 3.5vh;
-    width:150px;
+    width:150px;    
+    max-width: 25vw;
 }
 
 .progress-doneH3{
@@ -57,5 +58,6 @@
     border-radius: 0 4px 4px 0;
     background-color: #DBEBF5;
     height: 3.5vh;
-    width:150px;
+    width:150px;    
+    max-width: 25vw;
 }

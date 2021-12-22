@@ -14,7 +14,7 @@
 .rightBar {
     margin-left:72vw;
     margin-top:-75vh;
-    width: 30vw;
+    width: 25vw;
     height: 80vh;
 }
 
@@ -22,6 +22,7 @@
     margin-top: 3vh;
     font-size:1rem;
     font-weight:bold;
+    width: 20vw;
 }
 
 .resumoJornada {
@@ -114,4 +115,43 @@
     display: flex;
     align-items: right;
     width: 9vw;
+    margin-top: 5vh;
+}
+
+.ball {
+    height: 25px;
+    width:25px;
+    border-radius: 25px;
+    background-color: pink;
+    
+}
+
+.theBestWrapper {
+    width: 20vw;  
+      
+}
+
+.theBest {
+    margin: 2px 0;
+    padding: 3px 2px;    
+    align-items: center;
+    justify-content: left;
+    display:flex;
+    cursor: pointer;    
+    width: 20vw;
+}
+
+.bestInteractionContainer {
+    margin-top: 2vh;
+    width: 20vw;
+}
+
+.bICTitle {
+    width: 20vw;  
+    padding-top: 2.5vh;  
+}
+
+.bICText {
+    padding-left: 1vw;
+    width: 19vw;
 }

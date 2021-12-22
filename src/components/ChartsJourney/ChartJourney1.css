@@ -42,6 +42,7 @@
     background-color: #A6CDE7;
     height: 2vh;
     width:100px;
+    max-width: 18vw;
 }
 
 .progress-done3{
@@ -63,6 +64,7 @@
     background-color: #DBEBF5;
     height: 2vh;
     width:100px;
+    max-width: 18vw;
 }
 
 .chartJourneyTitle1 {

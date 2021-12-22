@@ -74,7 +74,7 @@
 
 .title1 {
   padding-top:0.8vh;
-  margin-bottom: -1.8vh;
+  margin-bottom: -1vh;
   font-size: 1rem;
   width:100%;
   display:flex;
@@ -95,7 +95,7 @@
 
 .title2 {
   padding-top:0.8vh;
-  margin-bottom: -1.8vh;
+  margin-bottom: -1vh;
   font-size: 1rem;
   width:100%;
   display:flex;
@@ -116,7 +116,7 @@
 
 .title3 {
   padding-top:0.8vh;
-  margin-bottom: -1.8vh;
+  margin-bottom: -1vh;
   font-size: 1rem;
   width:100%;
   display:flex;
@@ -174,6 +174,7 @@ margin-left: 6.2vw;
   background: #FFFFFF;
   box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+  align-items: center;
   justify-content:space-between;
   margin-right: 4vw;
   padding-right: 5vw;
@@ -234,6 +235,14 @@ margin-left: 6.2vw;
   font-size:1.5rem;
 }
 
+.journey {
+  margin-top: 1.5vh;
+  font-size:0.85rem;
+}
+
+.btnComp {
+  margin-top: 2.5vh;
+}
   
 .elementP > p {
   font-size: 0.85rem;

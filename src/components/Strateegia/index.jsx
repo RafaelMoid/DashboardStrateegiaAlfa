@@ -138,19 +138,19 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
           <article className="box1">
             <div className="textBox1">
               <div className="title1"><h1>32</h1></div>
-              <div className="subtitle1"><p>projetos ativos</p></div>
+              <div className="subtitle1"><p>Jornadas que administro</p></div>
             </div>
           </article>
           <article className="box2">
             <div className="textBox2">
               <div className="title2"><h1>45</h1></div>
-              <div className="subtitle2"><p>projetos concluídos</p></div>
+              <div className="subtitle2"><p>Jornadas que sou mentor</p></div>
             </div>
           </article>
           <article className="box3">
             <div className="textBox3">
               <div className="title3"><h1>144</h1></div>
-              <div className="subtitle3"><p>participantes</p></div>
+              <div className="subtitle3"><p>Jornadas que participo</p></div>
             </div>
           </article>
       </div>
@@ -175,13 +175,13 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
              <div className="containerLeft">
               <div className="comp0">
                 <h3>Comparação rápida  de índices</h3>
-                <p>Selecione duas jornadas para um compartivo rápido entre seus índices  </p>
-                <h3>Jornada 1</h3>
+                <p>Selecione duas jornadas para comparar seus índices  </p>
+                <h3 className="journey">Jornada 1</h3>
                 <select className="dropdown" onChange={e => setId1(e.target.value)}>
                   <option>Selecione</option>
                   {listaProjetosDropdown}
                 </select>
-                <h3>Jornada 2</h3>
+                <h3 className="journey">Jornada 2</h3>
                 <select className="dropdown" onChange={e => setId2(e.target.value)}>
                   <option>Selecione</option>
                   {listaProjetosDropdown2}

@@ -7,6 +7,8 @@ import PeopleContainer from '../PeopleList/PeopleContainer.jsx';
 import {fetchMapById, fetchMapStatistics} from "../../services/requestFunctions";
 import { AuthContext } from "../providers/auth";
 
+import {BsFillPersonFill} from 'react-icons/bs';
+
 function Projetos() {
 
     
@@ -87,6 +89,40 @@ function Projetos() {
             <div className="rightBar">
                     <PeopleContainer />
                     <h3 className="partTitle">Participantes mais influentes</h3>
+                    {/* MOACKADINHO DO SUCESSO */}
+
+                    <div className="theBestWrapper">
+                        <div className="theBest">
+                        <div className="ball"></div>
+                            <div className="person-txt-container">
+                                <p> Matheus </p>
+                            </div>
+                        </div>
+                        <div className="theBest">
+                        <div className="ball"></div>
+                            <div className="person-txt-container">
+                                <p> Nath </p>
+                            </div>
+                        </div>
+                        <div className="theBest">
+                        <div className="ball"></div>
+                            <div className="person-txt-container">
+                                <p> Rafael </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bestInteractionContainer">
+                        <h3 className="bICTitle">Comentários com mais interações</h3>
+                        <p className="bICText">comentário bem longo que foi escirto na strateegia, 
+                            porque eu preciso de uma exemplo para os comentários 
+                            com mais concordos do rolê
+                        </p>
+                        <p>
+
+                        </p>
+                    </div>
+
                     {/* Criar aqui um component para exibir o top 3 de pessoas
                     com mais comentarios na plataformar que não tenham o status de admin
                     ou habilitador */}
