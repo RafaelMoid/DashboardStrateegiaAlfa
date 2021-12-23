@@ -53,24 +53,24 @@ export const fetchProjectsMembers = async (token) => {
   return data;
 };
 
-export const fetchMapById = async (token) => {
+export const fetchMapById = async () => {
   const {data} = await api("/projects/v1/project/"+localStorage.getItem('id'),
   {
     method: "GET", 
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
   },
 })
  return data;
 };
 
 //Detalhamento das statisticas do projeto /v1/project/{id}/statistics
-export const fetchMapStatistics = async (token) => {
+export const fetchMapStatistics = async () => {
   const {data} = await api("/projects/v1/project/"+localStorage.getItem('id')+"/statistics",
   {
     method: "GET", 
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
   },
 })
  return data;

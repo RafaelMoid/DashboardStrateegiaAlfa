@@ -17,25 +17,29 @@ function Projetos() {
     const [viewMode, setViewMode] = useState("indices");
     console.log(viewMode);
     const auth = useContext(AuthContext);
-    const [project, setProject] = useState([]);
-    const [projectStatistics, setProjectStatistics] = useState([]);
+    const [project, setProject] = useState({});
+    const [projectStatistics, setProjectStatistics] = useState({});
 
+    const newDate = new Date(project.created_at);
+
+    //console.log("project set" , project);
+    //console.log("projectStatistics set" , projectStatistics);
 
     useEffect(() => {
-        fetchMapById(auth.apiToken).then((response) => {
+        fetchMapById().then((response) => {
           //console.log(user)
-          console.log(response);
-          setProject(response);
+          //console.log( "Map1" , response);
+          setProject({...response});
         });
 
         
-        fetchMapStatistics(auth.apiToken).then((response) => {
+        fetchMapStatistics().then((response) => {
             //console.log(user)
-            console.log(response);
-            setProjectStatistics(response);
+            //console.log("Map2" ,response);
+            setProjectStatistics({...response});
         }
 
-    )}, [auth.apiToken] );
+    )}, [] );
 
   
 
@@ -55,7 +59,7 @@ function Projetos() {
                     <img src="group96.svg" className="imgProjetcs"/>
                     <div className="infoP">
                         <h1>{project.title}</h1>
-                        <p className="titleP">criada em {project.created_at}</p>
+                        <p className="titleP">criada em {newDate.getDay()}/{newDate.getMonth()}/{newDate.getFullYear()}</p>
                         <p className="titleP">última atividade 2 dias atrás</p>
                     </div>
                 </div>

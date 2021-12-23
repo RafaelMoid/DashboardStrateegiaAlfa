@@ -105,3 +105,7 @@
     align-items: center;
     justify-content: left;
 }
+
+.chartJourHoriWrapper {
+    margin-top: 2vh;
+}

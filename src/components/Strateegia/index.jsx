@@ -100,27 +100,22 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
 
 
   const listaProjetosNome=projectsData.map(
-    (c,i)=>
-      <li className="ulItem">
-        <p key={i} className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
+    (c)=>
+      <li key={c.id} className="ulItem">
+        <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
       </li>    
       )
 
     //ESTAMOS SEMPRE PASSANDO O ULTIMO VALOR DO OBJETO DE LISTA PARA A REQUISÇÃO DE aAPI
 
   const listaProjetosDropdown=projectsData.map(
-    (c,i)=>
-      <>
-        <option key={i} value={c.id} >{c.title}</option>
-        {/* Fazendo dessa forma é possivel passar o valor no onChange do Select */}
-      </>
+    (c)=>
+        <option key={c.id} value={c.id} >{c.title}</option>
       )
       //
   const listaProjetosDropdown2=projectsData.map(
-    (c,i)=>
-    <>
-      <option key={i} value={c.id} >{c.title}</option>
-    </>
+    (c)=>
+      <option key={c.id} value={c.id} >{c.title}</option>
       )    
 
   
@@ -191,40 +186,40 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
 
               <div className="comp1">
                 <div className="horizontalDisplay">
-                <h2 className="compTitle">{projectStatistics1.title}</h2>
+                <h2 className="compTitle">{projectStatistics1.title || "Selecione um projeto"}</h2>
                   <div className="element">
-                  <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics1.people_active_count}</h3>
+                  <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics1.people_active_count || "0"}</h3>
                   </div>
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
                     
-                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
+                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{ projectStatistics1.parent_comments_count?
                   parseFloat(
                     projectStatistics1.parent_comments_count
                     /
                     (projectStatistics1.question_count*projectStatistics1.people_active_count)*100)
-                    .toFixed(2)}%</h3>
+                    .toFixed(2) :"0"}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
-                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
-                  parseFloat(
+                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{ projectStatistics1.parent_comments_count?
+                  parseFloat( 
                       (projectStatistics1.parent_comments_count
                       /
                       (projectStatistics1.question_count*projectStatistics1.people_active_count))
                     +
                     (((projectStatistics1.agreements_comments_count+projectStatistics1.reply_comments_count)
                     /
-                    ((projectStatistics1.parent_comments_count*projectStatistics1.people_active_count)/2))/2)*100).toFixed(2)}%</h3>
+                    ((projectStatistics1.parent_comments_count*projectStatistics1.people_active_count)/2))/2)*100).toFixed(2) :"0"}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
-                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
+                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics1.parent_comments_count?
                   parseFloat(
                     (projectStatistics1.agreements_comments_count+projectStatistics1.reply_comments_count)
                     /
-                    ((projectStatistics1.parent_comments_count*projectStatistics1.people_active_count)/2)*100).toFixed(2)
+                    ((projectStatistics1.parent_comments_count*projectStatistics1.people_active_count)/2)*100).toFixed(2):"0"
                   }%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nos debates</p></div>
@@ -233,22 +228,23 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
               
               <div className="comp1">
                 <div className="horizontalDisplay">
-                <h2 className="compTitle">{projectStatistics2.title}</h2>
+                <h2 className="compTitle">{projectStatistics2.title || "Selecione um projeto"}</h2>
                   <div className="element">
-                  <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.people_active_count}</h3>
+                  <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.people_active_count || "0"}</h3>
                   </div>
                   <div className="elementP"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
-                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{parseFloat(
+                  <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.parent_comments_count?
+                  parseFloat(
                     projectStatistics2.parent_comments_count
                     /
                     (projectStatistics2.question_count*projectStatistics2.people_active_count)*100)
-                    .toFixed(2)}%</h3>
+                    .toFixed(2) :"0"}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas questões</p></div>
                   <div className="element">
-                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
+                  <img src="squareChat.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.parent_comments_count?
                   parseFloat(
                       (projectStatistics2.parent_comments_count
                       /
@@ -256,15 +252,15 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
                     +
                     (((projectStatistics2.agreements_comments_count+projectStatistics2.reply_comments_count)
                     /
-                    ((projectStatistics2.parent_comments_count*projectStatistics2.people_active_count)/2))/2)*100).toFixed(2)}%</h3>
+                    ((projectStatistics2.parent_comments_count*projectStatistics2.people_active_count)/2))/2)*100).toFixed(2):"0"}%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nas divergências</p></div>
                   <div className="element">
-                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{
+                  <img src="chatBubbles.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.parent_comments_count?
                   parseFloat(
                     (projectStatistics2.agreements_comments_count+projectStatistics2.reply_comments_count)
                     /
-                    ((projectStatistics2.parent_comments_count*projectStatistics2.people_active_count)/2)*100).toFixed(2)
+                    ((projectStatistics2.parent_comments_count*projectStatistics2.people_active_count)/2)*100).toFixed(2):"0"
                   }%</h3>
                   </div>
                   <div className="elementP"><p>Engajamento nos debates</p></div>

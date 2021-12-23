@@ -45,12 +45,12 @@ const Navbar2 = ({ username }) => {
                   </Link>
               </li>
               
-              {SidebarData.map((item, index, click) =>{
+              {SidebarData.map((item, index) =>{
                   return(
                       <li key={index} className={item.cName}>
                           <Link to={item.path}>
                            {item.icon}
-                           <span onClick={click} >{item.title}</span> 
+                           <span>{item.title}</span> 
                           </Link>
                       </li>
                   )

@@ -26,7 +26,7 @@ const PeopleContainer = () => {
             <div className="search-person">
                 <input 
                    className="search-person-input"
-                    value="Buscar"
+                    defaultValue="Buscar"
                     type="text" 
             />
                     <ButtonPeople className="people-button"><BiSearch/></ButtonPeople>

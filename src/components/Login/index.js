@@ -45,6 +45,7 @@ const Login = () => {
         .then((response) => {
           if (response.data) {
             auth.setApiToken(response.data.access_token);
+            localStorage.setItem("token" , response.data.access_token);
             auth.setIsAuthenticated(!auth.isAuthenticated);
             history.push("/");
           }

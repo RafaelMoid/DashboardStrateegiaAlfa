@@ -4,6 +4,7 @@
     width: 12.24px;
     height: 12.24px;
     border-radius: 12px;
+    margin-top:1vh;
 }
 
 .ball22 {
@@ -12,6 +13,7 @@
     width: 12.24px;
     height: 12.24px;
     border-radius: 12px;
+    margin-top:1vh;
 }
 
 .ball33 {
@@ -20,6 +22,7 @@
     width: 12.24px;
     height: 12.24px;
     border-radius: 12px;
+    margin-top:1vh;
 }
 
 .ball44 {
@@ -28,12 +31,13 @@
     width: 12.24px;
     height: 12.24px;
     border-radius: 12px;
+    margin-top:1vh;
 }
 
 .legendWrapper2 {
     display: flex;
     flex-direction: row;
-    margin-top:2vh;
+    margin-top:3vh;
     margin-left: -1vw;
 }
 
@@ -53,4 +57,5 @@
     margin-top:-0.5vh;
     font-weight: bold;
     font-size: 0.75rem;
+    margin-top:0.65vh;
 }
