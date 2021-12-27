@@ -50,6 +50,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   const [user, setUser] = useState({});
   //Aqui está a chamada do valor de id para a função seguinte
   const [projectsData, setProjectsData] = useState([]);
+  const [projectsData2, setProjectsData2] = useState([]);
   const [projectId, setProjectId] = useState("");
   const [project, setProject] = useState([]);
   const [projectStatistics1, setProjectStatistics1] = useState("");
@@ -69,7 +70,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-        console.log(data)
+        //console.log(data)
         if (data && response) {
           const [myJourneys] = data.filter((journey) => {
             return journey.lab.id === response.id 
@@ -78,6 +79,17 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
           )
           setProjectsData(...[myJourneys.projects])
         }}) 
+
+        fetchUserProjects(auth.apiToken ).then((data2) => {
+          //console.log(data2)
+          if (data2 && response) {
+            const [myJourneys] = data2.filter((journey) => {
+              return journey.lab.id !== response.id 
+              
+              }
+            )
+            setProjectsData2(...[myJourneys.projects])
+          }}) 
     });
   }, [auth.apiToken]);
 
@@ -105,6 +117,12 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
         <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
       </li>    
       )
+  const listaProjetosNome2=projectsData2.map(
+    (c)=>
+      <li key={c.id} className="ulItem">
+        <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
+      </li>    
+      )
 
     //ESTAMOS SEMPRE PASSANDO O ULTIMO VALOR DO OBJETO DE LISTA PARA A REQUISÇÃO DE aAPI
 
@@ -114,6 +132,16 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
       )
       //
   const listaProjetosDropdown2=projectsData.map(
+    (c)=>
+      <option key={c.id} value={c.id} >{c.title}</option>
+      )    
+
+  const listaProjetosDropdown3=projectsData2.map(
+    (c)=>
+        <option key={c.id} value={c.id} >{c.title}</option>
+      )
+      //
+  const listaProjetosDropdown4=projectsData2.map(
     (c)=>
       <option key={c.id} value={c.id} >{c.title}</option>
       )    
@@ -160,6 +188,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
               
                 <ul className="listaProjetos"  onClick={e => setId0(e.target.value)}> 
                  {listaProjetosNome}
+                 {listaProjetosNome2}
                 </ul>
               
             </div>
@@ -175,11 +204,13 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
                 <select className="dropdown" onChange={e => setId1(e.target.value)}>
                   <option>Selecione</option>
                   {listaProjetosDropdown}
+                  {listaProjetosDropdown3}
                 </select>
                 <h3 className="journey">Jornada 2</h3>
                 <select className="dropdown" onChange={e => setId2(e.target.value)}>
                   <option>Selecione</option>
                   {listaProjetosDropdown2}
+                  {listaProjetosDropdown4}
                 </select>
                 <div><button className="btnComp" onClick={handleSelect}>Comparar</button></div>
               </div>
