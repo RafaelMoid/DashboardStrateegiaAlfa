@@ -51,7 +51,9 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   //Aqui está a chamada do valor de id para a função seguinte
   const [projectsData, setProjectsData] = useState([]);
   const [projectsData2, setProjectsData2] = useState([]);
-  const [projectsDataSummary, setProjectsDataSummary] = useState([]);
+  const [projectsDataSummary1, setProjectsDataSummary1] = useState({});
+  const [projectsDataSummary2, setProjectsDataSummary2] = useState({});
+  const [projectsDataSummary3, setProjectsDataSummary3] = useState({});
   const [projectId, setProjectId] = useState("");
   const [project, setProject] = useState([]);
   const [projectStatistics1, setProjectStatistics1] = useState("");
@@ -94,19 +96,49 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
     });
   }, [auth.apiToken]);
 
+  // useEffect(() => {
+  //   getSummaryProjectsByUser().then((response) => {
+  //     console.log(response);
+  //     if (response) {
+  //       const [adminProject] = response.content.filter((obj) => {
+  //         return obj.my_member_info.project_roles[0] === 'ADMIN'
+          
+  //         }
+  //       )
+  //       setProjectsDataSummary({...adminProject.my_member_info.project_roles})
+  //       console.log('adminProject' , adminProject.my_member_info.project_roles)
+  //     }
+  //   })
+  // }, []);
+
   useEffect(() => {
     getSummaryProjectsByUser().then((response) => {
-      console.log(response);
+      //console.log(response);
       if (response) {
-        const [adminProject] = response.content.filter((obj) => {
+        const adminProject = response.content  
+        //console.log(adminProject)
+         
+        let box1 = adminProject.filter((obj) => {
           return obj.my_member_info.project_roles[0] === 'ADMIN'
           
-          }
-        )
-        setProjectsDataSummary(...[adminProject.my_member_info.project_roles])
-        console.log('adminProject' , adminProject.my_member_info.project_roles)
+        })
+           
+        let box2 = adminProject.filter((obj) => {
+          return obj.my_member_info.project_roles[0] === 'MENTOR'
+          
+        })
+
+        let box3 = adminProject.filter((obj) => {
+          return obj.my_member_info.project_roles[0] === 'INNOVATOR'
+        })
+
+      setProjectsDataSummary1(box1)
+      setProjectsDataSummary2(box2)
+      setProjectsDataSummary3(box3)
+      }     
+        
       }
-    })
+    )
   }, []);
 
 
@@ -160,19 +192,19 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
       <div className="wrapperBoxes">
           <article className="box1">
             <div className="textBox1">
-              <div className="title1"><h1>44</h1></div>
+              <div className="title1"><h1>{projectsDataSummary1.length}</h1></div>
               <div className="subtitle1"><p>Jornadas que administro</p></div>
             </div>
           </article>
           <article className="box2">
             <div className="textBox2">
-              <div className="title2"><h1>45</h1></div>
+              <div className="title2"><h1>{projectsDataSummary2.length}</h1></div>
               <div className="subtitle2"><p>Jornadas que sou mentor</p></div>
             </div>
           </article>
           <article className="box3">
             <div className="textBox3">
-              <div className="title3"><h1>144</h1></div>
+              <div className="title3"><h1>{projectsDataSummary3.length}</h1></div>
               <div className="subtitle3"><p>Jornadas que participo</p></div>
             </div>
           </article>
