@@ -99,12 +99,12 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
       console.log(response);
       if (response) {
         const [adminProject] = response.content.filter((obj) => {
-          return obj.my_member_info.project_roles[0] === "ADMIN" 
+          return obj.my_member_info.project_roles[0] === 'ADMIN'
           
           }
         )
-        setProjectsDataSummary(...[adminProject])
-        console.log('adminProject' , adminProject)
+        setProjectsDataSummary(...[adminProject.my_member_info.project_roles])
+        console.log('adminProject' , adminProject.my_member_info.project_roles)
       }
     })
   }, []);
