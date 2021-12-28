@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/auth";
 import {
   fetchUserData,fetchUserEncouters,fetchMapById, fetchEncounterByMaps, fetchUserGetProjectById,
-  fetchUserProjects, fetchMapStatistics, fetchMapStatisticsHome, fetchMapStatisticsHome2
+  fetchUserProjects, fetchMapStatistics, fetchMapStatisticsHome, fetchMapStatisticsHome2, getSummaryProjectsByUser
 } from "../../services/requestFunctions";
 import Navbar from "../Navbar";
 import Kits from "../Kits";
@@ -51,6 +51,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   //Aqui está a chamada do valor de id para a função seguinte
   const [projectsData, setProjectsData] = useState([]);
   const [projectsData2, setProjectsData2] = useState([]);
+  const [projectsDataSummary, setProjectsDataSummary] = useState([]);
   const [projectId, setProjectId] = useState("");
   const [project, setProject] = useState([]);
   const [projectStatistics1, setProjectStatistics1] = useState("");
@@ -70,7 +71,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-        //console.log(data)
+        //console.log("fetchUserProjects data1" , data)
         if (data && response) {
           const [myJourneys] = data.filter((journey) => {
             return journey.lab.id === response.id 
@@ -81,7 +82,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
         }}) 
 
         fetchUserProjects(auth.apiToken ).then((data2) => {
-          //console.log(data2)
+          //console.log("fetchUserProjects data2" , data2)
           if (data2 && response) {
             const [myJourneys] = data2.filter((journey) => {
               return journey.lab.id !== response.id 
@@ -93,22 +94,21 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
     });
   }, [auth.apiToken]);
 
+  useEffect(() => {
+    getSummaryProjectsByUser().then((response) => {
+      console.log(response);
+      if (response) {
+        const [adminProject] = response.content.filter((obj) => {
+          return obj.my_member_info.project_roles[0] === "ADMIN" 
+          
+          }
+        )
+        setProjectsDataSummary(...[adminProject])
+        console.log('adminProject' , adminProject)
+      }
+    })
+  }, []);
 
-    // useEffect(() => {
-    //   fetchMapStatisticsHome(auth.apiToken).then((response) => {
-    //       //console.log(user)
-    //       console.log(response);
-    //       setProjectStatistics1(response);
-    //     }
-    // )});
-
-    // useEffect(() => {
-    //   fetchMapStatisticsHome2(auth.apiToken).then((response) => {
-    //       //console.log(user)
-    //       console.log(response);
-    //       setProjectStatistics2(response);
-    //     }
-    // )});
 
 
   const listaProjetosNome=projectsData.map(
@@ -160,7 +160,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
       <div className="wrapperBoxes">
           <article className="box1">
             <div className="textBox1">
-              <div className="title1"><h1>32</h1></div>
+              <div className="title1"><h1>44</h1></div>
               <div className="subtitle1"><p>Jornadas que administro</p></div>
             </div>
           </article>
