@@ -115,9 +115,9 @@ const ChartJourney1 = ({props , props2}) => {
                     A LISTA DE PESSOAS NO PROJETO */}
                    
                    <h3 className="chartJourneyTitle1">Pessoas ativas na jornada </h3>
-                   <Progress done={(props.people_active_count / props2?.users.length)*100}/>
+                   <Progress done={((props.people_active_count / props2?.users.length)*100).toFixed(2)}/>
                    <p className="chartJourneyP1">Total de participantes: {props2?.users.length}</p>
-                   <p className="chartJourneyP3">Pessoas inativas: {props.people_active_count - props2?.users.length}</p>
+                   <p className="chartJourneyP3">Pessoas inativas: {props2?.users.length - props.people_active_count}</p>
                </div>
                <div>
                    <h3 className="chartJourneyTitle1">Engajamento nas questões</h3>
@@ -138,9 +138,10 @@ const ChartJourney1 = ({props , props2}) => {
                     /
                     ((props.parent_comments_count*props.people_active_count)/2)*100).toFixed(2)
                   }/>
-                   <p className="chartJourneyP1">N° de comentários: 5</p>
-                   <p className="chartJourneyP2">N° de concordos: 22</p>
-                   <p className="chartJourneyP3">N° de interações: 27 de 40.5 esperadas</p>
+                   <p className="chartJourneyP1">N° de comentários: {props.total_comments_count}</p>
+                   <p className="chartJourneyP2">N° de concordos: {props.agreements_comments_count}</p>
+                   <p className="chartJourneyP3">N° de interações: {(props.agreements_comments_count + props.replied_parent_comments_count) + ' '}
+                    de {(props.people_active_count * props.replied_parent_comments_count)/2} esperadas</p>
                </div>
                <div>
                    <h3 className="chartJourneyTitle1">Engajamento nas divergências</h3>
@@ -158,7 +159,7 @@ const ChartJourney1 = ({props , props2}) => {
             <div className="rightData">
                 <h3 className="chartJourneyTitle1">Balanço índices</h3>
                 <div className="chartJourHoriWrapper">
-                    <ProgressH done={(props.people_active_count / props2?.users.length)*100}/>
+                    <ProgressH done={((props.people_active_count / props2?.users.length)*100).toFixed(2)}/>
                     <ProgressH2 done={
                   parseFloat(
                     props.parent_comments_count

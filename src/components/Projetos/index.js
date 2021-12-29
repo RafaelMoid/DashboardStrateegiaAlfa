@@ -4,7 +4,7 @@ import "./index.css";
 import ChartJourney1 from '../ChartsJourney/ChartJourney1.js';
 import ChartJourney2 from '../ChartsJourney/ChartJourney2.js';
 import PeopleContainer from '../PeopleList/PeopleContainer.jsx';
-import {fetchMapById, fetchMapStatistics} from "../../services/requestFunctions";
+import {fetchMapById, fetchMapStatistics , fetchProjectById} from "../../services/requestFunctions";
 import { AuthContext } from "../providers/auth";
 
 import {BsFillPersonFill} from 'react-icons/bs';
@@ -19,6 +19,7 @@ function Projetos() {
     const auth = useContext(AuthContext);
     const [project, setProject] = useState({});
     const [projectStatistics, setProjectStatistics] = useState({});
+    const [projectUsers, setProjectUsers] = useState({});
 
     const newDate = new Date(project.created_at);
 
@@ -37,9 +38,15 @@ function Projetos() {
             //console.log(user)
             //console.log("Map2" ,response);
             setProjectStatistics({...response});
-        }
+        });
 
-    )}, [] );
+        fetchProjectById().then((response) => {
+            //console.log(user)
+            //console.log("Map2" ,response);
+            setProjectUsers({...response});
+        });
+
+}, [] );
 
   
 
@@ -91,7 +98,7 @@ function Projetos() {
                 </div>
             </div>
             <div className="rightBar">
-                    <PeopleContainer />
+                    <PeopleContainer props={projectUsers}/>
                     <h3 className="partTitle">Participantes mais influentes</h3>
                     {/* MOACKADINHO DO SUCESSO */}
 
@@ -118,7 +125,7 @@ function Projetos() {
 
                     <div className="bestInteractionContainer">
                         <h3 className="bICTitle">Comentários com mais interações</h3>
-                        <p className="bICText">comentário bem longo que foi escirto na strateegia, 
+                        <p className="bICText">comentário bem longo que foi escrito na strateegia, 
                             porque eu preciso de uma exemplo para os comentários 
                             com mais concordos do rolê
                         </p>

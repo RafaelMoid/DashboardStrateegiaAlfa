@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ButtonPeople from './ButtonPeople';
 import { BiSearch } from 'react-icons/bi';
 import People from './People.jsx'
+import {fetchProjectById} from "../../services/requestFunctions";
 
 import "./PeopleContainer.css";
 
@@ -20,6 +21,19 @@ const PeopleContainer = () => {
             position: "Mentor",
         }
     ]);
+
+
+    useEffect(() => {
+        fetchProjectById().then((users) =>{
+            if(users) {
+                const usersList = users.users
+                // console.log(users)
+                // console.log(usersList)
+
+                setPeople(usersList)
+            }
+        })
+    }, []);
 
     return ( 
         <div className="people-container">

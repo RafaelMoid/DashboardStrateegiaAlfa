@@ -116,7 +116,8 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
       //console.log(response);
       if (response) {
         const adminProject = response.content  
-        //console.log(adminProject)
+        // console.log(response)
+        // console.log(adminProject)
          
         let box1 = adminProject.filter((obj) => {
           return obj.my_member_info.project_roles[0] === 'ADMIN'

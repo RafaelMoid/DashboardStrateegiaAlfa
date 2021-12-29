@@ -76,6 +76,19 @@ export const fetchMapStatistics = async () => {
  return data;
 };
 
+export const fetchProjectById = async () => {
+  const {data} = await api(`/projects/v1/project/${localStorage.getItem('id')}`,
+  {
+    method: "GET", 
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+  },
+})
+ return data;
+};
+
+
+
 export const getSummaryProjectsByUser = async () => {
   const {data} = await api("/projects/v1/project/summary",
   {
