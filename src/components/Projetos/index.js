@@ -66,8 +66,8 @@ function Projetos() {
                     <img src="group96.svg" className="imgProjetcs"/>
                     <div className="infoP">
                         <h1>{project.title}</h1>
-                        <p className="titleP">criada em {newDate.getDay()}/{newDate.getMonth()}/{newDate.getFullYear()}</p>
-                        <p className="titleP">última atividade 2 dias atrás</p>
+                        <p className="titleP">Criada em {newDate.getDay()}/{newDate.getMonth()}/{newDate.getFullYear()}</p>
+                        <p className="titleP">Última atividade 2 dias atrás</p>
                     </div>
                 </div>
                 <div className="introData">

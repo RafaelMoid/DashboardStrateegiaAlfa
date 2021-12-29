@@ -9,7 +9,7 @@ const Person = ({person}) => {
             <div className="person-icon"><BsFillPersonFill/></div>
             <div className="person-txt-container">
                 <p className="person-name"> {person.name} </p>
-                <p className="person-position"> {person.position} </p>
+                <p className="person-position"> {person.project_roles} </p>
             </div>
         </div>
     );

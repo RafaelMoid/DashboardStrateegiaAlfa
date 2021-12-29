@@ -12,12 +12,12 @@ const PeopleContainer = () => {
     const [people, setPeople] = useState([
         {
             id: "1",
-            name: "Sara sobrenome",
+            name: "Rafael Varela",
             position: "Mentor",
         },
         {
             id: "2",
-            name: "Mara sobrenome",
+            name: "é muito limpeza",
             position: "Mentor",
         }
     ]);
