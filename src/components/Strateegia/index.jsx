@@ -69,11 +69,11 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   useEffect(() => {
     fetchUserData(auth.apiToken).then((response) => {
       //console.log(user)
-      //console.log(response);
+      console.log(response);
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-        //console.log("fetchUserProjects data1" , data)
+        console.log("fetchUserProjects data1" , data)
         if (data && response) {
           const [myJourneys] = data.filter((journey) => {
             return journey.lab.id === response.id 
@@ -84,7 +84,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
         }}) 
 
         fetchUserProjects(auth.apiToken ).then((data2) => {
-          //console.log("fetchUserProjects data2" , data2)
+          console.log("fetchUserProjects data2" , data2)
           if (data2 && response) {
             const [myJourneys] = data2.filter((journey) => {
               return journey.lab.id !== response.id 
