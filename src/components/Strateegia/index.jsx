@@ -80,7 +80,8 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
             
             }
           )
-          setProjectsData(...[myJourneys.projects])
+          setProjectsData(...[myJourneys.projects])          
+          console.log('Retorno de fetchUserProjects' , projectsData)
         }}) 
 
         fetchUserProjects(auth.apiToken ).then((data2) => {
@@ -92,6 +93,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
               }
             )
             setProjectsData2(...[myJourneys.projects])
+            console.log('Retorno de fetchUserProjects2' , projectsData2)
           }}) 
     });
   }, [auth.apiToken]);
