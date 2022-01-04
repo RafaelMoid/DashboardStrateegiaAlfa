@@ -55,7 +55,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   const [projectsDataSummary2, setProjectsDataSummary2] = useState({});
   const [projectsDataSummary3, setProjectsDataSummary3] = useState({});
   const [projectId, setProjectId] = useState("");
-  const [project, setProject] = useState([]);
+  const [projects, setProjects] = useState([]);
   const [projectStatistics1, setProjectStatistics1] = useState("");
   const [projectStatistics2, setProjectStatistics2] = useState("");
   const [id0, setId0] = useState("");
@@ -86,6 +86,11 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
 
         fetchUserProjects(auth.apiToken ).then((data2) => {
           console.log("fetchUserProjects data2" , data2)
+          let newArray = [];
+          data2.forEach((valorAtual) => {
+            newArray.push(valorAtual.projects)
+            console.log(newArray)
+          })
           if (data2 && response) {
             const [myJourneys] = data2.filter((journey) => {
               return journey.lab.owner_name !== response.name 
