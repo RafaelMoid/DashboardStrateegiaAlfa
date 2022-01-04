@@ -5,7 +5,7 @@ const People = ({people}) => {
     return ( 
         <>
             {people.map((person) => (
-            <Person key={person.id} person={person}/>
+            <Person key={person.id} person={person} roles={person.project_roles}/>
             ))}
         </>
      );

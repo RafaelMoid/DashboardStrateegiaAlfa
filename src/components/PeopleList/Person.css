@@ -31,5 +31,6 @@
 
 .person-position {
     font-size: 0.8rem;
+    text-transform: lowercase;
     
 }
