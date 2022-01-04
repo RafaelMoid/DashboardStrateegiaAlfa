@@ -69,38 +69,35 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   useEffect(() => {
     fetchUserData(auth.apiToken).then((response) => {
       //console.log(user)
-      console.log('response', response);
+      // console.log('response', response);
       setUser(response);
 
       fetchUserProjects(auth.apiToken ).then((data) => {
-        console.log("fetchUserProjects data1" , data)
-        if (data && response) {
-          const [myJourneys] = data.filter((journey) => {
-            return journey.lab.owner_name === response.name 
-            
-            }
-          )
-          setProjectsData(...[myJourneys.projects])          
-          console.log('Retorno de fetchUserProjects' , myJourneys.projects)
-        }}) 
+        // console.log("fetchUserProjects data1" , data)
+        const journeys = data.map(dt => (
+          dt.projects
+        ))
+        
+        setProjectsData(...[journeys.flat()])
+        console.log('Retorno de fetchUserProjects' , data)    
+       }) 
+        // fetchUserProjects(auth.apiToken ).then((data2) => {
+        //   console.log("fetchUserProjects data2" , data2)
+        //   let newArray = [];
+        //   data2.forEach((journey, i) => {
+        //     newArray.push(journey.projects)
+        //     console.log( 'iteração numero: ' + i , newArray)
+        //   })
 
-        fetchUserProjects(auth.apiToken ).then((data2) => {
-          console.log("fetchUserProjects data2" , data2)
-          let newArray = [];
-          data2.forEach((journey, i) => {
-            newArray.push(journey.projects)
-            console.log( 'iteração numero: ' + i , newArray)
-          })
-
-          if (data2 && response) {
-            const [myJourneys] = data2.filter((journey) => {
-              return journey.lab.owner_name !== response.name 
+        //   if (data2 && response) {
+        //     const [myJourneys] = data2.filter((journey) => {
+        //       return journey.lab.owner_name !== response.name 
               
-              }
-            )
-            setProjectsData2(...[myJourneys.projects])
-            console.log('Retorno de fetchUserProjects2' , myJourneys.projects)
-          }}) 
+        //       }
+        //     )
+        //     setProjectsData2(...[myJourneys.projects])
+        //     console.log('Retorno de fetchUserProjects2' , myJourneys.projects)
+        //   }}) 
     });
   }, [auth.apiToken]);
 
