@@ -87,10 +87,11 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
         fetchUserProjects(auth.apiToken ).then((data2) => {
           console.log("fetchUserProjects data2" , data2)
           let newArray = [];
-          data2.forEach((valorAtual) => {
-            newArray.push(valorAtual.projects)
-            console.log(newArray)
+          data2.forEach((journey, i) => {
+            newArray.push(journey.projects)
+            console.log( 'iteração numero: ' + i , newArray)
           })
+
           if (data2 && response) {
             const [myJourneys] = data2.filter((journey) => {
               return journey.lab.owner_name !== response.name 
