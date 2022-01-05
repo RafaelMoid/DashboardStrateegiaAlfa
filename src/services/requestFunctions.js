@@ -100,6 +100,30 @@ export const getSummaryProjectsByUser = async () => {
  return data;
 };
 
+export const getAllDivergencePointsByMapId = async () => {
+  const {data} = await api(`/projects/v1/map/${localStorage.getItem('MapId')}/divergence-point`,
+  {
+    method: "GET", 
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+  },
+})
+ return data;
+};
+
+//MapId
+//É necessario adicionar aqui no local store um objeto com o id do divergence point
+export const getCommentsGroupedByQuestionReport = async () => {
+  const {data} = await api(`/projects/v1/divergence-point/${localStorage.getItem("divergencePointId")}/comment/report`,
+  {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+  },
+})
+ return data;
+};
+
 
 
 export const fetchMapStatisticsHome = async (token, id) => {

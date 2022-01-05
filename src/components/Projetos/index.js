@@ -4,7 +4,10 @@ import "./index.css";
 import ChartJourney1 from '../ChartsJourney/ChartJourney1.js';
 import ChartJourney2 from '../ChartsJourney/ChartJourney2.js';
 import PeopleContainer from '../PeopleList/PeopleContainer.jsx';
-import {fetchMapById, fetchMapStatistics , fetchProjectById} from "../../services/requestFunctions";
+import {fetchMapById, fetchMapStatistics , 
+    fetchProjectById, getCommentsGroupedByQuestionReport,
+    getAllDivergencePointsByMapId
+} from "../../services/requestFunctions";
 import { AuthContext } from "../providers/auth";
 
 import {BsFillPersonFill} from 'react-icons/bs';
@@ -15,16 +18,13 @@ function Projetos() {
     
     //State responsavel por mostrar as visualizações do dropdown
     const [viewMode, setViewMode] = useState("indices");
-    console.log(viewMode);
+    //console.log(viewMode);
     const auth = useContext(AuthContext);
     const [project, setProject] = useState({});
     const [projectStatistics, setProjectStatistics] = useState({});
     const [projectUsers, setProjectUsers] = useState({});
 
     const newDate = new Date(project.created_at);
-
-    //console.log("project set" , project);
-    //console.log("projectStatistics set" , projectStatistics);
 
     useEffect(() => {
         fetchMapById().then((response) => {
@@ -38,14 +38,30 @@ function Projetos() {
             //console.log(user)
             //console.log("Map2" ,response);
             setProjectStatistics({...response});
+            
+            let mapId = response.id;
+            console.log("Map const" ,mapId);
+            localStorage.setItem('MapId', mapId)
+            console.log("MapId" , localStorage.getItem('MapId'))
+            if (response && projectStatistics !== '') {
+                getAllDivergencePointsByMapId().then((response) => {
+            console.log("Retorno getAllDivergencePointsByMapId" , response)
+        })
+            }
+            
         });
 
         fetchProjectById().then((response) => {
             //console.log(user)
-            //console.log("Map2" ,response);
+            //console.log("Map3" ,response);
             setProjectUsers({...response});
         });
 
+        
+
+        // getCommentsGroupedByQuestionReport().then((response) => {
+        //     console.log(response)
+        // })
 }, [] );
 
   
