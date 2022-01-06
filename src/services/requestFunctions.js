@@ -100,8 +100,10 @@ export const getSummaryProjectsByUser = async () => {
  return data;
 };
 
+//O Id abaixo /projects/v1/map/ >> 61a135358d09f1002bfaa2f4 <</divergence-point
+//veio da requisição fetchMapById, fica localizado em maps[indice].id
 export const getAllDivergencePointsByMapId = async () => {
-  const {data} = await api(`/projects/v1/map/${localStorage.getItem('MapId')}/divergence-point`,
+  const {data} = await api(`/projects/v1/map/61a135358d09f1002bfaa2f4/divergence-point`,
   {
     method: "GET", 
     headers: {
@@ -112,9 +114,10 @@ export const getAllDivergencePointsByMapId = async () => {
 };
 
 //MapId
-//É necessario adicionar aqui no local store um objeto com o id do divergence point
+//O Id abaixo /projects/v1/divergence-point/ >> 61b8a0f12f64c2239f995dd5 << /comment/report
+//veio da requisição anterior, fica localizado em content.id
 export const getCommentsGroupedByQuestionReport = async () => {
-  const {data} = await api(`/projects/v1/divergence-point/${localStorage.getItem("divergencePointId")}/comment/report`,
+  const {data} = await api(`/projects/v1/divergence-point/61b8a0f12f64c2239f995dd5/comment/report`,
   {
     method: "GET",
     headers: {

@@ -29,23 +29,24 @@ function Projetos() {
     useEffect(() => {
         fetchMapById().then((response) => {
           //console.log(user)
-          //console.log( "Map1" , response);
+          console.log( "Map1 (Dados dos mapas)" , response);
           setProject({...response});
+          
+          let mapsId = [...response.maps];
+          console.log('Array da Maps da jornada (Id e Nome)' , mapsId)
+          //inserir aqui uma estrutura de repetição que vai realizar o getAllDivergencePointsByMapId
+          //para cada id no mapsId
+          if (response && projectStatistics !== '') {
+              getAllDivergencePointsByMapId().then((response) => {
+          console.log("Retorno getAllDivergencePointsByMapId" , response)
         });
 
         
         fetchMapStatistics().then((response) => {
             //console.log(user)
-            //console.log("Map2" ,response);
+            console.log("Retorno de fetchMapStatistics (Dados para comparações)" ,response);
             setProjectStatistics({...response});
             
-            let mapId = response.id;
-            console.log("Map const" ,mapId);
-            localStorage.setItem('MapId', mapId)
-            console.log("MapId" , localStorage.getItem('MapId'))
-            if (response && projectStatistics !== '') {
-                getAllDivergencePointsByMapId().then((response) => {
-            console.log("Retorno getAllDivergencePointsByMapId" , response)
         })
             }
             
@@ -59,9 +60,9 @@ function Projetos() {
 
         
 
-        // getCommentsGroupedByQuestionReport().then((response) => {
-        //     console.log(response)
-        // })
+        getCommentsGroupedByQuestionReport().then((response) => {
+            console.log('Resposta de getCommentsGroupedByQuestionReport' , response)
+        })
 }, [] );
 
   
