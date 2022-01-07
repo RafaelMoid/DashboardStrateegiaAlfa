@@ -15,11 +15,15 @@ import printJS from "print-js";
 
 function Projetos() {
 
+    //PROBLEM WITH THE IMPORT, CHECK GITHUB FOR LIBRARY CREATOR RESPONSE
     function printPage() {
         printJS({
             printable: 'printJS-form',
             type: 'html',
+            css: ['./index.css' , '../ChartsJourney/ChartJourney1.css', 
+            '../ChartsJourney/chartJourneyHorizontal.css', '../PeopleList/PeopleContainer.css'],
             targetStyles: ['*']
+            
         })
     };
     
@@ -46,9 +50,9 @@ function Projetos() {
           let arrayProjectUsers = project.users;
           let usersData = [];
           //console.log('Array de pessoas' , arrayProjectUsers);
-          arrayProjectUsers.forEach((user) => {
-            usersData.push({name: user.name , id: user.id , questionsAnswered: 0, totalAgreementsUser: 0})
-          })
+        //   arrayProjectUsers.forEach((user) => {
+        //     usersData.push({name: user.name , id: user.id , questionsAnswered: 0, totalAgreementsUser: 0})
+        //   })
           console.log('Array de pessoas iterado' , usersData)
           }
 
