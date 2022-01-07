@@ -32,10 +32,23 @@ function Projetos() {
           console.log( "Map1 (Dados dos mapas)" , response);
           setProject({...response});
           
+          //ESSA ESTRUTURA VAI CRIAR UM ARRAY PARA RECEBER O VALOR DE INTERAÇÃO
+          // DE CADA USUARIO, QUE SE INICIA VAZIA (PARA QUE DEPOIS EU POSSA ITERAR COM ESTRUTURA
+          // DE REPETIÇÃO USANDO UM COUNTER PARA ADICIONAR OS VALORES AS NOVAS CHAVES NOS OBJETOS)
+          if (response) {
+          let arrayProjectUsers = project.users;
+          let usersData = [];
+          //console.log('Array de pessoas' , arrayProjectUsers);
+          arrayProjectUsers.forEach((user) => {
+            usersData.push({name: user.name , id: user.id , questionsAnswered: 0, totalAgreementsUser: 0})
+          })
+          console.log('Array de pessoas iterado' , usersData)
+          }
+
           let mapsId = [...response.maps];
           console.log('Array da Maps da jornada (Id e Nome)' , mapsId)
           //inserir aqui uma estrutura de repetição que vai realizar o getAllDivergencePointsByMapId
-          //para cada id no mapsId
+          //para cada id no mapsId, POR ENQUANTO É O MOCKADIN DO SUCESSO
           if (response && projectStatistics !== '') {
               getAllDivergencePointsByMapId().then((response) => {
           console.log("Retorno getAllDivergencePointsByMapId" , response)
