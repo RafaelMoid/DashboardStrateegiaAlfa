@@ -9,6 +9,8 @@ import "./PeopleContainer.css";
 const PeopleContainer = () => {
 
     //State responsavel por popular a lista de usuarios no projeto
+    
+    const [busca, setBusca] = useState('');
     const [people, setPeople] = useState([
         {
             id: "1",
@@ -22,6 +24,7 @@ const PeopleContainer = () => {
         }
     ]);
 
+    // console.log(busca)
 
     useEffect(() => {
         fetchProjectById().then((users) =>{
@@ -41,7 +44,9 @@ const PeopleContainer = () => {
                 <input 
                    className="search-person-input"
                     defaultValue="Buscar"
-                    type="text" 
+                    type="text"                     
+                    onChange={(event) => setBusca(event.target.value)}
+                    value={busca}
             />
                     <ButtonPeople className="people-button"><BiSearch/></ButtonPeople>
             </div>

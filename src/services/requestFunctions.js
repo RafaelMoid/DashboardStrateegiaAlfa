@@ -36,7 +36,7 @@ export const fetchUserProjects = async (token) => {
   const { data } = await api("/projects/v1/project", {
     method: "GET",
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   })
   return data;

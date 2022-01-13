@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navbar2 from "../Navbarv2";
 import ChartPAtivas from "../Charts/ChartPAtivas";
 import ChartEQuestoes from "../Charts/ChartEQuestoes";
@@ -10,25 +10,44 @@ import Chart3 from '../HorizontalCharts/Chart3';
 import Chart4 from '../HorizontalCharts/Chart4';
 import Chart5 from '../HorizontalCharts/Chart5';
 import Legend from '../HorizontalCharts/legend';
+import { AuthContext } from "../providers/auth";
+import {fetchUserProjects} from "../../services/requestFunctions";
 import "./index.css";
 
 function Comparacao() {
 
+    const [projectsData, setProjectsData] = useState([]);
+
+    
+    const auth = useContext(AuthContext);
+
+    useEffect(() => {
+          fetchUserProjects(auth.apiToken ).then((data) => {
+            // console.log("fetchUserProjects data1" , data)
+            const journeys = data.map(dt => (
+              dt.projects
+            ))
+            
+            setProjectsData(...[journeys.flat()])
+            console.log('Retorno de fetchUserProjects' , data)    
+           });
+      }, [auth.apiToken]);
     //Salve salve do passado pra ti
     //Saca só, aqui vou inserir uma bibliotera mockada de dados que pode ser trocados por json para
     //de outra origem depois
 
-    const projetos1=[
-        {nome:"Strateegia Studio", status:"ativo", pessoas:"25 participantes"},
-        {nome:"Projeto Moura fácil", status:"concluido", pessoas:"125 participantes"},
-        {nome:"TreeloStudio", status:"ativo", pessoas:"22 participantes"},
-        {nome:"Projeto Rafa é desenrolado", status:"ativo", pessoas:"48 participantes"},
-        {nome:"Projeto Nath é uma artista", status:"ativo", pessoas:"87 participantes"}
-      ];
-      const listaProjetosNome=projetos1.map(
-        (c,i)=>
-          <li key={i} className="ulItem">{c.nome}</li>
+    const listaProjetosNome=projectsData.map(
+        (c)=>
+          <li key={c.id} className="ulItem">
+            <p className="ulItem">{c.title}</p>
+          </li>    
           )
+
+          const listaProjetosDropdown=projectsData.map(
+            (c)=>
+              <option value={c.title}>{c.title}</option>
+                
+              )
 
 
     return (
@@ -45,9 +64,7 @@ function Comparacao() {
                 <div className="comp1">
                     <div className="jornadas">
                        <select className="dropdown">
-                            <option value="Project 1">Project 1</option>
-                            <option value="Project 2">Project 2</option>
-                            <option value="Project 3">Project 3</option>
+                            {listaProjetosDropdown}
                         </select>
                      
                         <div className="wrapperProj">

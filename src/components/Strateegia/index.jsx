@@ -155,12 +155,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
         <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
       </li>    
       )
-  const listaProjetosNome2=projectsData2.map(
-    (c)=>
-      <li key={c.id} className="ulItem">
-        <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
-      </li>    
-      )
+  
 
     //ESTAMOS SEMPRE PASSANDO O ULTIMO VALOR DO OBJETO DE LISTA PARA A REQUISÇÃO DE aAPI
 
@@ -226,7 +221,6 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
               
                 <ul className="listaProjetos"  onClick={e => setId0(e.target.value)}> 
                  {listaProjetosNome}
-                 {listaProjetosNome2}
                 </ul>
               
             </div>
