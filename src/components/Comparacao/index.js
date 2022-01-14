@@ -17,7 +17,8 @@ import "./index.css";
 function Comparacao() {
 
     const [projectsData, setProjectsData] = useState([]);
-
+    const [projectsDataArray, setProjectsDataArray] = useState([]);
+    const [selectedProjects, setSelectedProjects] = useState([]);
     
     const auth = useContext(AuthContext);
 
@@ -36,18 +37,26 @@ function Comparacao() {
     //Saca só, aqui vou inserir uma bibliotera mockada de dados que pode ser trocados por json para
     //de outra origem depois
 
-    const listaProjetosNome=projectsData.map(
+    function ProjetosSelecionados() {
+        selectedProjects.push({name:'e aqui', id:'Preciso aprender como passar o valor aqui'})
+        console.log(selectedProjects)
+    }
+
+    const listaProjetosNome=selectedProjects.map(
         (c)=>
           <li key={c.id} className="ulItem">
-            <p className="ulItem">{c.title}</p>
+            <p className="ulItem">{c.name}</p>
           </li>    
           )
 
-          const listaProjetosDropdown=projectsData.map(
-            (c)=>
-              <option value={c.title}>{c.title}</option>
+    const listaProjetosDropdown=projectsData.map(
+        (c)=>
+            <option value={c.title}>{c.title}</option>
                 
-              )
+            )
+
+
+             
 
 
     return (
@@ -63,7 +72,7 @@ function Comparacao() {
 
                 <div className="comp1">
                     <div className="jornadas">
-                       <select className="dropdown">
+                       <select className="dropdown" onClick={ProjetosSelecionados}>
                             {listaProjetosDropdown}
                         </select>
                      
