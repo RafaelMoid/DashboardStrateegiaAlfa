@@ -19,6 +19,7 @@ function Comparacao() {
     const [journeys, setJourneys] = useState([]);
     const [selectedProject, setSelectedProject] = useState("");
     const [listNomesProjetos, setListNomesProjetos] = useState([]);
+    const [listSelectedProject, setListSelectedProject] = useState([]);
     const auth = useContext(AuthContext);
 
     useEffect(() => {
@@ -42,9 +43,12 @@ function Comparacao() {
                 let projetos = await fetchMapStatisticsComp(selectedProject)
                 console.log(projetos)
                 // setListNomesProjetos(...[projetos])
+                listSelectedProject.push(projetos)
+                console.log('retorno do array de selecionados',listSelectedProject)
             }
         }
         func()
+        
     },[selectedProject])
 
     // const listaProjetosNome = journeys.map((c)=><li key={c.id} className="ulItem"><p className="ulItem">{c.name}</p></li>)
@@ -57,7 +61,7 @@ function Comparacao() {
     }
     const ListaProjetosNome = () => {
         return (
-            listNomesProjetos?.map((c)=><li key={c.id} className="ulItem"><p className="ulItem">{c.name}</p></li>)
+            listSelectedProject.map((c)=><li key={c.id} className="ulItem"><p className="ulItem">{c.title}</p></li>)
         );
     }
 
