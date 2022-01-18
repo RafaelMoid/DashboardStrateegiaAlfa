@@ -72,7 +72,7 @@ function Comparacao() {
 
                 <div className="comp1">
                     <div className="jornadas">
-                       <select className="dropdown" onClick={ProjetosSelecionados}>
+                       <select className="dropdown" onChange={ProjetosSelecionados}>
                             {listaProjetosDropdown}
                         </select>
                      
