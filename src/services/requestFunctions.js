@@ -76,6 +76,18 @@ export const fetchMapStatistics = async () => {
  return data;
 };
 
+//Detalhamento das statisticas do projeto NA PAGINA DE COMPARAÇÕES AVANÇADAS
+export const fetchMapStatisticsComp = async (idJourney) => {
+  const {data} = await api("/projects/v1/project/"+idJourney+"/statistics",
+  {
+    method: "GET", 
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+  },
+})
+ return data;
+};
+
 export const fetchProjectById = async () => {
   const {data} = await api(`/projects/v1/project/${localStorage.getItem('id')}`,
   {
