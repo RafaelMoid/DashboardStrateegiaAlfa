@@ -71,7 +71,7 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 .listaProjetos2 {
 
 overflow:hidden; 
-height:20vh;
+height:25vh;
 margin-right: 5vh;    
 width: 17vw;
 
@@ -140,7 +140,7 @@ width: 17vw;
 
 .notesWrapper {
     margin-left: 8vw;
-    margin-top:-6vh;
+    margin-top:-2vh;
 }
 
  .notes {
@@ -148,7 +148,7 @@ width: 17vw;
     background: #FFFFFF;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    height: 28vh;
+    height: 20vh;
     width: 18vw;
 
 }
