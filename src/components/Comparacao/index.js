@@ -16,7 +16,7 @@ import "./index.css";
 
 function Comparacao() {
 
-    let testeProp = [10, 10, 10, 10, 10];
+    var testeProp = [0, 10, 0, 0, 0];
     const [journeys, setJourneys] = useState([]);
     const [listSelectedProject, setListSelectedProject] = useState([]);
     const auth = useContext(AuthContext);
@@ -55,7 +55,13 @@ function Comparacao() {
                 ]
             })
             console.log('retorno do array de selecionados',listSelectedProject)
-
+            
+            //Tentativa de atualizar valores da props do chart
+            for (var i = 0; i < listSelectedProject.length; i++)
+                if (testeProp[i] === 0){
+                testeProp[i] = listSelectedProject[i].people_active_count;
+                console.log('teste kkk' , listSelectedProject[i].people_active_count)
+                }
             // switch (listSelectedProject) {
             //     case listSelectedProject.length = 0:
             //         break;

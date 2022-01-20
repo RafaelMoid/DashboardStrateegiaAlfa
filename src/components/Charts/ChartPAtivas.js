@@ -10,7 +10,7 @@ const ChartPativas = ({props}) => {
                 labels: ['', '', '', '', ''],
                 datasets: [{
                     label: '',
-                    data: [props[0], props[1], props[2], props[3], props[4]],
+                    data: [localStorage.getItem('chart1'), props[1], props[2], props[3], props[4]],
                     barThickness: 18,
                     backgroundColor: [
                         '#125AB8',
