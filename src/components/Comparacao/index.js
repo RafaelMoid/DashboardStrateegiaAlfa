@@ -16,11 +16,10 @@ import "./index.css";
 
 function Comparacao() {
 
-    var testeProp = [0, 10, 0, 0, 0];
     const [journeys, setJourneys] = useState([]);
     const [listSelectedProject, setListSelectedProject] = useState([]);
     const auth = useContext(AuthContext);
-    // const [props1, setProps1] = useState([]);
+    const [props1, setProps1] = useState([]);
     // const [props2, setProps2] = useState([]);
     // const [props3, setProps3] = useState([]);
     // const [props4, setProps4] = useState([]);
@@ -54,14 +53,17 @@ function Comparacao() {
                     projetos
                 ]
             })
+            var pAC = listSelectedProject.map(pActCounter => pActCounter.people_active_count);
+            setProps1(pAC)
+            console.log(props1)
             console.log('retorno do array de selecionados',listSelectedProject)
             
             //Tentativa de atualizar valores da props do chart
-            for (var i = 0; i < listSelectedProject.length; i++)
-                if (testeProp[i] === 0){
-                testeProp[i] = listSelectedProject[i].people_active_count;
-                console.log('teste kkk' , listSelectedProject[i].people_active_count)
-                }
+            // for (var i = 0; i < listSelectedProject.length; i++)
+            //     if (testeProp[i] === 0){
+            //     testeProp[i] = listSelectedProject[i].people_active_count;
+            //     console.log('teste kkk' , listSelectedProject[i].people_active_count)
+            //     }
             // switch (listSelectedProject) {
             //     case listSelectedProject.length = 0:
             //         break;
@@ -151,7 +153,7 @@ function Comparacao() {
                     <h3 className="titleComp">Comparativo por índice dos projetos</h3>
                     <div className="charts">
                         <div className="chartsContent">
-                             <ChartPAtivas props={testeProp}/>
+                             <ChartPAtivas props={props1}/>
                              <div className="iconAndText">
                                 <img src="group.svg" className="iconComp"/>
                                 <p>Pessoas ativas <br/> na jornada</p>
@@ -190,11 +192,11 @@ function Comparacao() {
                 <button> Salvar nota </button>
             </div>
             <div className="balanceProj">
-                <Chart1/>
-                <Chart2/>
-                <Chart3/>
-                <Chart4/>
-                <Chart5/>
+                <Chart1 pac={props1}/>
+                <Chart2 pac={props1}/>
+                <Chart3 pac={props1}/>
+                <Chart4 pac={props1}/>
+                <Chart5 pac={props1}/>
                 <Legend/>
             </div>
             <div>

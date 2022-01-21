@@ -3,7 +3,7 @@ import {Bar} from 'react-chartjs-2';
 
 import "./hChart.css";
 
-const Chart4 = () => {
+const Chart4 = ({pac}) => {
     return (
         
         <div className="chartWrapper">
@@ -13,7 +13,7 @@ const Chart4 = () => {
                 labels: ['', '', '', ''],
                 datasets: [{
                     label: '',
-                    data: [12, 19, 12, 12],
+                    data: [pac[3], 19, 12, 12],
                     barThickness: 14,
                     backgroundColor: [
                         '#51C0A5',
