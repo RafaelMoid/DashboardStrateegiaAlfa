@@ -20,9 +20,9 @@ function Comparacao() {
     const [listSelectedProject, setListSelectedProject] = useState([]);
     const auth = useContext(AuthContext);
     const [props1, setProps1] = useState([]);
-    // const [props2, setProps2] = useState([]);
-    // const [props3, setProps3] = useState([]);
-    // const [props4, setProps4] = useState([]);
+    const [props2, setProps2] = useState([]);
+    const [props3, setProps3] = useState([]);
+    const [props4, setProps4] = useState([]);
     // const [props5, setProps5] = useState([]);
 
     useEffect(() => {
@@ -53,57 +53,37 @@ function Comparacao() {
                     projetos
                 ]
             })
-            var pAC = listSelectedProject.map(pActCounter => pActCounter.people_active_count);
+            
+            console.log('retorno do array de selecionados',listSelectedProject)
+            var pAC = listSelectedProject.map(pACCounter => pACCounter.people_active_count);
             setProps1(pAC)
             console.log(props1)
-            console.log('retorno do array de selecionados',listSelectedProject)
-            
-            //Tentativa de atualizar valores da props do chart
-            // for (var i = 0; i < listSelectedProject.length; i++)
-            //     if (testeProp[i] === 0){
-            //     testeProp[i] = listSelectedProject[i].people_active_count;
-            //     console.log('teste kkk' , listSelectedProject[i].people_active_count)
-            //     }
-            // switch (listSelectedProject) {
-            //     case listSelectedProject.length = 0:
-            //         break;
-                    
-            //     case listSelectedProject.length = 1:
-            //         setProps1(listSelectedProject[0])
-            //         console.log('Teste de Switch caso 1' , props1)
-            //         break;
-                
-            //     case listSelectedProject.length = 2:
-            //         setProps2(listSelectedProject[1])
-            //         console.log('Teste de Switch caso 2' , props2)
-            //         break;
-                
-            //     case listSelectedProject.length = 3:
-            //         setProps3(listSelectedProject[2])
-            //         console.log('Teste de Switch caso 3' , props3)
-            //         break;
-                
-            //     case listSelectedProject.length = 4:
-            //         setProps4(listSelectedProject[3])
-            //         console.log('Teste de Switch caso 4' , props4)
-            //         break;
-                
-            //     case listSelectedProject.length = 5:
-            //         setProps5(listSelectedProject[4])
-            //         console.log('Teste de Switch caso 5' , props5)
-            //         break;
 
-            //     default:
-            //         console.log("Se nada foi impresso é por que não temos nada selecionado");
-                
-            // }
+            var eND = listSelectedProject.map(eNDCounter => parseFloat((((eNDCounter.agreements_comments_count+eNDCounter.reply_comments_count)
+            /((eNDCounter.parent_comments_count*eNDCounter.people_active_count)/2)
+            )*100).toFixed(2)));
+            setProps2(eND)
+            console.log(props2)
+
+            var eNQ = listSelectedProject.map(eNQCounter => parseFloat((
+                eNQCounter.parent_comments_count
+                /
+                (eNQCounter.question_count*eNQCounter.people_active_count)*100)
+                .toFixed(2)));
+            setProps3(eNQ)
+            console.log(props3)
+
+            var eNDi = listSelectedProject.map(eNDiCounter => parseFloat(
+                (eNDiCounter.agreements_comments_count+eNDiCounter.reply_comments_count)
+                /
+                ((eNDiCounter.parent_comments_count*eNDiCounter.people_active_count)/2)*100).toFixed(2));
+            setProps4(eNDi)
+            console.log(props4)
 
             
         }
     }
 
-    
-    // const listaProjetosNome = journeys.map((c)=><li key={c.id} className="ulItem"><p className="ulItem">{c.name}</p></li>)
 
 
     const ListaProjetos = () => {
@@ -160,21 +140,21 @@ function Comparacao() {
                              </div>
                         </div>
                         <div className="chartsContent">
-                             <ChartEQuestoes/>
+                             <ChartEDebates props={props2}/>
                              <div className="iconAndText">
                                 <img src="squareChat.svg" className="iconComp"/>
                                 <p>Engajamento<br/>nos debates</p>
                              </div>
                         </div>
                         <div className="chartsContent">
-                            <ChartEDebates/>
+                            <ChartEQuestoes props={props3}/>
                             <div className="iconAndText">
                                 <img src="circledQuestion.svg" className="iconComp"/>
                                 <p>Engajamento<br/>nas questões</p>
                             </div>
                         </div>
                         <div className="chartsContent">
-                            <ChartEDiver/>
+                            <ChartEDiver props={props4}/>
                             <div className="iconAndText">
                                 <img src="chatBubbles.svg" className="iconComp"/>
                                 <p>Engajamento<br/>nas divergências</p>
@@ -192,11 +172,11 @@ function Comparacao() {
                 <button> Salvar nota </button>
             </div>
             <div className="balanceProj">
-                <Chart1 pac={props1}/>
-                <Chart2 pac={props1}/>
-                <Chart3 pac={props1}/>
-                <Chart4 pac={props1}/>
-                <Chart5 pac={props1}/>
+                <Chart1 pac={props1} end={props2} enq={props3} endi={props4}/>
+                <Chart2 pac={props1} end={props2} enq={props3} endi={props4}/>
+                <Chart3 pac={props1} end={props2} enq={props3} endi={props4}/>
+                <Chart4 pac={props1} end={props2} enq={props3} endi={props4}/>
+                <Chart5 pac={props1} end={props2} enq={props3} endi={props4}/>
                 <Legend/>
             </div>
             <div>

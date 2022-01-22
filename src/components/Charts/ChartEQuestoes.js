@@ -2,7 +2,7 @@ import React from 'react';
 import {Bar} from 'react-chartjs-2';
 import "./chart.css";
 
-const ChartEQuestoes = () => {
+const ChartEQuestoes = ({props}) => {
     return (
         <div className="chartWrapper">
             <Bar 
@@ -10,7 +10,7 @@ const ChartEQuestoes = () => {
                 labels: ['', '', '', '', ''],
                 datasets: [{
                     label: '',
-                    data: [8, 19, 21, 21, 2],
+                    data: [props[0], props[1], props[2], props[3], props[4]],
                     barThickness: 18,
                     backgroundColor: [
                         '#125AB8',
