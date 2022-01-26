@@ -7,6 +7,7 @@ import {SidebarData} from './SidebarData';
 import {Link} from "react-router-dom";
 import "./style.css";
 import {IconContext} from 'react-icons';
+import * as FiIcons from "react-icons/fi";
 
 
 const Navbar2 = ({ username }) => {
@@ -55,6 +56,12 @@ const Navbar2 = ({ username }) => {
                       </li>
                   )
               })}
+              <li key={3} className='nav-text' onClick={handleLogout}>
+                  <Link to={'/'}>
+                    <FiIcons.FiLogOut/>
+                    <span>Fazer logout</span>
+                  </Link>
+              </li>
             
               
           </ul>

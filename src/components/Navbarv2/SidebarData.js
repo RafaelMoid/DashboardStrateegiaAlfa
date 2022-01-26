@@ -40,15 +40,8 @@ export const SidebarData = [
         path: '/Comparacao',
         icon: < AiOutlineBarChart / > ,
         cName: 'nav-text'
-    },
-
-    {
-        title: ' Fazer logout',
-        path: '/',
-        icon: < FiIcons.FiLogOut / > ,
-        cName: 'nav-text',
-        click: '"handleLogout"'
     }
+    
 
 
 ]
