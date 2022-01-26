@@ -4,11 +4,7 @@ import ChartPAtivas from "../Charts/ChartPAtivas";
 import ChartEQuestoes from "../Charts/ChartEQuestoes";
 import ChartEDebates from "../Charts/ChartEDebates";
 import ChartEDiver from "../Charts/ChartEDiver";
-import Chart1 from "../HorizontalCharts/Chart1";
-import Chart2 from '../HorizontalCharts/Chart2';
-import Chart3 from '../HorizontalCharts/Chart3';
-import Chart4 from '../HorizontalCharts/Chart4';
-import Chart5 from '../HorizontalCharts/Chart5';
+import Chart from "../HorizontalCharts/Chart";
 import Legend from '../HorizontalCharts/legend';
 import { AuthContext } from "../providers/auth";
 import {fetchUserProjects, fetchMapStatisticsComp} from "../../services/requestFunctions";
@@ -18,7 +14,11 @@ function Comparacao() {
 
     const [journeys, setJourneys] = useState([]);
     const [listSelectedProject, setListSelectedProject] = useState([]);
+
+    const [journeysList, setJourneysList] = useState([]);
+
     const auth = useContext(AuthContext);
+
     const [props1, setProps1] = useState([]);
     const [props2, setProps2] = useState([]);
     const [props3, setProps3] = useState([]);
@@ -37,51 +37,56 @@ function Comparacao() {
       }, [auth.apiToken]);
 
 
-    const onSelectProject = async ({target:{value:selectedProject}}) => {
+    const onSelectProject = async ({ target: { value: selectedProject }}) => {
+
         //console.log('linha 55' , selectedProject)
-        if(selectedProject){
-            let projetos = await fetchMapStatisticsComp(selectedProject)
-            //console.log(projetos)
-            // setListNomesProjetos(...[projetos])
-            //listSelectedProject.push(projetos)
-            setListSelectedProject(projects1 => {
-                if(projects1.find(({id})=>id===selectedProject)){
-                    return projects1
-                }
-                return [
-                    ...projects1,
-                    projetos
-                ]
-            })
+        // if(selectedProject){
+            let projeto = await fetchMapStatisticsComp(selectedProject)
+            console.log('projeto', projeto)
+            setJourneysList(state =>([...state, projeto]))
+
+        //     //console.log(projetos)
+        //     // setListNomesProjetos(...[projetos])
+        //     //listSelectedProject.push(projetos)
+
+        //     setListSelectedProject(projects1 => {
+        //         if(projects1.find(({id})=>id===selectedProject)){
+        //             return projects1
+        //         }
+        //         return [
+        //             ...projects1,
+        //             projetos
+        //         ]
+        //     })
             
-            console.log('retorno do array de selecionados',listSelectedProject)
-            var pAC = listSelectedProject.map(pACCounter => pACCounter.people_active_count);
-            setProps1(pAC)
-            console.log(props1)
+        //     console.log('retorno do array de selecionados',listSelectedProject)
+        //     var pAC = listSelectedProject.map(pACCounter => pACCounter.people_active_count);
+        //     setProps1(pAC)
+        //     console.log(props1)
 
-            var eND = listSelectedProject.map(eNDCounter => parseFloat((((eNDCounter.agreements_comments_count+eNDCounter.reply_comments_count)
-            /((eNDCounter.parent_comments_count*eNDCounter.people_active_count)/2)
-            )*100).toFixed(2)));
-            setProps2(eND)
-            console.log(props2)
+        //     var eND = listSelectedProject.map(eNDCounter => parseFloat((((eNDCounter.agreements_comments_count+eNDCounter.reply_comments_count)
+        //     /((eNDCounter.parent_comments_count*eNDCounter.people_active_count)/2)
+        //     )*100).toFixed(2)));
+        //     setProps2(eND)
+        //     console.log(props2)
 
-            var eNQ = listSelectedProject.map(eNQCounter => parseFloat((
-                eNQCounter.parent_comments_count
-                /
-                (eNQCounter.question_count*eNQCounter.people_active_count)*100)
-                .toFixed(2)));
-            setProps3(eNQ)
-            console.log(props3)
+        //     var eNQ = listSelectedProject.map(eNQCounter => parseFloat((
+        //         eNQCounter.parent_comments_count
+        //         /
+        //         (eNQCounter.question_count*eNQCounter.people_active_count)*100)
+        //         .toFixed(2)));
+        //     setProps3(eNQ)
+        //     console.log(props3)
 
-            var eNDi = listSelectedProject.map(eNDiCounter => parseFloat(
-                (eNDiCounter.agreements_comments_count+eNDiCounter.reply_comments_count)
-                /
-                ((eNDiCounter.parent_comments_count*eNDiCounter.people_active_count)/2)*100).toFixed(2));
-            setProps4(eNDi)
-            console.log(props4)
+        //     var eNDi = listSelectedProject.map(eNDiCounter => parseFloat(
+        //         (eNDiCounter.agreements_comments_count+eNDiCounter.reply_comments_count)
+        //         /
+        //         ((eNDiCounter.parent_comments_count*eNDiCounter.people_active_count)/2)*100).toFixed(2));
+        //     setProps4(eNDi)
+        //     console.log(props4)
 
             
-        }
+        // }
     }
 
 
@@ -93,7 +98,7 @@ function Comparacao() {
     }
     const ListaProjetosNome = () => {
         return (
-            listSelectedProject.map((c)=><li key={c.id} className="ulItem"><p className="ulItem">{c.title}</p></li>)
+            journeysList.map((c)=><li key={c.id} className="ulItem"><p className="ulItem">{c.title}</p></li>)
         );
     }
 
@@ -115,7 +120,7 @@ function Comparacao() {
                 <div className="comp1">
                     <div className="jornadas">
                         {/* Aqui é onde adicionamos os valores na mudança da opção selecionada */}
-                       <select className="dropdown" onChange={onSelectProject}> 
+                       <select className="dropdown" onChange={onSelectProject} disabled={journeysList.length >= 5}> 
                             <option value="default" >Escolha um projeto</option>
                             <ListaProjetos />
                         </select>
@@ -133,28 +138,40 @@ function Comparacao() {
                     <h3 className="titleComp">Comparativo por índice dos projetos</h3>
                     <div className="charts">
                         <div className="chartsContent">
-                             <ChartPAtivas props={props1}/>
+                             <ChartPAtivas props={journeysList.map(journey => journey.people_active_count)}/>
                              <div className="iconAndText">
                                 <img src="group.svg" className="iconComp"/>
                                 <p>Pessoas ativas <br/> na jornada</p>
                              </div>
                         </div>
                         <div className="chartsContent">
-                             <ChartEDebates props={props2}/>
+                             <ChartEDebates props={journeysList.map(journey => parseFloat((((
+                                                                    journey.agreements_comments_count+journey.reply_comments_count)
+                                                                    /((journey.parent_comments_count*journey.people_active_count)/2)
+                                                                    )*100).toFixed(2)))}/>
                              <div className="iconAndText">
                                 <img src="squareChat.svg" className="iconComp"/>
                                 <p>Engajamento<br/>nos debates</p>
                              </div>
                         </div>
                         <div className="chartsContent">
-                            <ChartEQuestoes props={props3}/>
+                            <ChartEQuestoes props={journeysList.map(journey => parseFloat((
+                                                                    journey.parent_comments_count
+                                                                    /
+                                                                    (journey.question_count*journey.people_active_count)*100)
+                                                                    .toFixed(2))
+                                                                    )}/>
                             <div className="iconAndText">
                                 <img src="circledQuestion.svg" className="iconComp"/>
                                 <p>Engajamento<br/>nas questões</p>
                             </div>
                         </div>
                         <div className="chartsContent">
-                            <ChartEDiver props={props4}/>
+                            <ChartEDiver props={journeysList.map(journey => parseFloat(
+                                                                (journey.agreements_comments_count+journey.reply_comments_count)
+                                                                /
+                                                                ((journey.parent_comments_count*journey.people_active_count)/2)*100).toFixed(2))
+                                                }/>
                             <div className="iconAndText">
                                 <img src="chatBubbles.svg" className="iconComp"/>
                                 <p>Engajamento<br/>nas divergências</p>
@@ -172,13 +189,36 @@ function Comparacao() {
                 <button> Salvar nota </button>
             </div>
             <div className="balanceProj">
-                <Chart1 pac={props1} end={props2} enq={props3} endi={props4}/>
-                <Chart2 pac={props1} end={props2} enq={props3} endi={props4}/>
-                <Chart3 pac={props1} end={props2} enq={props3} endi={props4}/>
-                <Chart4 pac={props1} end={props2} enq={props3} endi={props4}/>
-                <Chart5 pac={props1} end={props2} enq={props3} endi={props4}/>
+                
+
+                {
+                    journeysList.map((journey, index)=> <Chart
+                        key={journey.id}
+                        title={journey.title.substring(0, 24)}
+                        pac={journey.people_active_count}
+                        end={calculateEngAtDeb(
+                            journey.people_active_count,
+                            journey.parent_comments_count,
+                            journey.agreements_comments_count,
+                            journey.reply_comments_countagreements_comments_count
+                        )}
+                        enq={calculateEngAtQuest(
+                            journey.people_active_count,
+                            journey.parent_comments_count,
+                            journey.question_count
+                        )}
+                        endi={calculateEngAtDiver(
+                            journey.agreements_comments_count,
+                            journey.reply_comments_count,
+                            journey.parent_comments_count,
+                            journey.people_active_count,
+                        )}
+                    />)
+                }
+
                 <Legend/>
             </div>
+
             <div>
                 <button className="btnPng">Download PNG</button>
             </div>
@@ -188,3 +228,39 @@ function Comparacao() {
 }
 
 export default Comparacao;
+
+const calculateEngAtDeb = (
+    people_active_count,
+    parent_comments_count,
+    agreements_comments_count,
+    reply_comments_count
+    ) => {
+        
+   return  parseFloat((agreements_comments_count+reply_comments_count)
+       /(((parent_comments_count*people_active_count)/2)*100).toFixed(2));  
+}
+
+
+const calculateEngAtQuest = (
+    people_active_count,
+    parent_comments_count,
+    question_count) => {
+        
+   return  parseFloat((
+            parent_comments_count
+            /
+            (question_count*people_active_count)*100)
+            .toFixed(2))
+}
+
+const calculateEngAtDiver = (
+    agreements_comments_count,
+    reply_comments_count,
+    parent_comments_count,
+    people_active_count,) => {
+        
+   return  parseFloat(
+    agreements_comments_count+reply_comments_count
+    /
+    (((parent_comments_count*people_active_count)/2)*100).toFixed(2));  
+}

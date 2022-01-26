@@ -1,30 +1,40 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
-import "./chart.css";
 
-const ChartEQuestoes = ({props}) => {
+import "./hChart.css";
+
+const Chart = ({pac, end, enq, endi, title}) => {
     return (
+        
         <div className="chartWrapper">
+            <p className="chartTitle">{title}</p>
             <Bar 
             data={{
-                labels: ['', '', '', '', ''],
+                labels: ['', '', '', ''],
                 datasets: [{
                     label: '',
-                    data: props.data || [props[0], props[1], props[2], props[3], props[4]],
-                    barThickness: 18,
+                    data: [pac, end, enq, endi],
+                    barThickness: 14,
                     backgroundColor: [
-                        '#125AB8',
-                        '#7AB4DB',
-                        '#A6CDE7',
-                        '#DBEBF5',
-                        '#DBEBF5'
+                        '#51C0A5',
+                        '#51C0A58F',
+                        '#51C0A54A',
+                        '#51C0A51F'
                     ],
+
+
                     
-                    borderWidth: 1
+                    borderWidth: 1,
+                    datalabels: {
+                        
+                    }
                 }]
             }}
             options={{
+                
+                indexAxis: 'y',
                 plugins:{
+                     
                     legend:{
                         display:false
                     }
@@ -43,20 +53,24 @@ const ChartEQuestoes = ({props}) => {
                         }
                     },
                     x: {
-                        grid: {
+                        ticks: {
                             display: false
+                        },
+                        grid: {
+                            display: false,
+                            
                             
                         }
                     }
                 }
             }}
 
-            height={150}
-            width={100}
+            height={60}
+            width={220}
 
             />
             </div>
     )
 };
 
-export default ChartEQuestoes;
+export default Chart;

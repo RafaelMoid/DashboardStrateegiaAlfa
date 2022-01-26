@@ -15,7 +15,6 @@ import printJS from "print-js";
 
 function Projetos() {
 
-    //PROBLEM WITH THE IMPORT, CHECK GITHUB FOR LIBRARY CREATOR RESPONSE
     function printPage() {
         printJS({
             printable: 'printJS-form',
