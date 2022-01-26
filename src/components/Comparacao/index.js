@@ -145,21 +145,22 @@ function Comparacao() {
                              </div>
                         </div>
                         <div className="chartsContent">
-                             <ChartEDebates props={journeysList.map(journey => parseFloat((((
-                                                                    journey.agreements_comments_count+journey.reply_comments_count)
-                                                                    /((journey.parent_comments_count*journey.people_active_count)/2)
-                                                                    )*100).toFixed(2)))}/>
+                             <ChartEDebates props={journeysList.map(journey => parseFloat(
+                                                        (journey.agreements_comments_count+journey.reply_comments_count)
+                                                        /
+                                                        ((journey.parent_comments_count*journey.people_active_count)/2)*100).toFixed(2)
+                                                   )} />
                              <div className="iconAndText">
                                 <img src="squareChat.svg" className="iconComp"/>
                                 <p>Engajamento<br/>nos debates</p>
                              </div>
                         </div>
                         <div className="chartsContent">
-                            <ChartEQuestoes props={journeysList.map(journey => parseFloat((
+                            <ChartEQuestoes props={journeysList.map(journey => parseFloat(
                                                                     journey.parent_comments_count
                                                                     /
                                                                     (journey.question_count*journey.people_active_count)*100)
-                                                                    .toFixed(2))
+                                                                    .toFixed(2)
                                                                     )}/>
                             <div className="iconAndText">
                                 <img src="circledQuestion.svg" className="iconComp"/>
@@ -167,10 +168,14 @@ function Comparacao() {
                             </div>
                         </div>
                         <div className="chartsContent">
-                            <ChartEDiver props={journeysList.map(journey => parseFloat(
-                                                                (journey.agreements_comments_count+journey.reply_comments_count)
-                                                                /
-                                                                ((journey.parent_comments_count*journey.people_active_count)/2)*100).toFixed(2))
+                            <ChartEDiver props={journeysList.map(journey => parseFloat( 
+                                                    (journey.parent_comments_count
+                                                    /
+                                                    (journey.question_count*journey.people_active_count))
+                                                    +
+                                                    (((journey.agreements_comments_count+journey.reply_comments_count)
+                                                    /
+                                                    ((journey.parent_comments_count*journey.people_active_count)/2))/2)*100).toFixed(2))
                                                 }/>
                             <div className="iconAndText">
                                 <img src="chatBubbles.svg" className="iconComp"/>
@@ -200,7 +205,7 @@ function Comparacao() {
                             journey.people_active_count,
                             journey.parent_comments_count,
                             journey.agreements_comments_count,
-                            journey.reply_comments_countagreements_comments_count
+                            journey.reply_comments_count
                         )}
                         enq={calculateEngAtQuest(
                             journey.people_active_count,
@@ -212,6 +217,7 @@ function Comparacao() {
                             journey.reply_comments_count,
                             journey.parent_comments_count,
                             journey.people_active_count,
+                            journey.question_count
                         )}
                     />)
                 }
@@ -236,8 +242,10 @@ const calculateEngAtDeb = (
     reply_comments_count
     ) => {
         
-   return  parseFloat((agreements_comments_count+reply_comments_count)
-       /(((parent_comments_count*people_active_count)/2)*100).toFixed(2));  
+   return  parseFloat(
+    (agreements_comments_count+reply_comments_count)
+    /
+    ((parent_comments_count*people_active_count)/2)*100).toFixed(2)
 }
 
 
@@ -246,21 +254,26 @@ const calculateEngAtQuest = (
     parent_comments_count,
     question_count) => {
         
-   return  parseFloat((
-            parent_comments_count
-            /
-            (question_count*people_active_count)*100)
-            .toFixed(2))
+   return  parseFloat(
+    parent_comments_count
+    /
+    (question_count*people_active_count)*100)
+    .toFixed(2)
 }
 
 const calculateEngAtDiver = (
     agreements_comments_count,
     reply_comments_count,
     parent_comments_count,
-    people_active_count,) => {
+    people_active_count,
+    question_count) => {
         
-   return  parseFloat(
-    agreements_comments_count+reply_comments_count
+   return  parseFloat( 
+    (parent_comments_count
     /
-    (((parent_comments_count*people_active_count)/2)*100).toFixed(2));  
+    (question_count*people_active_count))
+  +
+  (((agreements_comments_count+reply_comments_count)
+  /
+  ((parent_comments_count*people_active_count)/2))/2)*100).toFixed(2) 
 }
