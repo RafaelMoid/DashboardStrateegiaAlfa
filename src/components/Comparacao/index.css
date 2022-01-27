@@ -4,16 +4,15 @@
 }
 
 .wrapper {
-    top:21vh;
+    top:25%;
     display:flex;
     flex-direction:column;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 
 .containerTxt {
-    margin-top: 4vh;
     justify-content:start;
     top:0;
     width: 100vw;
@@ -48,13 +47,12 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 .comp1 {
     display:flex;
     flex-direction:row;
-    margin-top: 3.5vh;
-    margin-left: 6vw;
+    margin-top: 2.5%;
     
 }
 
 .wrapperProj{
-    margin-top: 2vh;
+    margin-top: 2.5%;
 }
 
 .dropdown {
@@ -62,8 +60,9 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 }
 
 .jornadas{
-    height:35vh;
-    width: 10vw;
+    height:30%;
+    width: 25%;
+    margin-left: -60%;
     /*Aqui está o conteudo do wrap*/
 
 }
@@ -71,9 +70,8 @@ AQUI ESTÃO O VISUAL REFERENTE A DIV REFERENTE A SELEÇÃO DOS PROJETOS
 .listaProjetos2 {
 
 overflow:hidden; 
-height:25vh;
-margin-right: 5vh;    
-width: 17vw;
+height:25%;   
+width: 100%;
 
   }
 
@@ -82,24 +80,25 @@ width: 17vw;
   }
 
   .compProj {
-      margin-left:7vw;
-      width: 70vw;
-      height: 45vh;
+      margin-left:7.5%;
+      width: 100%;
+      height: 100%;
       display:flex;
       flex-direction:column;
   }
   
 .titleComp {
-    margin-left: 2.5vw;
-    margin-bottom: 3vh;
+    margin-left: 15%;
+    margin-bottom: 5%;
 }
 
   .charts {
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-    width:50vw;
-    margin-left: 5vw;
+    width:100%;
+    height: 100%;
+    margin-left: 2.5%;
   }
 
 .chartsContent {
@@ -107,23 +106,26 @@ width: 17vw;
     display:flex;
     flex-direction:column;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-left: 15%;
     
 }
 
 .iconComp {
     margin-left:0.1vw;
+    height: 100%;
 }
 
 .iconAndText{
-    margin-top:-4vh;
+    margin-top:-3%;
     display: flex;
     align-items: space-around;
-    margin-left: 1vw;
     
   }
 
   .iconAndText > p {
-      margin-left:0.8vw;
+      margin-left:2%;
       font-size:0.75rem;
       font-weight: bold;
   }
@@ -131,8 +133,8 @@ width: 17vw;
  /* PARTE INFERIOR DA TELA DE COMPARAÇÕES */
 
  .comp2 {
-     width: 100vw;
-     margin-top: -5vh;
+     width: 100%;
+     margin-top: 5%;
     display:flex;
     flex-direction:row;
     justify-content: flex-start;
@@ -148,8 +150,8 @@ width: 17vw;
     background: #FFFFFF;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    height: 20vh;
-    width: 18vw;
+    height: 80%;
+    width: 100%;
 
 }
 

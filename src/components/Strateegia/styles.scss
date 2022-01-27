@@ -316,10 +316,12 @@ justify-content: left;
   justify-content: center;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   margin-left: 7.5%;
   list-style-type: none;
 }
+
+
 
 
 .ulItem:hover {
@@ -774,7 +776,7 @@ justify-content: left;
 
 .title1 {
   padding-top:2%;
-  font-size: 1rem;
+  font-size: 0.9rem;
   width:100%;
   display:flex;
   align-items: center;
@@ -784,7 +786,7 @@ justify-content: left;
 
 
 .subtitle1 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: black;
   text-align: left;
   font-weight: bold;
@@ -795,8 +797,8 @@ justify-content: left;
 
 .title2 {
   padding-top:2%;
-  font-size: 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-size: 0.9rem;
   width:100%;
   display:flex;
   align-items: center;
@@ -806,7 +808,7 @@ justify-content: left;
 
 
 .subtitle2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: black;
   text-align: center;
   font-weight: bold;  
@@ -934,8 +936,9 @@ margin-left: 7%;
 
 .btnComp {
   margin-top: 5%;
-  width: 60%;
+  width: 100%;
 }
+
   
 .elementP > p {
   font-size: 0.8rem;

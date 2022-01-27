@@ -13,7 +13,7 @@ import {Link, useHistory} from "react-router-dom";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Encontros from "../Kits";
 import BarChart from '../Charts/Chart.js';
-import {BsThreeDots} from 'react-icons/bs';
+import { IoIosArrowForward } from "react-icons/io";
 
 
 import "./styles.scss";
@@ -152,7 +152,8 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   const listaProjetosNome=projectsData.map(
     (c)=>
       <li key={c.id} className="ulItem">
-        <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title} ></p>
+        <p className="ulItem" onClick={handleRoute} onMouseEnter={() => 
+          localStorage.setItem('id', c.id)}>{c.title} <IoIosArrowForward/></p>
       </li>    
       )
   

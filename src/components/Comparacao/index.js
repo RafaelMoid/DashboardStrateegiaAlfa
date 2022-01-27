@@ -126,7 +126,6 @@ function Comparacao() {
                         </select>
                      
                         <div className="wrapperProj">
-                             {/*<h3>mediana</h3>*/}
                             <div>
                                 <ul className="listaProjetos2">
                                     <ListaProjetosNome/>
