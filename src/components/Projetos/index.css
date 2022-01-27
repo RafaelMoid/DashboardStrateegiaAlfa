@@ -5,21 +5,22 @@
 
 .textTitle {
     width: 60vw;
-    margin-top:2%;
     margin-left:10vw;
 }
 .textTitle > p{
     color: rgba(0, 0, 0, 0.36);    
 }
 .rightBar {
-    margin-left:72vw;
-    margin-top:-75vh;
+    margin-left:72%;
+    position: relative;
+    top: -80vh;
     width: 25vw;
-    height: 80vh;
+    height: 100%;
+    margin-bottom: -100%;
 }
 
 .partTitle {
-    margin-top: 3vh;
+    margin-top: 5%;
     font-size:1rem;
     font-weight:bold;
     width: 20vw;
@@ -28,15 +29,14 @@
 .resumoJornada {
     display:flex;
     flex-direction:row;
-    width: 55vw;
-    height: 18vh;
+    width: 58%;
+    height: 20%;
     justify-content: left;
     align-items: center; 
-    margin-top: 2vh;   
-    margin-left:10vw;
+    margin-left:10%;
     background-color: #006FB90F;
     border-radius: 20px;
-    padding-top: 5vh;
+    padding-top: 1%;
     padding-bottom: 5vh;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .infoP > h1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .titleP {

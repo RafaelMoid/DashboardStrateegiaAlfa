@@ -105,7 +105,7 @@ span {
 }
 
 
-@media screen and (max-width:1600px) and (min-width : 1040px) {
+@media screen and (max-width:2000px) and (min-width : 1040px) {
 .navbar {
     width:0vh;
     display: flex;
