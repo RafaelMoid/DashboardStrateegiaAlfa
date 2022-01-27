@@ -189,6 +189,119 @@
 // }
 
 }
+@media screen and (min-width: 1120px) and (max-width: 1440px)  {
+  .login-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  .informative-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+          width:50%;
+    
+    .informative {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+
+
+    }
+
+    .imgLogo {
+      margin-top: 5%;
+      margin-left: 7.5%;  
+      margin-bottom: 25%;
+      height: 15%;
+      width: 25%;
+    }
+    
+    .imgIcons {
+      width: 50%;
+    }
+
+    
+
+  }
+ 
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: -40%;
+  h1 {
+    color: #545151;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: -10%;
+    input {
+      background-color: #efefef;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 2px 3px rgb(214, 209, 209);
+      padding: 12px;
+      &:focus {
+        outline: none;
+        text-decoration: underline;
+      }
+    }
+    button {
+      background-color: #D70858;
+      color: #fff;
+      height: 20%;
+      width: 50%;
+      margin: auto;
+      padding: 5px 12px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 2px 3px #efefef;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        background-color: #D70858;
+      }
+    }
+  }
+}
+
+
+.imgIconsMobile {
+  visibility: hidden;
+  height: 0%;
+  width: 0%;
+}
+
+.cadastre-se {
+  visibility: hidden;
+}
+.cadastre-se-G {
+  width: 100%;
+}
+.cadastre-se-G > span , a{
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+// .cdLink{
+//   margin-left: 35%;
+// }
+
+}
 
 @media screen and (min-width: 1440px) {
   .login-container {
@@ -449,6 +562,9 @@
   margin-top: -15%;
   margin-left: 12.5%;
   width: 75%;
+  display: flex;
+  justify-content:column;
+  align-items:center;
 }
 
 .cdLink{  
@@ -457,6 +573,9 @@
 
 .cadastre-se > span, a{
   font-size: 0.7rem;
+  display: flex;
+  justify-content:column;
+  align-items:normal;
   }
 
 .cadastre-se-G {
