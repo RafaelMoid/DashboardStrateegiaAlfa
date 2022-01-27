@@ -152,7 +152,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
   const listaProjetosNome=projectsData.map(
     (c)=>
       <li key={c.id} className="ulItem">
-        <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title}</p>
+        <p className="ulItem" onClick={handleRoute} onMouseEnter={() => localStorage.setItem('id', c.id)}>{c.title} ></p>
       </li>    
       )
   
@@ -206,7 +206,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
           <article className="box3">
             <div className="textBox3">
               <div className="title3"><h1>{projectsDataSummary3.length}</h1></div>
-              <div className="subtitle3"><p>Jornadas que participo</p></div>
+              <div className="subtitle3"><p>Jornadas em que participo</p></div>
             </div>
           </article>
       </div>
@@ -231,7 +231,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
              <div className="containerLeft">
               <div className="comp0">
                 <h3>Comparação rápida  de índices</h3>
-                <p>Selecione duas jornadas para comparar seus índices  </p>
+                <p className="pTextTela2">Selecione duas jornadas para comparar seus índices  </p>
                 <h3 className="journey">Jornada 1</h3>
                 <select className="dropdown" onChange={e => setId1(e.target.value)}>
                   <option>Selecione</option>
@@ -253,7 +253,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
                   <div className="element">
                   <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics1.people_active_count || "0"}</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementPA"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
                     
@@ -295,7 +295,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
                   <div className="element">
                   <img src="group.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.people_active_count || "0"}</h3>
                   </div>
-                  <div className="elementP"><p>Pessoas ativas na jornada</p></div>
+                  <div className="elementPA"><p>Pessoas ativas na jornada</p></div>
                   
                   <div className="element">
                   <img src="circledQuestion.svg" className="iconComp" alt="icon"/><h3 className="h3Comp">{projectStatistics2.parent_comments_count?
