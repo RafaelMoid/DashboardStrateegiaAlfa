@@ -140,7 +140,7 @@ function Comparacao() {
                              <ChartPAtivas props={journeysList.map(journey => journey.people_active_count)}/>
                              <div className="iconAndText">
                                 <img src="group.svg" className="iconComp"/>
-                                <p>Pessoas ativas <br/> na jornada</p>
+                                <p>Pessoas ativas na jornada</p>
                              </div>
                         </div>
                         <div className="chartsContent">
