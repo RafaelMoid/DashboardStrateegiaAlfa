@@ -1,6 +1,6 @@
 //Sessão de dados iniciais e boxes display
 //DAQUI PARA BAIXO É NECESSARIO FAZER A RESPONSIVIDADE
-@media only screen and (min-width : 1120px) and (max-width : 1440px)
+@media only screen and (min-width : 1120px) and (max-width : 1600px)
 {
 
   .Wrapper {
@@ -30,7 +30,7 @@
 
 .box1 {
   height: 30%;
-  width: 5%;
+  width: 8vw;
   background-color:white;
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
@@ -47,7 +47,7 @@
 
 .box2 {
   height: 30%;
-  width: 5%;
+  width: 8vw;
   background-color:white;
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
@@ -61,7 +61,7 @@
 }
 .box3 {
   height: 30%;
-  width: 5%;
+  width: 8vw;
   background-color:white;
   color:black;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
@@ -210,7 +210,7 @@ margin-left: 7%;
 }
 
 .comp1 > h2 {
-  font-size:1.5rem;
+  font-size:1rem;
 }
 
 .horizontalDisplay{
@@ -240,14 +240,14 @@ margin-left: 7%;
 }
 
 .elementP > p {
-font-size: 0.7rem;
+font-size: 0.6rem;
 justify-content:center;
 flex-direction:column;
 margin-left: 5%;
 }
 
 .elementPA > p {
-font-size: 0.7rem;
+font-size: 0.6rem;
 justify-content:center;
 flex-direction:column;
 margin-left: 5%;
@@ -557,7 +557,7 @@ margin-left: 7%;
 }
 
 .comp1 > h2 {
-  font-size:1rem;
+  font-size:0.7rem;
 }
 
 .horizontalDisplay{

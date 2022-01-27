@@ -23,6 +23,12 @@ const Strateegia = () => {
   //Variaveis para dropdown
 
   const history = useHistory();
+//   var largura = window.screen.width;
+//   var caixa3 = if (largura ) {
+//     instrução1
+//  } else {
+//     instrução2
+//  }
   
   const handleRoute = () =>{ 
     history.push("/Projetos");
@@ -207,7 +213,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
           <article className="box3">
             <div className="textBox3">
               <div className="title3"><h1>{projectsDataSummary3.length}</h1></div>
-              <div className="subtitle3"><p>Jornadas em que participo</p></div>
+              <div className="subtitle3"><p>{('Jornadas em que participo')}</p></div>
             </div>
           </article>
       </div>
