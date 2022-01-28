@@ -697,9 +697,10 @@ justify-content: left;
 @media screen and (max-width: 480px) {
 
   .Wrapper {
-    display: flex;
+    display:flex;        
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    margin-top: -1%;
   }
 
 .wrapperBoxes {
@@ -707,9 +708,7 @@ justify-content: left;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content:space-around;
-  margin-left: 7%;
-  margin-right: 40%;
+  justify-content:center;
 }
 
 
@@ -729,8 +728,6 @@ justify-content: left;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
   margin: 0.5vh;
-  margin-right: 2%;
-  margin-left: 15%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -751,7 +748,6 @@ justify-content: left;
   box-shadow: 0px 4px 4px rgba(215, 8, 88, 0.17);
   border-radius: 12px;
   margin: 0.5vh;
-  margin-right: 2%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;

@@ -43,6 +43,15 @@
 }
 
 @media screen and (max-width: 600px) {
+    
+    .container {
+        display:flex;        
+        align-items: center;
+        justify-content: center;
+        margin-top: 8%;
+        width: 100%;
+    }
+    
     .wellcome {
         position: relative;
         font-weight: 400;
@@ -63,5 +72,41 @@
     }
     
     
+  
+}
+
+@media screen and (max-width: 460px) {
+    .wellcome {
+        position: relative;
+        font-weight: 400;
+        color:black ;
+        margin-left: 10%;
+        
+    }
+    
+    .wellcome h3 {
+        font-size: 2rem;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+    }
+    
+    .wellcome p {
+        width: 70%;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #2322225E;
+
+    }
+
+    .ola{
+       
+        color: black;
+    }
+    
+    .imgWellcome {
+        height: 0;
+        width: 0;
+    }
   
 }
