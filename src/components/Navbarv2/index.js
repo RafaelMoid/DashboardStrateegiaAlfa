@@ -8,6 +8,9 @@ import {Link} from "react-router-dom";
 import "./style.css";
 import {IconContext} from 'react-icons';
 import * as FiIcons from "react-icons/fi";
+import {
+  FiHexagon
+} from "react-icons/fi";
 
 
 const Navbar2 = ({ username }) => {
@@ -33,7 +36,7 @@ const Navbar2 = ({ username }) => {
     <IconContext.Provider value={{color:'white'}}>
       <div className="navbar">
         <Link to="#" className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar}/>
+            <FaIcons.FaBars size = {25} onClick={showSidebar}/>
         </Link>
         </div>
        
@@ -46,6 +49,7 @@ const Navbar2 = ({ username }) => {
                   </Link>
               </li>
               
+            
               {SidebarData.map((item, index) =>{
                   return(
                       <li key={index} className={item.cName}>
@@ -62,7 +66,12 @@ const Navbar2 = ({ username }) => {
                     <span>Fazer logout</span>
                   </Link>
               </li>
-            
+              <li key= {4} className='hexa'>
+                <Link to=''>
+                  <h3>Inicio</h3>
+                  <FiHexagon size = {35}/>
+                </Link>
+              </li>
               
           </ul>
       </nav>
