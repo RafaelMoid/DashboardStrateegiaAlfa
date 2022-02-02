@@ -204,13 +204,13 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
               <div className="subtitle1"><p>Jornadas que administro</p></div>
             </div>
           </article>
-          <article className="box2">
+          <article className="box1">
             <div className="textBox2">
               <div className="title2"><h1>{projectsDataSummary2.length}</h1></div>
               <div className="subtitle2"><p>Jornadas que sou mentor</p></div>
             </div>
           </article>
-          <article className="box3">
+          <article className="box1">
             <div className="textBox3">
               <div className="title3"><h1>{projectsDataSummary3.length}</h1></div>
               <div className="subtitle3"><p>{('Jornadas em que participo')}</p></div>
@@ -253,7 +253,7 @@ fetchMapStatisticsHome(auth.apiToken, id2).then((response2) => {
                 </select>
                 <div><button className="btnComp" onClick={handleSelect}>Comparar</button></div>
               </div>
-
+            
               <div className="comp1">
                 <div className="horizontalDisplay">
                 <h2 className="compTitle">{projectStatistics1.title || "Selecione um projeto"}</h2>

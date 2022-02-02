@@ -108,7 +108,7 @@ span {
     box-shadow: 0px 4px 4px 0px #908A8A29;
 }
 }
-@media screen and (max-width:1039px) and (min-width : 800px) {
+@media screen and (max-width:1039px) and (min-width : 600px) {
 .navbar {
     width:0vh;
     display: flex;
@@ -328,6 +328,7 @@ span {
 }
 
 .hexa {
+
     width: 0;
     height: 0;
 }

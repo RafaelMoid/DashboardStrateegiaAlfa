@@ -40,53 +40,11 @@ function Comparacao() {
     const onSelectProject = async ({ target: { value: selectedProject }}) => {
 
         //console.log('linha 55' , selectedProject)
-        // if(selectedProject){
             let projeto = await fetchMapStatisticsComp(selectedProject)
             console.log('projeto', projeto)
             setJourneysList(state =>([...state, projeto]))
 
-        //     //console.log(projetos)
-        //     // setListNomesProjetos(...[projetos])
-        //     //listSelectedProject.push(projetos)
-
-        //     setListSelectedProject(projects1 => {
-        //         if(projects1.find(({id})=>id===selectedProject)){
-        //             return projects1
-        //         }
-        //         return [
-        //             ...projects1,
-        //             projetos
-        //         ]
-        //     })
-            
-        //     console.log('retorno do array de selecionados',listSelectedProject)
-        //     var pAC = listSelectedProject.map(pACCounter => pACCounter.people_active_count);
-        //     setProps1(pAC)
-        //     console.log(props1)
-
-        //     var eND = listSelectedProject.map(eNDCounter => parseFloat((((eNDCounter.agreements_comments_count+eNDCounter.reply_comments_count)
-        //     /((eNDCounter.parent_comments_count*eNDCounter.people_active_count)/2)
-        //     )*100).toFixed(2)));
-        //     setProps2(eND)
-        //     console.log(props2)
-
-        //     var eNQ = listSelectedProject.map(eNQCounter => parseFloat((
-        //         eNQCounter.parent_comments_count
-        //         /
-        //         (eNQCounter.question_count*eNQCounter.people_active_count)*100)
-        //         .toFixed(2)));
-        //     setProps3(eNQ)
-        //     console.log(props3)
-
-        //     var eNDi = listSelectedProject.map(eNDiCounter => parseFloat(
-        //         (eNDiCounter.agreements_comments_count+eNDiCounter.reply_comments_count)
-        //         /
-        //         ((eNDiCounter.parent_comments_count*eNDiCounter.people_active_count)/2)*100).toFixed(2));
-        //     setProps4(eNDi)
-        //     console.log(props4)
-
-            
-        // }
+       
     }
 
 
